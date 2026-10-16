@@ -197,11 +197,8 @@ func (shaman *Shaman) RegisterFlametongueImbue(procMask core.ProcMask, isDownran
 		return
 	}
 
-	icd := core.Cooldown{
-		Timer:    shaman.NewTimer(),
-		Duration: time.Millisecond,
-	}
-
+	// wotlksim: Flametongue Weapon has no internal cooldown, so every landed
+	// hit (main hand and off hand alike) can trigger it.
 	mhSpell := shaman.newFlametongueImbueSpell(shaman.MainHand(), isDownranked)
 	ohSpell := shaman.newFlametongueImbueSpell(shaman.OffHand(), isDownranked)
 
@@ -222,12 +219,6 @@ func (shaman *Shaman) RegisterFlametongueImbue(procMask core.ProcMask, isDownran
 			if !result.Landed() || !spell.ProcMask.Matches(procMask) {
 				return
 			}
-
-			if !icd.IsReady(sim) {
-				return
-			}
-
-			icd.Use(sim)
 
 			if spell.IsMH() {
 				mhSpell.Cast(sim, result.Target)
