@@ -361,8 +361,147 @@ const CUSTOM_TOOLTIPS: Record<number, CustomTooltip> = {
 
 const LINK_PREFIX = '#wotlksim-item-';
 
+// Lower item level versions of buffed items (e.g. Ulduar): original ID + this offset.
+const BASE_VERSION_ID_OFFSET = 10_000_000;
+
+// Minimal shape of a UIItem, so this file doesn't depend on the generated protos.
+interface ItemData {
+	id: number;
+	name: string;
+	type: number;
+	armorType: number;
+	weaponType: number;
+	handType: number;
+	rangedWeaponType: number;
+	stats: Array<number>;
+	gemSockets: Array<number>;
+	socketBonus: Array<number>;
+	weaponDamageMin: number;
+	weaponDamageMax: number;
+	weaponSpeed: number;
+	ilvl: number;
+	quality: number;
+	unique: boolean;
+	heroic: boolean;
+	classAllowlist: Array<number>;
+}
+
+let itemLookup: ((id: number) => ItemData | undefined) | null = null;
+
+// Called by the Database once items are loaded.
+export function registerItemLookup(lookup: (id: number) => ItemData | undefined) {
+	itemLookup = lookup;
+}
+
 export function hasCustomTooltip(itemId: number): boolean {
-	return itemId in CUSTOM_TOOLTIPS;
+	return itemId in CUSTOM_TOOLTIPS || itemId > BASE_VERSION_ID_OFFSET;
+}
+
+const SLOT_NAMES: Record<number, string> = {
+	1: 'Head', 2: 'Neck', 3: 'Shoulder', 4: 'Back', 5: 'Chest', 6: 'Wrist', 7: 'Hands', 8: 'Waist',
+	9: 'Legs', 10: 'Feet', 11: 'Finger', 12: 'Trinket', 14: 'Ranged',
+};
+const ARMOR_NAMES: Record<number, string> = { 1: 'Cloth', 2: 'Leather', 3: 'Mail', 4: 'Plate' };
+const WEAPON_NAMES: Record<number, string> = {
+	1: 'Axe', 2: 'Dagger', 3: 'Fist Weapon', 4: 'Mace', 5: 'Held In Off-hand', 6: 'Polearm', 7: 'Shield', 8: 'Staff', 9: 'Sword',
+};
+const HAND_NAMES: Record<number, string> = { 1: 'Main Hand', 2: 'One-Hand', 3: 'Off Hand', 4: 'Two-Hand' };
+const RANGED_NAMES: Record<number, string> = {
+	1: 'Bow', 2: 'Crossbow', 3: 'Gun', 4: 'Idol', 5: 'Libram', 6: 'Thrown', 7: 'Totem', 8: 'Wand', 9: 'Sigil',
+};
+const CLASS_NAMES: Record<number, string> = {
+	1: 'Druid', 2: 'Hunter', 3: 'Mage', 4: 'Paladin', 5: 'Priest', 6: 'Rogue', 7: 'Shaman', 8: 'Warlock', 9: 'Warrior', 10: 'Death Knight',
+};
+const SOCKET_NAMES: Record<number, string> = { 1: 'Meta', 2: 'Red', 3: 'Blue', 4: 'Yellow', 8: 'Prismatic' };
+const QUALITY_NAMES: Record<number, CustomTooltip['quality']> = { 4: 'epic', 5: 'legendary' };
+
+// Stat indices (proto Stat enum order).
+const S = {
+	str: 0, agi: 1, sta: 2, int: 3, spi: 4, sp: 5, mp5: 6, spellHit: 7, spellCrit: 8, spellHaste: 9, spellPen: 10,
+	ap: 11, hit: 12, crit: 13, haste: 14, arp: 15, exp: 16, armor: 20, def: 22, block: 23, blockValue: 24,
+	dodge: 25, parry: 26, resil: 27, bonusArmor: 34,
+};
+
+function statBonusText(stats: Array<number>): Array<string> {
+	const v = (i: number) => Math.round(stats[i] || 0);
+	const parts: Array<string> = [];
+	const add = (amount: number, name: string) => amount && parts.push(`+${amount} ${name}`);
+	add(v(S.str), 'Strength');
+	add(v(S.agi), 'Agility');
+	add(v(S.sta), 'Stamina');
+	add(v(S.int), 'Intellect');
+	add(v(S.spi), 'Spirit');
+	add(v(S.sp), 'Spell Power');
+	add(v(S.ap), 'Attack Power');
+	add(Math.max(v(S.crit), v(S.spellCrit)), 'Critical Strike Rating');
+	add(Math.max(v(S.hit), v(S.spellHit)), 'Hit Rating');
+	add(Math.max(v(S.haste), v(S.spellHaste)), 'Haste Rating');
+	return parts;
+}
+
+function buildGenericTooltip(itemId: number): CustomTooltip | null {
+	const item = itemLookup?.(itemId);
+	if (!item) {
+		return null;
+	}
+	const stat = (i: number) => Math.round(item.stats[i] || 0);
+	const lines: CustomTooltip['lines'] = [];
+
+	if (item.heroic) lines.push({ text: 'Heroic', color: 'green' });
+	lines.push(`Item Level ${item.ilvl}`);
+	lines.push('Binds when picked up');
+	if (item.unique) lines.push('Unique');
+
+	if (item.type == 13) {
+		if (item.weaponType == 5) {
+			lines.push('Held In Off-hand');
+		} else {
+			lines.push([HAND_NAMES[item.handType] || '', WEAPON_NAMES[item.weaponType] || '']);
+		}
+	} else if (item.type == 14) {
+		lines.push(['Ranged', RANGED_NAMES[item.rangedWeaponType] || '']);
+	} else {
+		lines.push([SLOT_NAMES[item.type] || '', ARMOR_NAMES[item.armorType] || '']);
+	}
+	if (item.weaponSpeed > 0 && item.weaponDamageMax > 0) {
+		lines.push([`${Math.round(item.weaponDamageMin)} - ${Math.round(item.weaponDamageMax)} Damage`, `Speed ${item.weaponSpeed.toFixed(2)}`]);
+		lines.push(`(${((item.weaponDamageMin + item.weaponDamageMax) / 2 / item.weaponSpeed).toFixed(1)} damage per second)`);
+	}
+	if (stat(S.armor)) lines.push(`${stat(S.armor)} Armor`);
+	if (stat(S.block)) lines.push(`${stat(S.block)} Block`);
+
+	for (const [i, name] of [[S.str, 'Strength'], [S.agi, 'Agility'], [S.sta, 'Stamina'], [S.int, 'Intellect'], [S.spi, 'Spirit']] as Array<[number, string]>) {
+		if (stat(i)) lines.push(`+${stat(i)} ${name}`);
+	}
+	for (const socket of item.gemSockets) {
+		lines.push(gem(SOCKET_NAMES[socket] || 'Prismatic'));
+	}
+	const bonus = statBonusText(item.socketBonus || []);
+	if (bonus.length) lines.push({ text: `Socket Bonus: ${bonus.join(', ')}`, color: 'gray' });
+	if (item.classAllowlist?.length) lines.push('Classes: ' + item.classAllowlist.map(c => CLASS_NAMES[c] || '').join(', '));
+	lines.push('Requires Level 80');
+
+	const equip = (amount: number, text: string) => amount && lines.push(green(`Equip: ${text.replace('#', String(amount))}`));
+	equip(stat(S.def), 'Increases defense rating by #.');
+	equip(stat(S.dodge), 'Increases your dodge rating by #.');
+	equip(stat(S.parry), 'Increases your parry rating by #.');
+	equip(stat(S.blockValue), 'Increases the block value of your shield by #.');
+	equip(Math.max(stat(S.hit), stat(S.spellHit)), 'Improves hit rating by #.');
+	equip(Math.max(stat(S.crit), stat(S.spellCrit)), 'Improves critical strike rating by #.');
+	equip(Math.max(stat(S.haste), stat(S.spellHaste)), 'Improves haste rating by #.');
+	equip(stat(S.exp), 'Increases your expertise rating by #.');
+	equip(stat(S.arp), 'Increases your armor penetration rating by #.');
+	equip(stat(S.ap), 'Increases attack power by #.');
+	equip(stat(S.sp), 'Increases spell power by #.');
+	equip(stat(S.mp5), 'Restores # mana per 5 sec.');
+	equip(stat(S.spellPen), 'Increases your spell penetration by #.');
+
+	const original = itemLookup?.(itemId - BASE_VERSION_ID_OFFSET);
+	if (original) {
+		lines.push({ text: `Original item level version. Special effects as on the item level ${original.ilvl} version.`, color: 'gray' });
+	}
+
+	return { name: item.name, quality: QUALITY_NAMES[item.quality] || 'epic', lines };
 }
 
 export function customItemUrl(itemId: number): string {
@@ -441,7 +580,7 @@ function install() {
 		const anchor = findCustomLink(event.target);
 		if (!anchor) return;
 		const id = Number((anchor.getAttribute('href') || '').split(LINK_PREFIX)[1]);
-		const tooltip = CUSTOM_TOOLTIPS[id];
+		const tooltip = CUSTOM_TOOLTIPS[id] ?? buildGenericTooltip(id);
 		if (!tooltip) return;
 		const elem = getTooltipElem();
 		elem.innerHTML = renderTooltip(tooltip);
