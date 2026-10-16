@@ -9,6 +9,7 @@ import {
 
 import { Database } from './database.js';
 import { CHARACTER_LEVEL } from '../constants/mechanics.js';
+import { customItemUrl, hasCustomTooltip } from '../custom_tooltips.js';
 
 // If true uses wotlkdb.com, else uses wowhead.com.
 export const USE_WOTLK_DB = false;
@@ -137,6 +138,10 @@ export class ActionId {
 	}
 
 	static makeItemUrl(id: number): string {
+		// wotlksim: custom items/glyphs get our own tooltip instead of Wowhead's.
+		if (hasCustomTooltip(id)) {
+			return customItemUrl(id);
+		}
 		const langPrefix = getWowheadLanguagePrefix();
 		if (USE_WOTLK_DB) {
 			return 'https://wotlkdb.com/?item=' + id;

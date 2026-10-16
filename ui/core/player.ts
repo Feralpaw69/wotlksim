@@ -1,4 +1,5 @@
 import {
+import { hasCustomTooltip } from './custom_tooltips.js';
 	Class,
 	Consumes,
 	Cooldowns,
@@ -1091,6 +1092,11 @@ export class Player<SpecType extends Spec> {
 	}
 
 	setWowheadData(equippedItem: EquippedItem, elem: HTMLElement) {
+		// wotlksim: custom items use our own tooltip (see custom_tooltips.ts).
+		if (hasCustomTooltip(equippedItem.item.id)) {
+			elem.removeAttribute('data-wowhead');
+			return;
+		}
 		const parts = [];
 
 		const lang = getLanguageCode();
