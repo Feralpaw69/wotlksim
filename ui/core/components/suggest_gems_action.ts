@@ -5,7 +5,7 @@ import { Gear } from '../proto_utils/gear.js';
 import { EquippedItem } from '../proto_utils/equipped_item.js';
 import { TypedEvent } from '../typed_event.js';
 import { Stats } from '../proto_utils/stats.js';
-import { GemColor, Stat, Profession, ItemSlot, Spec } from '../proto/common.js';
+import { GemColor, Stat, Profession, ItemSlot, Spec, TristateEffect } from '../proto/common.js';
 import { UIGem as Gem } from '../proto/ui.js';
 import { gemMatchesSocket, isUnrestrictedGem } from '../proto_utils/gems.js';
 import { SPELL_HIT_RATING_PER_HIT_CHANCE } from '../constants/mechanics.js';
@@ -686,11 +686,15 @@ export class EPGemOptimizer {
 	private readonly sim: Sim;
 	// Spell hit cap in percent (e.g. 17 for casters), or 0 for no cap.
 	private readonly spellHitCapPercent: number;
+	// Spell hit % that isn't part of the character sheet stats (e.g. talents the sim
+	// applies per spell), so it isn't seen by the stat check below.
+	private readonly extraHitPercent: (player: Player<any>) => number;
 
-	constructor(simUI: IndividualSimUI<any>, options?: { spellHitCapPercent?: number }) {
+	constructor(simUI: IndividualSimUI<any>, options?: { spellHitCapPercent?: number; extraHitPercent?: (player: Player<any>) => number }) {
 		this.player = simUI.player;
 		this.sim = simUI.sim;
 		this.spellHitCapPercent = options?.spellHitCapPercent ?? 0;
+		this.extraHitPercent = options?.extraHitPercent ?? (() => 0);
 		simUI.addAction('Suggest Gems', 'suggest-gems-action', async () => {
 			this.optimizeGems();
 		});
@@ -836,7 +840,12 @@ export class EPGemOptimizer {
 		hasMeta: boolean,
 		isBlacksmithing: boolean,
 	): Promise<Gear> {
-		const cap = this.spellHitCapPercent * SPELL_HIT_RATING_PER_HIT_CHANCE;
+		// Misery / Improved Faerie Fire give 3% spell hit as a target debuff, which
+		// isn't in the character's stats either.
+		const debuffs = this.sim.raid.getDebuffs();
+		const debuffHit = debuffs.misery || debuffs.faerieFire == TristateEffect.TristateEffectImproved ? 3 : 0;
+		const capPercent = Math.max(0, this.spellHitCapPercent - debuffHit - this.extraHitPercent(this.player));
+		const cap = capPercent * SPELL_HIT_RATING_PER_HIT_CHANCE;
 		const hitOf = (gem: Gem) => gem.stats[Stat.StatSpellHit] || 0;
 		const noHitGems = allGems.filter(gem => hitOf(gem) == 0);
 		if (noHitGems.length == 0) {
