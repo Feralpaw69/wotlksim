@@ -4,7 +4,7 @@ package wotlk
 // Class-specific custom effects:
 //   - Embersoul (finisher discount): sim/druid/items_custom.go
 //   - Doomhammer (Lava Burst reset): sim/shaman/shocks.go
-// Stormcoil has no special effect.
+// The base Stormcoil has no special effect; its upgraded versions have a lightning proc.
 
 import (
 	"time"
@@ -14,6 +14,9 @@ import (
 
 const (
 	armataStrigoiID    = 130031
+	armataStrigoi2ID   = 315004 // upgraded version, same effect
+	stormcoil2ID       = 150090
+	stormcoil3ID       = 315005
 	nargarothID        = 315007
 	furyOfTheSunwellID = 217741
 	nightwingID        = 315006
@@ -26,7 +29,7 @@ func init() {
 
 	// Armata Strigoi: 40% chance on white hits to bind a Forgotten Soul.
 	// At 4 souls they are released and trigger an instant weapon attack.
-	core.NewItemEffect(armataStrigoiID, func(agent core.Agent) {
+	armataEffect := func(agent core.Agent) {
 		character := agent.GetCharacter()
 
 		soulAttack := character.RegisterSpell(core.SpellConfig{
@@ -68,7 +71,55 @@ func init() {
 				}
 			},
 		})
-	})
+	}
+	core.NewItemEffect(armataStrigoiID, armataEffect)
+	core.NewItemEffect(armataStrigoi2ID, armataEffect)
+
+	// Stormcoil (upgrade levels 2/3 and 3/3): chance on hit to hurl a lightning
+	// bolt for 734-838 Nature damage that jumps to additional nearby enemies,
+	// each jump dealing 30% less, 3 targets total. 15 sec cooldown.
+	// The proc chance isn't on the tooltip; 15% per ranged hit is assumed.
+	stormcoilEffect := func(itemID int32) core.ApplyEffect {
+		return func(agent core.Agent) {
+			character := agent.GetCharacter()
+
+			lightning := character.RegisterSpell(core.SpellConfig{
+				ActionID:    core.ActionID{ItemID: itemID},
+				SpellSchool: core.SpellSchoolNature,
+				ProcMask:    core.ProcMaskEmpty,
+
+				DamageMultiplier: 1,
+				CritMultiplier:   character.DefaultSpellCritMultiplier(),
+				ThreatMultiplier: 1,
+
+				ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+					damageMult := 1.0
+					curTarget := target
+					numHits := min(3, int(sim.GetNumTargets()))
+					for hit := 0; hit < numHits; hit++ {
+						spell.CalcAndDealDamage(sim, curTarget, sim.Roll(734, 838)*damageMult, spell.OutcomeMagicHitAndCrit)
+						damageMult *= 0.7
+						curTarget = sim.Environment.NextTargetUnit(curTarget)
+					}
+				},
+			})
+
+			core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
+				Name:       "Stormcoil",
+				ActionID:   core.ActionID{ItemID: itemID},
+				Callback:   core.CallbackOnSpellHitDealt,
+				ProcMask:   core.ProcMaskRanged,
+				Outcome:    core.OutcomeLanded,
+				ProcChance: 0.15,
+				ICD:        time.Second * 15,
+				Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
+					lightning.Cast(sim, result.Target)
+				},
+			})
+		}
+	}
+	core.NewItemEffect(stormcoil2ID, stormcoilEffect(stormcoil2ID))
+	core.NewItemEffect(stormcoil3ID, stormcoilEffect(stormcoil3ID))
 
 	// Nargaroth, Warden of the Dark Tower: 10% chance on hit (1 min ICD).
 	// For 8 sec: 10% less damage taken and 1200 Fire damage to nearby enemies

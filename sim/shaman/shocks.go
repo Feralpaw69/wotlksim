@@ -84,7 +84,7 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 	// wotlksim custom: Doomhammer. Flame Shock ticks have a 20% chance to reset
 	// Lava Burst's cooldown and make the next Lava Burst instant.
 	var doomhammerAura *core.Aura
-	if shaman.MainHand().ID == DoomhammerID {
+	if id := shaman.MainHand().ID; id == DoomhammerID || id == Doomhammer2ID {
 		doomhammerAura = shaman.RegisterAura(core.Aura{
 			Label:    "Doomhammer",
 			ActionID: core.ActionID{ItemID: DoomhammerID},
