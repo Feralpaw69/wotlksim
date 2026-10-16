@@ -13,7 +13,10 @@ import { BulkSimRequest, BulkSimResult } from './proto/api.js';
 
 import { wait } from './utils.js';
 
-const SIM_WORKER_URL = `/${REPO_NAME}/sim_worker.js`;
+// Injected by vite (see vite.config.js); a new value per build so browsers don't
+// combine a fresh UI with a cached, outdated sim worker / lib.wasm.
+declare const __BUILD_ID__: string;
+const SIM_WORKER_URL = `/${REPO_NAME}/sim_worker.js?v=${__BUILD_ID__}`;
 
 export class WorkerPool {
 	private workers: Array<SimWorker>;

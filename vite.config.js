@@ -4,6 +4,10 @@ import { defineConfig } from 'vite'
 
 export default defineConfig(({ command, mode }) => ({
 	base: "/wotlksim/",
+	// wotlksim: changes every build, used to bust the browser cache for the sim worker and lib.wasm.
+	define: {
+		__BUILD_ID__: JSON.stringify(String(Date.now())),
+	},
 	root: path.join(__dirname, "ui"),
 	build: {
 		outDir: path.join(__dirname, "dist", "wotlk"),

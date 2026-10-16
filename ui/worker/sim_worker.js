@@ -8,7 +8,7 @@ function wasmready() {
 const go = new Go();
 let mod, inst;
 
-WebAssembly.instantiateStreaming(fetch("lib.wasm"), go.importObject).then(
+WebAssembly.instantiateStreaming(fetch("lib.wasm" + self.location.search), go.importObject).then(
 	async result => {
 		mod = result.module;
 		inst = result.instance;
