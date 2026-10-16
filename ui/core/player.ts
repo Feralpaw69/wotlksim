@@ -1,5 +1,5 @@
-import {
 import { hasCustomTooltip } from './custom_tooltips.js';
+import {
 	Class,
 	Consumes,
 	Cooldowns,
