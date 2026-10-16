@@ -8,6 +8,7 @@ import { Stats } from '../proto_utils/stats.js';
 import { GemColor, Stat, Profession, ItemSlot, Spec } from '../proto/common.js';
 import { UIGem as Gem } from '../proto/ui.js';
 import { gemMatchesSocket, isUnrestrictedGem } from '../proto_utils/gems.js';
+import { SPELL_HIT_RATING_PER_HIT_CHANCE } from '../constants/mechanics.js';
 
 interface GemCapsData {
 	gemId: number
@@ -683,10 +684,13 @@ export class TankGemOptimizer extends GemOptimizer {
 export class EPGemOptimizer {
 	private readonly player: Player<Spec>;
 	private readonly sim: Sim;
+	// Spell hit cap in percent (e.g. 17 for casters), or 0 for no cap.
+	private readonly spellHitCapPercent: number;
 
-	constructor(simUI: IndividualSimUI<any>) {
+	constructor(simUI: IndividualSimUI<any>, options?: { spellHitCapPercent?: number }) {
 		this.player = simUI.player;
 		this.sim = simUI.sim;
+		this.spellHitCapPercent = options?.spellHitCapPercent ?? 0;
 		simUI.addAction('Suggest Gems', 'suggest-gems-action', async () => {
 			this.optimizeGems();
 		});
@@ -807,6 +811,67 @@ export class EPGemOptimizer {
 			}
 		}
 
+		if (this.spellHitCapPercent > 0) {
+			gear = await this.respectSpellHitCap(gear, sockets, allGems, metaGem != null, isBlacksmithing);
+		}
+
 		this.player.setGear(TypedEvent.nextEventID(), gear);
+	}
+
+	private async finalStats(gear: Gear): Promise<Stats> {
+		this.player.setGear(TypedEvent.nextEventID(), gear);
+		await this.sim.updateCharacterStats(TypedEvent.nextEventID());
+		return Stats.fromProto(this.player.getCurrentStats().finalStats);
+	}
+
+	/**
+	 * Removes hit from gems while the character is above the spell hit cap.
+	 * Each step replaces the hit gem whose replacement loses the least EP, as long as
+	 * the character stays at or above the cap (and the meta gem stays active).
+	 */
+	private async respectSpellHitCap(
+		gear: Gear,
+		sockets: Array<{ slot: ItemSlot; idx: number; color: GemColor }>,
+		allGems: Array<Gem>,
+		hasMeta: boolean,
+		isBlacksmithing: boolean,
+	): Promise<Gear> {
+		const cap = this.spellHitCapPercent * SPELL_HIT_RATING_PER_HIT_CHANCE;
+		const hitOf = (gem: Gem) => gem.stats[Stat.StatSpellHit] || 0;
+		const noHitGems = allGems.filter(gem => hitOf(gem) == 0);
+		if (noHitGems.length == 0) {
+			return gear;
+		}
+
+		let hit = (await this.finalStats(gear)).getStat(Stat.StatSpellHit);
+		for (let guard = 0; guard < 30 && hit > cap; guard++) {
+			const excess = hit - cap;
+			let best: { gear: Gear; loss: number; hitLost: number } | null = null;
+
+			for (const s of sockets) {
+				const item = gear.getEquippedItem(s.slot);
+				const current = item?.gems[s.idx];
+				if (!item || !current || hitOf(current) == 0 || hitOf(current) > excess) continue;
+
+				// Keep the socket bonus if the current gem earns it.
+				const keepColor = s.idx < item.item.gemSockets.length && gemMatchesSocket(current, s.color);
+				const options = keepColor ? noHitGems.filter(gem => gemMatchesSocket(gem, s.color)) : noHitGems;
+				const replacement = this.bestGem(options.length > 0 ? options : noHitGems);
+				if (!replacement) continue;
+
+				const testGear = gear.withEquippedItem(s.slot, item.withGem(replacement, s.idx), true);
+				if (hasMeta && gear.hasActiveMetaGem(isBlacksmithing) && !testGear.hasActiveMetaGem(isBlacksmithing)) continue;
+
+				const loss = this.gemEP(current) - this.gemEP(replacement);
+				if (!best || loss < best.loss) {
+					best = { gear: testGear, loss, hitLost: hitOf(current) };
+				}
+			}
+
+			if (!best) break;
+			gear = best.gear;
+			hit -= best.hitLost;
+		}
+		return gear;
 	}
 }

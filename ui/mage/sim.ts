@@ -394,7 +394,7 @@ export class MageSimUI extends IndividualSimUI<Spec.SpecMage> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecMage>) {
 		super(parentElem, player, SPEC_CONFIG);
 
-		// wotlksim: generic EP-based "Suggest Gems" button
-		new EPGemOptimizer(this);
+		// wotlksim: generic EP-based "Suggest Gems" button, respecting the 17% spell hit cap
+		new EPGemOptimizer(this, { spellHitCapPercent: 17 });
 	}
 }

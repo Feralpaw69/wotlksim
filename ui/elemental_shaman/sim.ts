@@ -216,7 +216,7 @@ export class ElementalShamanSimUI extends IndividualSimUI<Spec.SpecElementalSham
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecElementalShaman>) {
 		super(parentElem, player, SPEC_CONFIG);
 
-		// wotlksim: generic EP-based "Suggest Gems" button
-		new EPGemOptimizer(this);
+		// wotlksim: generic EP-based "Suggest Gems" button, respecting the 17% spell hit cap
+		new EPGemOptimizer(this, { spellHitCapPercent: 17 });
 	}
 }
