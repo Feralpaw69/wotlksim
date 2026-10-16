@@ -82,7 +82,7 @@ func BenchmarkSimulate(b *testing.B) {
 	core.RaidBenchmark(b, rsr)
 }
 
-var DefaultTalents = "2500030023-302-0533521225000012521030111321"
+var DefaultTalents = "2500030023-302-0533512250000125210130112321"
 var DefaultGlyphs = &proto.Glyphs{
 	Major1: int32(proto.WarriorMajorGlyph_GlyphOfBlocking),
 	Major2: int32(proto.WarriorMajorGlyph_GlyphOfDevastate),

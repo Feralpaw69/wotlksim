@@ -871,23 +871,6 @@
 				"maxPoints": 5
 			},
 			{
-				"fieldName": "bloodAndThunder",
-				"location": {
-					"rowIdx": 1,
-					"colIdx": 3
-				},
-				"spellIds": [
-					47502,
-					47502
-				],
-				"maxPoints": 2,
-				"customName": "Blood and Thunder",
-				"customDescription": [
-					"Your Thunder Clap has a 50% chance to affect every target with Rend.",
-					"Your Thunder Clap has a 100% chance to affect every target with Rend."
-				]
-			},
-			{
 				"fieldName": "lastStand",
 				"location": {
 					"rowIdx": 2,
@@ -1072,9 +1055,9 @@
 					"colIdx": 2
 				},
 				"spellIds": [
-					55694,
-					55694,
-					55694
+					29836,
+					29836,
+					29836
 				],
 				"maxPoints": 3,
 				"customName": "Painkiller",
@@ -1082,6 +1065,21 @@
 					"Your successful blocks heal you for 33% of the damage blocked. This effect cannot occur more often than once every 3 sec.",
 					"Your successful blocks heal you for 66% of the damage blocked. This effect cannot occur more often than once every 3 sec.",
 					"Your successful blocks heal you for 100% of the damage blocked. This effect cannot occur more often than once every 3 sec."
+				]
+			},
+			{
+				"fieldName": "unbrokenRage",
+				"location": {
+					"rowIdx": 6,
+					"colIdx": 3
+				},
+				"spellIds": [
+					29623
+				],
+				"maxPoints": 1,
+				"customName": "Unbroken Rage",
+				"customDescription": [
+					"Damage that would take you below 35% health, or damage taken while you are at 35% health or below, is reduced by 20%."
 				]
 			},
 			{
@@ -1138,18 +1136,20 @@
 				"maxPoints": 1
 			},
 			{
-				"fieldName": "unbrokenRage",
+				"fieldName": "bloodAndThunder",
 				"location": {
 					"rowIdx": 8,
 					"colIdx": 2
 				},
 				"spellIds": [
-					18499
+					47502,
+					47502
 				],
-				"maxPoints": 1,
-				"customName": "Unbroken Rage",
+				"maxPoints": 2,
+				"customName": "Blood and Thunder",
 				"customDescription": [
-					"Damage that would take you below 35% health, or damage taken while you are at 35% health or below, is reduced by 20%."
+					"Your Thunder Clap has a 50% chance to affect every target with Rend.",
+					"Your Thunder Clap has a 100% chance to affect every target with Rend."
 				]
 			},
 			{
