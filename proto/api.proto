@@ -123,6 +123,7 @@ message SimOptions {
 	bool is_test = 5; // Only used internally.
 	bool save_all_values = 7; // Only used internally.
 	bool interactive = 8; // Enables interactive mode.
+	int32 phase = 9; // wotlksim: content phase selected in the UI (0 = unknown).
 }
 
 // The aggregated results from all uses of a particular action.

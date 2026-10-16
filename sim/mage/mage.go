@@ -131,6 +131,7 @@ func (mage *Mage) Initialize() {
 	mage.registerMirrorImageCD()
 	mage.registerBlastWaveSpell()
 	mage.registerDragonsBreathSpell()
+	mage.registerTimeWarpCD()
 }
 
 func (mage *Mage) Reset(sim *core.Simulation) {

@@ -26,6 +26,8 @@ func (paladin *Paladin) ApplyTalents() {
 
 	paladin.ApplyEquipScaling(stats.Armor, paladin.ToughnessArmorMultiplier())
 
+	paladin.applyFanaticismDivineStormReset()
+
 	if paladin.Talents.DivineStrength > 0 {
 		paladin.MultiplyStat(stats.Strength, 1.0+0.03*float64(paladin.Talents.DivineStrength))
 	}
@@ -679,6 +681,27 @@ func (paladin *Paladin) applyGuardedByTheLight() {
 
 			if paladin.DivinePleaAura.IsActive() {
 				paladin.DivinePleaAura.Refresh(sim)
+			}
+		},
+	})
+}
+
+// wotlksim: Fanaticism additionally gives melee attacks a 20% chance to reset
+// the cooldown of Divine Storm.
+func (paladin *Paladin) applyFanaticismDivineStormReset() {
+	if paladin.Talents.Fanaticism == 0 || !paladin.Talents.DivineStorm {
+		return
+	}
+
+	core.MakeProcTriggerAura(&paladin.Unit, core.ProcTrigger{
+		Name:       "Fanaticism Divine Storm Reset",
+		Callback:   core.CallbackOnSpellHitDealt,
+		ProcMask:   core.ProcMaskMelee,
+		Outcome:    core.OutcomeLanded,
+		ProcChance: 0.2,
+		Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+			if paladin.DivineStorm != nil {
+				paladin.DivineStorm.CD.Reset()
 			}
 		},
 	})

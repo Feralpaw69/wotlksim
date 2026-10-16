@@ -8,7 +8,7 @@ import (
 	"github.com/wowsims/wotlk/sim/core/stats"
 )
 
-var TalentTreeSizes = [3]int{31, 27, 27}
+var TalentTreeSizes = [3]int{31, 27, 28}
 
 type WarriorInputs struct {
 	StanceSnapshot bool

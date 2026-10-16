@@ -579,7 +579,7 @@ func registerBloodlustCD(agent Agent) {
 		},
 
 		ApplyEffects: func(sim *Simulation, target *Unit, _ *Spell) {
-			if !target.HasActiveAura(SatedAuraLabel) {
+			if !HasHasteLockout(target) {
 				bloodlustAura.Activate(sim)
 			}
 		},
@@ -591,7 +591,7 @@ func registerBloodlustCD(agent Agent) {
 		Type:     CooldownTypeDPS,
 		ShouldActivate: func(sim *Simulation, character *Character) bool {
 			// Haste portion doesn't stack with Power Infusion, so prefer to wait.
-			return !character.HasActiveAuraWithTag(PowerInfusionAuraTag) && !character.HasActiveAura(SatedAuraLabel)
+			return !character.HasActiveAuraWithTag(PowerInfusionAuraTag) && !HasHasteLockout(&character.Unit)
 		},
 	})
 }
@@ -1518,4 +1518,49 @@ func FocusMagicAura(caster *Unit, target *Unit) (*Aura, *Aura) {
 	}
 
 	return casterAura, aura
+}
+
+// wotlksim: Time Warp (mage). Same 30% haste as Bloodlust; its lockout,
+// Temporal Displacement, blocks both Time Warp and Bloodlust, and Sated
+// blocks Time Warp as well.
+var TimeWarpActionID = ActionID{SpellID: 80353}
+
+const TemporalDisplacementAuraLabel = "Temporal Displacement"
+const TimeWarpDuration = time.Second * 40
+
+// HasHasteLockout reports whether the unit can't currently benefit from Bloodlust or Time Warp.
+func HasHasteLockout(unit *Unit) bool {
+	return unit.HasActiveAura(SatedAuraLabel) || unit.HasActiveAura(TemporalDisplacementAuraLabel)
+}
+
+func TimeWarpAura(character *Character, actionTag int32) *Aura {
+	actionID := TimeWarpActionID.WithTag(actionTag)
+
+	displacement := character.GetOrRegisterAura(Aura{
+		Label:    TemporalDisplacementAuraLabel,
+		ActionID: ActionID{SpellID: 80354},
+		Duration: time.Minute * 10,
+	})
+
+	aura := character.GetOrRegisterAura(Aura{
+		Label:    "Time Warp-" + actionID.String(),
+		Tag:      BloodlustAuraTag,
+		ActionID: actionID,
+		Duration: TimeWarpDuration,
+		OnGain: func(aura *Aura, sim *Simulation) {
+			character.MultiplyAttackSpeed(sim, 1.3)
+			for _, pet := range character.Pets {
+				if pet.IsEnabled() && !pet.IsGuardian() {
+					TimeWarpAura(&pet.Character, actionTag).Activate(sim)
+				}
+			}
+
+			displacement.Activate(sim)
+		},
+		OnExpire: func(aura *Aura, sim *Simulation) {
+			character.MultiplyAttackSpeed(sim, 1.0/1.3)
+		},
+	})
+	multiplyCastSpeedEffect(aura, 1.3)
+	return aura
 }

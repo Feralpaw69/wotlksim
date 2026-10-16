@@ -23,7 +23,7 @@ func (warrior *Warrior) RegisterRendSpell() {
 		Flags:       core.SpellFlagNoOnCastComplete | core.SpellFlagAPL,
 
 		RageCost: core.RageCostOptions{
-			Cost:   10 - float64(warrior.Talents.FocusedRage),
+			Cost:   10,
 			Refund: 0.8,
 		},
 		Cast: core.CastConfig{
@@ -34,7 +34,7 @@ func (warrior *Warrior) RegisterRendSpell() {
 		},
 
 		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
-			return warrior.StanceMatches(BattleStance|DefensiveStance)
+			return warrior.StanceMatches(BattleStance | DefensiveStance)
 		},
 
 		DamageMultiplier: 1 + 0.1*float64(warrior.Talents.ImprovedRend),

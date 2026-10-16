@@ -183,7 +183,11 @@
 				"spellIds": [
 					12328
 				],
-				"maxPoints": 1
+				"maxPoints": 1,
+				"customName": "Sweeping Strikes",
+				"customDescription": [
+					"Your next 10 melee attacks strike an additional nearby opponent."
+				]
 			},
 			{
 				"fieldName": "maceSpecialization",
@@ -329,7 +333,13 @@
 				"prereqLocation": {
 					"rowIdx": 6,
 					"colIdx": 1
-				}
+				},
+				"customName": "Improved Mortal Strike",
+				"customDescription": [
+					"Increases the damage caused by your Mortal Strike ability by 11.7% and extends the duration of its healing reduction effect.",
+					"Increases the damage caused by your Mortal Strike ability by 23.3% and extends the duration of its healing reduction effect.",
+					"Increases the damage caused by your Mortal Strike ability by 35% and extends the duration of its healing reduction effect."
+				]
 			},
 			{
 				"fieldName": "unrelentingAssault",
@@ -772,7 +782,11 @@
 				"spellIds": [
 					46917
 				],
-				"maxPoints": 1
+				"maxPoints": 1,
+				"customName": "Titan's Grip",
+				"customDescription": [
+					"Allows you to equip two-handed axes, maces and swords in one hand. While wielding a two-handed weapon in one hand: no damage penalty in Tier 7 (Phase 1), 5% reduced physical damage in patch 3.1 (Phase 2), 10% from patch 3.2 on (Phase 3+)."
+				]
 			}
 		]
 	},
@@ -805,7 +819,15 @@
 					12726,
 					12727
 				],
-				"maxPoints": 5
+				"maxPoints": 5,
+				"customName": "Shield Specialization",
+				"customDescription": [
+					"Increases your chance to block attacks with a shield by 3%, and has a 20% chance to generate 7 Rage when a block, dodge, or parry occurs.",
+					"Increases your chance to block attacks with a shield by 4%, and has a 40% chance to generate 7 Rage when a block, dodge, or parry occurs.",
+					"Increases your chance to block attacks with a shield by 5%, and has a 60% chance to generate 7 Rage when a block, dodge, or parry occurs.",
+					"Increases your chance to block attacks with a shield by 6%, and has a 80% chance to generate 7 Rage when a block, dodge, or parry occurs.",
+					"Increases your chance to block attacks with a shield by 7%, and has a 100% chance to generate 7 Rage when a block, dodge, or parry occurs."
+				]
 			},
 			{
 				"fieldName": "improvedThunderClap",
@@ -849,6 +871,23 @@
 				"maxPoints": 5
 			},
 			{
+				"fieldName": "bloodAndThunder",
+				"location": {
+					"rowIdx": 1,
+					"colIdx": 3
+				},
+				"spellIds": [
+					47502,
+					47502
+				],
+				"maxPoints": 2,
+				"customName": "Blood and Thunder",
+				"customDescription": [
+					"Your Thunder Clap has a 50% chance to affect every target with Rend.",
+					"Your Thunder Clap has a 100% chance to affect every target with Rend."
+				]
+			},
+			{
 				"fieldName": "lastStand",
 				"location": {
 					"rowIdx": 2,
@@ -881,7 +920,12 @@
 					29598,
 					29599
 				],
-				"maxPoints": 2
+				"maxPoints": 2,
+				"customName": "Shield Mastery",
+				"customDescription": [
+					"Increases your block value by 20% and reduces the cooldown of your Shield Block ability by 10 sec.",
+					"Increases your block value by 40% and reduces the cooldown of your Shield Block ability by 20 sec."
+				]
 			},
 			{
 				"fieldName": "toughness",
@@ -956,7 +1000,11 @@
 				"spellIds": [
 					12809
 				],
-				"maxPoints": 1
+				"maxPoints": 1,
+				"customName": "Concussion Blow",
+				"customDescription": [
+					"Stuns the opponent for 5 sec and deals 0.38 times Attack Power damage. Deals 600% increased damage against targets permanently immune to stuns."
+				]
 			},
 			{
 				"fieldName": "gagOrder",
@@ -995,7 +1043,12 @@
 					29593,
 					29594
 				],
-				"maxPoints": 2
+				"maxPoints": 2,
+				"customName": "Improved Defensive Stance",
+				"customDescription": [
+					"While in Defensive Stance, all spell damage is reduced by 6%. When you Block, Parry, or Dodge an attack, you have a 50% chance to become Enraged, increasing Physical damage caused by 10% for 12 sec.",
+					"While in Defensive Stance, all spell damage is reduced by 12%. When you Block, Parry, or Dodge an attack, you have a 100% chance to become Enraged, increasing Physical damage caused by 10% for 12 sec."
+				]
 			},
 			{
 				"fieldName": "vigilance",
@@ -1013,17 +1066,23 @@
 				}
 			},
 			{
-				"fieldName": "focusedRage",
+				"fieldName": "painkiller",
 				"location": {
 					"rowIdx": 6,
 					"colIdx": 2
 				},
 				"spellIds": [
-					29787,
-					29790,
-					29792
+					55694,
+					55694,
+					55694
 				],
-				"maxPoints": 3
+				"maxPoints": 3,
+				"customName": "Painkiller",
+				"customDescription": [
+					"Your successful blocks heal you for 33% of the damage blocked. This effect cannot occur more often than once every 3 sec.",
+					"Your successful blocks heal you for 66% of the damage blocked. This effect cannot occur more often than once every 3 sec.",
+					"Your successful blocks heal you for 100% of the damage blocked. This effect cannot occur more often than once every 3 sec."
+				]
 			},
 			{
 				"fieldName": "vitality",
@@ -1036,7 +1095,13 @@
 					29143,
 					29144
 				],
-				"maxPoints": 3
+				"maxPoints": 3,
+				"customName": "Vitality",
+				"customDescription": [
+					"Increases your total Strength by 3%, Stamina by 6%, and your Expertise by 3.",
+					"Increases your total Strength by 6%, Stamina by 9%, and your Expertise by 6.",
+					"Increases your total Strength by 9%, Stamina by 12%, and your Expertise by 9."
+				]
 			},
 			{
 				"fieldName": "safeguard",
@@ -1073,17 +1138,19 @@
 				"maxPoints": 1
 			},
 			{
-				"fieldName": "criticalBlock",
+				"fieldName": "unbrokenRage",
 				"location": {
 					"rowIdx": 8,
 					"colIdx": 2
 				},
 				"spellIds": [
-					47294,
-					47295,
-					47296
+					18499
 				],
-				"maxPoints": 3
+				"maxPoints": 1,
+				"customName": "Unbroken Rage",
+				"customDescription": [
+					"Damage that would take you below 35% health, or damage taken while you are at 35% health or below, is reduced by 20%."
+				]
 			},
 			{
 				"fieldName": "swordAndBoard",
@@ -1112,7 +1179,12 @@
 					58872,
 					58874
 				],
-				"maxPoints": 2
+				"maxPoints": 2,
+				"customName": "Damage Shield",
+				"customDescription": [
+					"Whenever you take damage from or block a melee attack, you cause damage equal to 15% of your block value.",
+					"Whenever you take damage from or block a melee attack, you cause damage equal to 30% of your block value."
+				]
 			},
 			{
 				"fieldName": "shockwave",

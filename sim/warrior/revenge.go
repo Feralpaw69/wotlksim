@@ -68,7 +68,7 @@ func (warrior *Warrior) registerRevengeSpell(cdTimer *core.Timer) {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
 
 		RageCost: core.RageCostOptions{
-			Cost:   5 - float64(warrior.Talents.FocusedRage),
+			Cost:   5,
 			Refund: 0.8,
 		},
 		Cast: core.CastConfig{

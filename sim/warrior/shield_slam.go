@@ -31,7 +31,7 @@ func (warrior *Warrior) registerShieldSlamSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
 
 		RageCost: core.RageCostOptions{
-			Cost:   20 - float64(warrior.Talents.FocusedRage),
+			Cost:   20,
 			Refund: 0.8,
 		},
 		Cast: core.CastConfig{
@@ -48,7 +48,7 @@ func (warrior *Warrior) registerShieldSlamSpell() {
 			return warrior.PseudoStats.CanBlock
 		},
 
-		BonusCritRating: 5 * core.CritRatingPerCritChance * float64(warrior.Talents.CriticalBlock),
+		BonusCritRating: 15 * core.CritRatingPerCritChance, // wotlksim: Critical Block rank 3 is baseline
 		DamageMultiplier: 1 +
 			.05*float64(warrior.Talents.GagOrder) +
 			core.TernaryFloat64(warrior.HasSetBonus(ItemSetOnslaughtArmor, 4), .10, 0) +

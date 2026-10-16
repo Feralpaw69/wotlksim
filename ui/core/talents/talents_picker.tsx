@@ -377,6 +377,15 @@ class TalentPicker<TalentsProto> extends Component {
 		this.pointsDisplay.classList.add('talent-picker-points');
 		this.rootElem.appendChild(this.pointsDisplay);
 
+		// wotlksim: talents changed on the server get our own tooltip instead of Wowhead's.
+		if (this.config.customDescription) {
+			new Tooltip(this.rootElem, {
+				html: true,
+				placement: 'right',
+				title: () => this.customTooltipHtml(),
+			});
+		}
+
 		this.rootElem.addEventListener('click', event => {
 			event.preventDefault();
 		});
@@ -538,9 +547,25 @@ class TalentPicker<TalentsProto> extends Component {
 
 		const spellId = this.getSpellIdForPoints(newPoints);
 		ActionId.fromSpellId(spellId).fill().then(actionId => {
-			actionId.setWowheadHref(this.rootElem as HTMLAnchorElement);
+			if (!this.config.customDescription) {
+				actionId.setWowheadHref(this.rootElem as HTMLAnchorElement);
+			}
 			this.rootElem.style.backgroundImage = `url('${actionId.iconUrl}')`;
 		});
+	}
+
+	private customTooltipHtml(): string {
+		const descriptions = this.config.customDescription!;
+		const points = this.getPoints();
+		const rankIdx = Math.min(Math.max(points, 1), descriptions.length) - 1;
+		const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		let html = `<div class="text-start"><b>${escape(this.config.customName || String(this.config.fieldName))}</b>`;
+		html += `<div>Rank ${points}/${this.config.maxPoints}</div>`;
+		html += `<div class="mt-1">${escape(descriptions[rankIdx])}</div>`;
+		if (points > 0 && points < this.config.maxPoints && descriptions.length > rankIdx + 1) {
+			html += `<div class="mt-2">Next rank:</div><div>${escape(descriptions[rankIdx + 1])}</div>`;
+		}
+		return html + '</div>';
 	}
 
 	getSpellIdForPoints(numPoints: number): number {
@@ -599,6 +624,12 @@ export type TalentConfig<TalentsProto> = {
 	spellIds: Array<number>;
 
 	maxPoints: number;
+
+	// wotlksim: name and per-rank description for talents that differ from Wowhead.
+	// When set, our own tooltip is shown instead of the Wowhead one. If fewer
+	// descriptions than ranks are given, the last one is used for the rest.
+	customName?: string;
+	customDescription?: Array<string>;
 };
 
 export function newTalentsConfig<TalentsProto>(talents: TalentsConfig<TalentsProto>): TalentsConfig<TalentsProto> {

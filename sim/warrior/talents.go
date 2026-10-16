@@ -34,13 +34,14 @@ func (warrior *Warrior) ApplyTalents() {
 
 	// Shield Mastery, Shield Block, Glyph of Blocking, Eternal Earthsiege treated as additive sources
 	if warrior.Talents.ShieldMastery > 0 {
-		warrior.PseudoStats.BlockValueMultiplier += 0.15 * float64(warrior.Talents.ShieldMastery)
+		warrior.PseudoStats.BlockValueMultiplier += 0.20 * float64(warrior.Talents.ShieldMastery) // wotlksim: 20/40%
 	}
 
 	if warrior.Talents.Vitality > 0 {
-		warrior.MultiplyStat(stats.Stamina, 1.0+0.03*float64(warrior.Talents.Vitality))
-		warrior.MultiplyStat(stats.Strength, 1.0+0.02*float64(warrior.Talents.Vitality))
-		warrior.AddStat(stats.Expertise, core.ExpertisePerQuarterPercentReduction*2*float64(warrior.Talents.Vitality))
+		// wotlksim: Strength 3/6/9%, Stamina 6/9/12%, Expertise 3/6/9.
+		warrior.MultiplyStat(stats.Stamina, 1.0+[]float64{0, 0.06, 0.09, 0.12}[warrior.Talents.Vitality])
+		warrior.MultiplyStat(stats.Strength, 1.0+0.03*float64(warrior.Talents.Vitality))
+		warrior.AddStat(stats.Expertise, core.ExpertisePerQuarterPercentReduction*3*float64(warrior.Talents.Vitality))
 	}
 
 	warrior.applyAngerManagement()
@@ -55,6 +56,8 @@ func (warrior *Warrior) ApplyTalents() {
 	warrior.applyFlurry()
 	warrior.applyWreckingCrew()
 	warrior.applyShieldSpecialization()
+	warrior.applyPainkiller()
+	warrior.applyUnbrokenRage()
 	warrior.registerDeathWishCD()
 	warrior.registerSweepingStrikesCD()
 	warrior.registerLastStandCD()
@@ -69,7 +72,8 @@ func (warrior *Warrior) ApplyTalents() {
 
 // Multiplicative with all other modifiers and only applies to the block damage event
 func (warrior *Warrior) applyCriticalBlock() {
-	if warrior.Talents.CriticalBlock == 0 {
+	// wotlksim: Critical Block is no longer a talent; it is trained at level 80 (rank 3).
+	if !warrior.PseudoStats.CanBlock {
 		return
 	}
 
@@ -80,7 +84,7 @@ func (warrior *Warrior) applyCriticalBlock() {
 
 	warrior.AddDynamicDamageTakenModifier(func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 		if result.Outcome.Matches(core.OutcomeBlock) && !result.Outcome.Matches(core.OutcomeMiss) && !result.Outcome.Matches(core.OutcomeParry) && !result.Outcome.Matches(core.OutcomeDodge) {
-			procChance := 0.2 * float64(warrior.Talents.CriticalBlock)
+			procChance := 0.6
 			if sim.RandomFloat("Critical Block Roll") <= procChance {
 				blockValue := warrior.BlockValue()
 				result.Damage = max(0, result.Damage-blockValue)
@@ -95,7 +99,7 @@ func (warrior *Warrior) applyDamageShield() {
 		return
 	}
 
-	coeff := 0.1 * float64(warrior.Talents.DamageShield)
+	coeff := 0.15 * float64(warrior.Talents.DamageShield) // wotlksim: 15/30%
 	damageShieldProcSpell := warrior.GetOrRegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 58874},
 		SpellSchool: core.SpellSchoolPhysical,
@@ -360,7 +364,25 @@ func (warrior *Warrior) applyTitansGrip() {
 		return
 	}
 
-	warrior.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] *= 1 - 0.1
+	// wotlksim: no penalty in Tier 7 (phase 1), 5% in patch 3.1 (phase 2), 10% from 3.2 (phase 3+).
+	var penalty float64
+	core.MakePermanent(warrior.RegisterAura(core.Aura{
+		Label: "Titan's Grip Penalty",
+		OnGain: func(aura *core.Aura, sim *core.Simulation) {
+			switch phase := sim.Options.Phase; {
+			case phase == 1:
+				penalty = 0
+			case phase == 2:
+				penalty = 0.05
+			default:
+				penalty = 0.1
+			}
+			aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] *= 1 - penalty
+		},
+		OnExpire: func(aura *core.Aura, sim *core.Simulation) {
+			aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] /= 1 - penalty
+		},
+	}))
 }
 
 func (warrior *Warrior) applyTwoHandedWeaponSpecialization() {
@@ -662,10 +684,11 @@ func (warrior *Warrior) applyShieldSpecialization() {
 		return
 	}
 
-	warrior.AddStat(stats.Block, core.BlockRatingPerBlockChance*1*float64(warrior.Talents.ShieldSpecialization))
+	// wotlksim: 3/4/5/6/7% block, 20-100% chance for 7 Rage.
+	warrior.AddStat(stats.Block, core.BlockRatingPerBlockChance*float64(2+warrior.Talents.ShieldSpecialization))
 
 	procChance := 0.2 * float64(warrior.Talents.ShieldSpecialization)
-	rageAdded := float64(warrior.Talents.ShieldSpecialization)
+	rageAdded := 7.0
 	rageMetrics := warrior.NewRageMetrics(core.ActionID{SpellID: 12727})
 
 	warrior.RegisterAura(core.Aura{
@@ -808,7 +831,7 @@ func (warrior *Warrior) RegisterBladestormCD() {
 		Flags:       core.SpellFlagChanneled | core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
 
 		RageCost: core.RageCostOptions{
-			Cost: 25 - float64(warrior.Talents.FocusedRage),
+			Cost: 25,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

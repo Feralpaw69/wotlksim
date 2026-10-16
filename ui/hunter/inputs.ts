@@ -82,8 +82,8 @@ export const HunterRotationConfig = {
 		}),
 		InputHelpers.makeRotationBooleanInput<Spec.SpecHunter>({
 			fieldName: 'trapWeave',
-			label: 'Trap Weave',
-			labelTooltip: 'Uses Explosive Trap at appropriate times. Note that selecting this will disable Black Arrow because they share a CD.',
+			label: 'Explosive Trap',
+			labelTooltip: 'Uses Explosive Trap via Trap Launcher at appropriate times. The trap is thrown from range, so you never stop auto shots. Note that selecting this will disable Black Arrow because they share a CD.',
 		}),
 		InputHelpers.makeRotationBooleanInput<Spec.SpecHunter>({
 			fieldName: 'allowExplosiveShotDownrank',

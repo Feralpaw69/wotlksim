@@ -47,7 +47,7 @@ export const ROTATION_PRESET_SIMPLE = PresetUtils.makePresetSimpleRotation('Simp
 export const StandardTalents = {
 	name: 'Standard',
 	data: SavedTalents.create({
-		talentsString: '2500030023-302-053351225000012521030113321',
+		talentsString: '2500030023-302-0533521225000012521030111321',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfBlocking,
 			major2: WarriorMajorGlyph.GlyphOfVigilance,
@@ -62,7 +62,7 @@ export const StandardTalents = {
 export const UATalents = {
 	name: 'UA',
 	data: SavedTalents.create({
-		talentsString: '35023301230051002020120002-2-05035122500000252',
+		talentsString: '35023301230051002020120002-2-050350122500000252',
 		glyphs: Glyphs.create({
 			major1: WarriorMajorGlyph.GlyphOfRevenge,
 			major2: WarriorMajorGlyph.GlyphOfHeroicStrike,

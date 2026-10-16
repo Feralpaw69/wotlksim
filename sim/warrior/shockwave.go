@@ -19,7 +19,7 @@ func (warrior *Warrior) registerShockwaveSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
 
 		RageCost: core.RageCostOptions{
-			Cost: 15 - float64(warrior.Talents.FocusedRage),
+			Cost: 15,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

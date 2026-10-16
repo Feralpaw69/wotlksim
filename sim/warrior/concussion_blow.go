@@ -18,7 +18,7 @@ func (warrior *Warrior) registerConcussionBlowSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
 
 		RageCost: core.RageCostOptions{
-			Cost:   15 - float64(warrior.Talents.FocusedRage),
+			Cost:   15,
 			Refund: 0.8,
 		},
 		Cast: core.CastConfig{
@@ -37,7 +37,8 @@ func (warrior *Warrior) registerConcussionBlowSpell() {
 		ThreatMultiplier: 2,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := 0.38 * spell.MeleeAttackPower()
+			// wotlksim: +600% against targets permanently immune to stuns (bosses).
+			baseDamage := 0.38 * spell.MeleeAttackPower() * 7
 			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
 
 			if !result.Landed() {

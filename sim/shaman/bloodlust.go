@@ -41,7 +41,7 @@ func (shaman *Shaman) registerBloodlustCD() {
 		ExtraCastCondition: func(sim *core.Simulation, target *core.Unit) bool {
 			// Only cast if there is a player missing Sated.
 			for _, playerUnit := range shaman.Env.Raid.AllPlayerUnits {
-				if !playerUnit.HasActiveAura(core.SatedAuraLabel) {
+				if !core.HasHasteLockout(playerUnit) {
 					return true
 				}
 			}
@@ -52,7 +52,7 @@ func (shaman *Shaman) registerBloodlustCD() {
 			for _, blAura := range blAuras {
 				target := blAura.Unit
 				// Only activate bloodlust on units without sated.
-				if !target.HasActiveAura(core.SatedAuraLabel) {
+				if !core.HasHasteLockout(target) {
 					blAura.Activate(sim)
 				}
 			}

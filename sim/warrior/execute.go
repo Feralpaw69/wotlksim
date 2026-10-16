@@ -22,7 +22,6 @@ func (warrior *Warrior) registerExecuteSpell() {
 
 		RageCost: core.RageCostOptions{
 			Cost: 15 -
-				float64(warrior.Talents.FocusedRage) -
 				[]float64{0, 2, 5}[warrior.Talents.ImprovedExecute] -
 				core.TernaryFloat64(warrior.HasSetBonus(ItemSetOnslaughtBattlegear, 2), 3, 0),
 			Refund: 0.8,

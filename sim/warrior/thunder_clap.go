@@ -8,6 +8,7 @@ import (
 )
 
 func (warrior *Warrior) registerThunderClapSpell() {
+	bloodAndThunderChance := 0.5 * float64(warrior.Talents.BloodAndThunder)
 	warrior.ThunderClapAuras = warrior.NewEnemyAuraArray(func(target *core.Unit) *core.Aura {
 		return core.ThunderClapAura(target, warrior.Talents.ImprovedThunderClap)
 	})
@@ -20,7 +21,6 @@ func (warrior *Warrior) registerThunderClapSpell() {
 
 		RageCost: core.RageCostOptions{
 			Cost: 20 -
-				float64(warrior.Talents.FocusedRage) -
 				[]float64{0, 1, 2, 4}[warrior.Talents.ImprovedThunderClap] -
 				core.TernaryFloat64(warrior.HasMajorGlyph(proto.WarriorMajorGlyph_GlyphOfResonatingPower), 5, 0),
 		},
@@ -52,6 +52,10 @@ func (warrior *Warrior) registerThunderClapSpell() {
 				result := spell.CalcAndDealDamage(sim, aoeTarget, baseDamage, spell.OutcomeRangedHitAndCrit)
 				if result.Landed() {
 					warrior.ThunderClapAuras.Get(aoeTarget).Activate(sim)
+					// wotlksim: Blood and Thunder spreads Rend to every target hit.
+					if bloodAndThunderChance > 0 && sim.Proc(bloodAndThunderChance, "Blood and Thunder") {
+						warrior.Rend.Dot(aoeTarget).Apply(sim)
+					}
 				}
 			}
 		},

@@ -230,7 +230,6 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecHunter, {
 	otherInputs: {
 		inputs: [
 			HunterInputs.PetUptime,
-			HunterInputs.TimeToTrapWeaveMs,
 			HunterInputs.SniperTrainingUptime,
 			OtherInputs.TankAssignment,
 			OtherInputs.InFrontOfTarget,

@@ -93,10 +93,10 @@ func (warrior *Warrior) registerDefensiveStanceAura() {
 			ActionID: core.ActionID{SpellID: 57516},
 			Duration: 12 * time.Second,
 			OnGain: func(aura *core.Aura, sim *core.Simulation) {
-				aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] *= 1.0 + 0.05*float64(warrior.Talents.ImprovedDefensiveStance)
+				aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] *= 1.10
 			},
 			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
-				aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] /= 1.0 + 0.05*float64(warrior.Talents.ImprovedDefensiveStance)
+				aura.Unit.PseudoStats.SchoolDamageDealtMultiplier[stats.SchoolIndexPhysical] /= 1.10
 			},
 		})
 
@@ -113,7 +113,7 @@ func (warrior *Warrior) registerDefensiveStanceAura() {
 		}))
 	}
 
-	impDefStanceMultiplier := 1 - 0.03*float64(warrior.Talents.ImprovedDefensiveStance)
+	impDefStanceMultiplier := 1 - 0.06*float64(warrior.Talents.ImprovedDefensiveStance) // wotlksim: 6/12%
 	tacMasteryThreatMultiplier := 1 + 0.21*float64(warrior.Talents.TacticalMastery)
 
 	warrior.DefensiveStanceAura = warrior.GetOrRegisterAura(core.Aura{

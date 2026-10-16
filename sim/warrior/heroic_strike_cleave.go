@@ -19,7 +19,7 @@ func (warrior *Warrior) registerHeroicStrikeSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagNoOnCastComplete | SpellFlagBloodsurge,
 
 		RageCost: core.RageCostOptions{
-			Cost:   15 - float64(warrior.Talents.ImprovedHeroicStrike) - float64(warrior.Talents.FocusedRage),
+			Cost:   15 - float64(warrior.Talents.ImprovedHeroicStrike),
 			Refund: 0.8,
 		},
 
@@ -65,7 +65,7 @@ func (warrior *Warrior) registerCleaveSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
 
 		RageCost: core.RageCostOptions{
-			Cost: 20 - float64(warrior.Talents.FocusedRage),
+			Cost: 20,
 		},
 
 		BonusCritRating:  float64(warrior.Talents.Incite) * 5 * core.CritRatingPerCritChance,

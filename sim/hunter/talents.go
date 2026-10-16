@@ -27,6 +27,8 @@ func (hunter *Hunter) ApplyTalents() {
 		hunter.pet.ApplyTalents()
 	}
 
+	hunter.applyAnimalHandlerManaRegen()
+
 	hunter.AddStat(stats.MeleeHit, core.MeleeHitRatingPerHitChance*1*float64(hunter.Talents.FocusedAim))
 	hunter.AddStat(stats.MeleeCrit, core.CritRatingPerCritChance*1*float64(hunter.Talents.KillerInstinct))
 	hunter.AddStat(stats.MeleeCrit, core.CritRatingPerCritChance*1*float64(hunter.Talents.MasterMarksman))
@@ -872,4 +874,25 @@ func (hunter *Hunter) registerReadinessCD() {
 			return !hunter.RapidFireAura.IsActive() || hunter.RapidFireAura.RemainingDuration(sim) < time.Second*10
 		},
 	})
+}
+
+// wotlksim: Animal Handler now also regenerates 1% of the hunter's maximum mana
+// (applied every 5 sec, like MP5).
+func (hunter *Hunter) applyAnimalHandlerManaRegen() {
+	if hunter.Talents.AnimalHandler == 0 {
+		return
+	}
+
+	manaMetrics := hunter.NewManaMetrics(core.ActionID{SpellID: 34453})
+	core.MakePermanent(hunter.RegisterAura(core.Aura{
+		Label: "Animal Handler Mana",
+		OnGain: func(aura *core.Aura, sim *core.Simulation) {
+			core.StartPeriodicAction(sim, core.PeriodicActionOptions{
+				Period: time.Second * 5,
+				OnAction: func(sim *core.Simulation) {
+					hunter.AddMana(sim, 0.01*hunter.MaxMana(), manaMetrics)
+				},
+			})
+		},
+	}))
 }

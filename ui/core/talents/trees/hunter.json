@@ -193,7 +193,12 @@
 					34453,
 					34454
 				],
-				"maxPoints": 2
+				"maxPoints": 2,
+				"customName": "Animal Handler",
+				"customDescription": [
+					"Increases your pet's attack power by 5% and the duration of the Master's Call effect by 3 sec. Also regenerates 1% of your mana.",
+					"Increases your pet's attack power by 10% and the duration of the Master's Call effect by 6 sec. Also regenerates 1% of your mana."
+				]
 			},
 			{
 				"fieldName": "frenzy",

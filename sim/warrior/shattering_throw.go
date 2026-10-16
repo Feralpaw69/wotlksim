@@ -18,7 +18,7 @@ func (warrior *Warrior) RegisterShatteringThrowCD() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		RageCost: core.RageCostOptions{
-			Cost: 25 - float64(warrior.Talents.FocusedRage),
+			Cost: 25,
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

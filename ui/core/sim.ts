@@ -203,6 +203,7 @@ export class Sim {
 				iterations: debug ? 1 : this.getIterations(),
 				randomSeed: BigInt(this.nextRngSeed()),
 				debugFirstIteration: true,
+				phase: this.getPhase(),
 			}),
 		});
 	}
@@ -360,6 +361,7 @@ export class Sim {
 					iterations: this.getIterations(),
 					randomSeed: BigInt(this.nextRngSeed()),
 					debug: false,
+					phase: this.getPhase(),
 				}),
 				tanks: tanks,
 

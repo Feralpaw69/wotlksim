@@ -89,8 +89,9 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 		},
 	})
 
-	timeToTrapWeave := time.Millisecond * time.Duration(hunter.Options.TimeToTrapWeaveMs)
-	halfWeaveTime := timeToTrapWeave / 2
+	// wotlksim: Trap Launcher. Explosive Trap is thrown from range like a normal
+	// spell, so the hunter no longer runs to the boss and stops auto shots.
+	// The "trap weave" APL action (tag 1) is kept so existing rotations still work.
 	hunter.TrapWeaveSpell = hunter.RegisterSpell(core.SpellConfig{
 		ActionID: hunter.ExplosiveTrap.ActionID.WithTag(1),
 		Flags:    core.SpellFlagNoOnCastComplete | core.SpellFlagNoMetrics | core.SpellFlagNoLogs | core.SpellFlagAPL,
@@ -100,38 +101,7 @@ func (hunter *Hunter) registerExplosiveTrapSpell(timer *core.Timer) {
 		},
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			if sim.CurrentTime < 0 {
-				hunter.mayMoveAt = sim.CurrentTime
-			}
-
-			// Assume we started running after the most recent ranged auto, so that time
-			// can be subtracted from the run in.
-			reachLocationAt := hunter.mayMoveAt + halfWeaveTime
-			layTrapAt := max(reachLocationAt, sim.CurrentTime)
-			doneAt := layTrapAt + halfWeaveTime
-
-			hunter.AutoAttacks.DelayRangedUntil(sim, doneAt+time.Millisecond*500)
-
-			if layTrapAt == sim.CurrentTime {
-				hunter.ExplosiveTrap.Cast(sim, target)
-				if doneAt > hunter.GCD.ReadyAt() {
-					hunter.GCD.Set(doneAt)
-				}
-			} else {
-				// Make sure the GCD doesn't get used while we're waiting.
-				hunter.WaitUntil(sim, doneAt)
-
-				core.StartDelayedAction(sim, core.DelayedActionOptions{
-					DoAt: layTrapAt,
-					OnAction: func(sim *core.Simulation) {
-						hunter.GCD.Reset()
-						hunter.ExplosiveTrap.Cast(sim, target)
-						if doneAt > hunter.GCD.ReadyAt() {
-							hunter.GCD.Set(doneAt)
-						}
-					},
-				})
-			}
+			hunter.ExplosiveTrap.Cast(sim, target)
 		},
 	})
 }
