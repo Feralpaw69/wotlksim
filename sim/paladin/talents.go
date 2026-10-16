@@ -693,6 +693,12 @@ func (paladin *Paladin) applyFanaticismDivineStormReset() {
 		return
 	}
 
+	// Dummy spell so every reset shows up in the results (cast count, timeline, logs).
+	resetSpell := paladin.RegisterSpell(core.SpellConfig{
+		ActionID: core.ActionID{SpellID: 31881}, // Fanaticism
+		Flags:    core.SpellFlagNoOnCastComplete,
+	})
+
 	core.MakeProcTriggerAura(&paladin.Unit, core.ProcTrigger{
 		Name:       "Fanaticism Divine Storm Reset",
 		Callback:   core.CallbackOnSpellHitDealt,
@@ -700,9 +706,12 @@ func (paladin *Paladin) applyFanaticismDivineStormReset() {
 		Outcome:    core.OutcomeLanded,
 		ProcChance: 0.2,
 		Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
-			if paladin.DivineStorm != nil {
-				paladin.DivineStorm.CD.Reset()
+			// Only counts when Divine Storm is actually on cooldown.
+			if paladin.DivineStorm == nil || paladin.DivineStorm.CD.IsReady(sim) {
+				return
 			}
+			paladin.DivineStorm.CD.Reset()
+			resetSpell.Cast(sim, nil)
 		},
 	})
 }
