@@ -28,14 +28,16 @@ func init() {
 	defer func() { core.AddEffectsToTest = true }()
 
 	// Armata Strigoi: 40% chance on white hits to bind a Forgotten Soul.
-	// At 4 souls they are released and trigger an instant weapon attack.
+	// At 4 souls they are released and trigger an instant weapon attack. That attack
+	// is an extra auto attack (white hit), so it triggers everything an auto attack
+	// does (e.g. Seal of Vengeance stacks and seal damage), except Armata itself.
 	armataEffect := func(agent core.Agent) {
 		character := agent.GetCharacter()
 
 		soulAttack := character.RegisterSpell(core.SpellConfig{
 			ActionID:    core.ActionID{ItemID: armataStrigoiID},
 			SpellSchool: core.SpellSchoolPhysical,
-			ProcMask:    core.ProcMaskMeleeMHSpecial,
+			ProcMask:    core.ProcMaskMeleeMHAuto,
 			Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage,
 
 			DamageMultiplier: 1,
@@ -44,7 +46,7 @@ func init() {
 
 			ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
 				baseDamage := spell.Unit.MHWeaponDamage(sim, spell.MeleeAttackPower()) + spell.BonusWeaponDamage()
-				spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeSpecialHitAndCrit)
+				spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMeleeWhite)
 			},
 		})
 
@@ -61,7 +63,10 @@ func init() {
 			ProcMask:   core.ProcMaskMeleeWhiteHit,
 			Outcome:    core.OutcomeLanded,
 			ProcChance: 0.40,
-			Handler: func(sim *core.Simulation, _ *core.Spell, result *core.SpellResult) {
+			Handler: func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
+				if spell == soulAttack {
+					return // the released souls don't bind new ones
+				}
 				souls.Activate(sim)
 				souls.AddStack(sim)
 				if souls.GetStacks() >= souls.MaxStacks {
