@@ -30,6 +30,11 @@ const (
 	Doomhammer2ID = 315008
 	Embersoul2ID  = 315010 // Upgrade level 2/2
 	Armata2ID     = 315004 // Upgrade level 2/2
+
+	// Atiesh (Whitemane) versions, copied from oomshroom's database.
+	AtieshPriestID = 132005
+	AtieshDruidID  = 132006
+	AtieshMageID   = 132007
 )
 
 func critRating(v float64) stats.Stats {
@@ -282,6 +287,63 @@ var CustomItems = []*proto.UIItem{
 		Ilvl:            258,
 		Phase:           1,
 		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshPriestID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 108, stats.Intellect: 128, stats.SpellPower: 550}, critRating(113), hasteRating(108)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 231,
+		WeaponDamageMax: 427,
+		WeaponSpeed:     2.1,
+		Ilvl:            232,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassPriest},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshDruidID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 108, stats.Intellect: 128, stats.SpellPower: 550}, critRating(113), hitRating(120)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 231,
+		WeaponDamageMax: 427,
+		WeaponSpeed:     2.1,
+		Ilvl:            232,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassDruid},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshMageID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 108, stats.Intellect: 128, stats.SpellPower: 550}, critRating(113), hasteRating(108)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 231,
+		WeaponDamageMax: 427,
+		WeaponSpeed:     2.1,
+		Ilvl:            232,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassMage},
 		Expansion:       proto.Expansion_ExpansionWotlk,
 	},
 }
