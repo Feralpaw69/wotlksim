@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Debuffs,
@@ -214,5 +215,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecElementalShaman, {
 export class ElementalShamanSimUI extends IndividualSimUI<Spec.SpecElementalShaman> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecElementalShaman>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

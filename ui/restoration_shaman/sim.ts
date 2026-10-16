@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Debuffs,
@@ -189,5 +190,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecRestorationShaman, {
 export class RestorationShamanSimUI extends IndividualSimUI<Spec.SpecRestorationShaman> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecRestorationShaman>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

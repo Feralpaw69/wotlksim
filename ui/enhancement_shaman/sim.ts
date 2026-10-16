@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Faction,
@@ -229,5 +230,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecEnhancementShaman, {
 export class EnhancementShamanSimUI extends IndividualSimUI<Spec.SpecEnhancementShaman> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecEnhancementShaman>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

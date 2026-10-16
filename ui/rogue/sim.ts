@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class, 
 	Debuffs,
@@ -402,6 +403,9 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecRogue, {
 export class RogueSimUI extends IndividualSimUI<Spec.SpecRogue> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecRogue>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 		this.player.changeEmitter.on((c) => {
 			const options = this.player.getSpecOptions()
 			const encounter = this.sim.encounter

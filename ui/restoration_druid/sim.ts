@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Faction,
@@ -157,5 +158,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecRestorationDruid, {
 export class RestorationDruidSimUI extends IndividualSimUI<Spec.SpecRestorationDruid> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecRestorationDruid>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

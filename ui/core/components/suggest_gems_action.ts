@@ -6,6 +6,8 @@ import { EquippedItem } from '../proto_utils/equipped_item.js';
 import { TypedEvent } from '../typed_event.js';
 import { Stats } from '../proto_utils/stats.js';
 import { GemColor, Stat, Profession, ItemSlot, Spec } from '../proto/common.js';
+import { UIGem as Gem } from '../proto/ui.js';
+import { gemMatchesSocket, isUnrestrictedGem } from '../proto_utils/gems.js';
 
 interface GemCapsData {
 	gemId: number
@@ -663,5 +665,148 @@ export class TankGemOptimizer extends GemOptimizer {
 	
 	allowGemInSocket(gemColor: GemColor, socketColor: GemColor, itemSlot: ItemSlot, item: EquippedItem): boolean {
 		return gemColor == GemColor.GemColorBlue;
+	}
+}
+
+/**
+ * wotlksim: generic "Suggest Gems" for every spec without a dedicated optimizer
+ * (casters, healers, tanks, rogue, enhancement, ...). It works only from the
+ * spec's EP weights, so it doesn't know about stat caps like hit cap:
+ *
+ * - Meta: keeps the currently socketed meta gem, otherwise uses the highest-EP one.
+ * - Each item: uses the best gem per socket, or the best gems matching the socket
+ *   colors when the socket bonus makes that worth more EP.
+ * - If the meta gem isn't active afterwards, the cheapest sockets are switched to the
+ *   colors it needs.
+ * - Jewelcrafters get their 3 best JC gems in the sockets where they gain the most EP.
+ */
+export class EPGemOptimizer {
+	private readonly player: Player<Spec>;
+	private readonly sim: Sim;
+
+	constructor(simUI: IndividualSimUI<any>) {
+		this.player = simUI.player;
+		this.sim = simUI.sim;
+		simUI.addAction('Suggest Gems', 'suggest-gems-action', async () => {
+			this.optimizeGems();
+		});
+	}
+
+	private gemEP(gem: Gem): number {
+		return this.player.computeGemEP(gem);
+	}
+
+	private bestGem(gems: Array<Gem>): Gem | null {
+		let best: Gem | null = null;
+		let bestEP = -Infinity;
+		for (const gem of gems) {
+			const ep = this.gemEP(gem);
+			if (ep > bestEP) {
+				bestEP = ep;
+				best = gem;
+			}
+		}
+		return best;
+	}
+
+	async optimizeGems() {
+		const phase = this.sim.getPhase();
+		const isBlacksmithing = this.player.isBlacksmithing();
+		const epWeights = this.player.getEpWeights();
+		const allGems = this.sim.db.getGems().filter(gem => gem.color != GemColor.GemColorMeta && isUnrestrictedGem(gem, phase));
+		const bestAny = this.bestGem(allGems);
+		if (!bestAny) {
+			return;
+		}
+		const bestMatching = (socketColor: GemColor) => this.bestGem(allGems.filter(gem => gemMatchesSocket(gem, socketColor))) ?? bestAny;
+
+		let gear = this.player.getGear();
+		const currentMeta = gear.getMetaGem();
+		gear = gear.withoutGems();
+
+		// Meta gem
+		const metaGem = currentMeta ?? this.bestGem(this.sim.db.getGems(GemColor.GemColorMeta).filter(gem => isUnrestrictedGem(gem, phase)));
+		if (metaGem) {
+			gear = gear.withMetaGem(metaGem);
+		}
+
+		// Regular sockets, item by item
+		const sockets: Array<{ slot: ItemSlot; idx: number; color: GemColor }> = [];
+		for (const slot of gear.getItemSlots()) {
+			const item = gear.getEquippedItem(slot);
+			if (!item) continue;
+
+			const colors = item.curSocketColors(isBlacksmithing);
+			const regular = colors.map((color, idx) => ({ color, idx })).filter(s => s.color != GemColor.GemColorMeta);
+			if (regular.length == 0) continue;
+
+			// The extra (blacksmithing / belt buckle) socket is prismatic and doesn't count for the bonus.
+			const bonusSockets = regular.filter(s => s.idx < item.item.gemSockets.length);
+			const anyEP = regular.length * this.gemEP(bestAny);
+			const matchEP = regular.reduce((total, s) => total + this.gemEP(s.idx < item.item.gemSockets.length ? bestMatching(s.color) : bestAny), 0)
+				+ (bonusSockets.length > 0 ? new Stats(item.item.socketBonus).computeEP(epWeights) : 0);
+			const matchBonus = matchEP > anyEP;
+
+			let updated = item;
+			for (const s of regular) {
+				const gem = matchBonus && s.idx < item.item.gemSockets.length ? bestMatching(s.color) : bestAny;
+				updated = updated.withGem(gem, s.idx);
+				sockets.push({ slot, idx: s.idx, color: s.color });
+			}
+			gear = gear.withEquippedItem(slot, updated, true);
+		}
+
+		// Activate the meta gem if needed, switching the sockets that lose the least EP.
+		if (metaGem) {
+			const colorsToTry = [GemColor.GemColorRed, GemColor.GemColorYellow, GemColor.GemColorBlue];
+			for (let guard = 0; guard < 6 && !gear.hasActiveMetaGem(isBlacksmithing); guard++) {
+				let bestSwap: { gear: Gear; loss: number } | null = null;
+				for (const color of colorsToTry) {
+					const candidate = this.bestGem(allGems.filter(gem => gemMatchesSocket(gem, color)));
+					if (!candidate) continue;
+					for (const s of sockets) {
+						const item = gear.getEquippedItem(s.slot);
+						const current = item?.gems[s.idx];
+						if (!item || !current || current.id == candidate.id) continue;
+						const loss = this.gemEP(current) - this.gemEP(candidate);
+						const testGear = gear.withEquippedItem(s.slot, item.withGem(candidate, s.idx), true);
+						const helps = testGear.hasActiveMetaGem(isBlacksmithing) ? loss - 1e6 : loss;
+						if (!bestSwap || helps < bestSwap.loss) {
+							bestSwap = { gear: testGear, loss: helps };
+						}
+					}
+				}
+				if (!bestSwap) break;
+				gear = bestSwap.gear;
+			}
+		}
+
+		// Jewelcrafting gems (max 3)
+		if (this.player.hasProfession(Profession.Jewelcrafting)) {
+			const jcGems = this.sim.db.getGems().filter(gem => gem.requiredProfession == Profession.Jewelcrafting && gem.phase <= phase && gem.color != GemColor.GemColorMeta);
+			for (let n = 0; n < 3; n++) {
+				let best: { slot: ItemSlot; idx: number; gem: Gem; gain: number } | null = null;
+				for (const s of sockets) {
+					const item = gear.getEquippedItem(s.slot);
+					const current = item?.gems[s.idx];
+					if (!item || !current || current.requiredProfession == Profession.Jewelcrafting) continue;
+					const keepsBonus = !gemMatchesSocket(current, s.color);
+					for (const jc of jcGems) {
+						if (!keepsBonus && !gemMatchesSocket(jc, s.color)) continue;
+						const gain = this.gemEP(jc) - this.gemEP(current);
+						if (gain > 0 && (!best || gain > best.gain)) {
+							best = { slot: s.slot, idx: s.idx, gem: jc, gain };
+						}
+					}
+				}
+				if (!best) break;
+				const item = gear.getEquippedItem(best.slot)!;
+				const testGear = gear.withEquippedItem(best.slot, item.withGem(best.gem, best.idx), true);
+				if (metaGem && !testGear.hasActiveMetaGem(isBlacksmithing)) break;
+				gear = testGear;
+			}
+		}
+
+		this.player.setGear(TypedEvent.nextEventID(), gear);
 	}
 }

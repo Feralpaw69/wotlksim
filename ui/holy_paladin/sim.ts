@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Debuffs,
@@ -197,5 +198,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecHolyPaladin, {
 export class HolyPaladinSimUI extends IndividualSimUI<Spec.SpecHolyPaladin> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecHolyPaladin>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

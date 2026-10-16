@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {Class, Cooldowns, Debuffs, Faction, IndividualBuffs, PartyBuffs, Race, RaidBuffs, Spec, Stat, TristateEffect} from '../core/proto/common.js';
 import {APLAction, APLListItem, APLPrepullAction, APLRotation} from '../core/proto/apl.js';
 import {Stats} from '../core/proto_utils/stats.js';
@@ -392,5 +393,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecMage, {
 export class MageSimUI extends IndividualSimUI<Spec.SpecMage> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecMage>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }

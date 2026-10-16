@@ -1,3 +1,4 @@
+import { EPGemOptimizer } from '../core/components/suggest_gems_action.js';
 import {
 	Class,
 	Debuffs,
@@ -316,5 +317,8 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecDeathknight, {
 export class DeathknightSimUI extends IndividualSimUI<Spec.SpecDeathknight> {
 	constructor(parentElem: HTMLElement, player: Player<Spec.SpecDeathknight>) {
 		super(parentElem, player, SPEC_CONFIG);
+
+		// wotlksim: generic EP-based "Suggest Gems" button
+		new EPGemOptimizer(this);
 	}
 }
