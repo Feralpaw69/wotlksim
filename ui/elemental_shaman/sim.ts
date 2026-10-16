@@ -217,6 +217,6 @@ export class ElementalShamanSimUI extends IndividualSimUI<Spec.SpecElementalSham
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button, respecting the 17% spell hit cap
-		new EPGemOptimizer(this, { spellHitCapPercent: 17, extraHitPercent: player => player.getTalents().elementalPrecision });
+		new EPGemOptimizer(this, { spellHitCapPercent: 17, extraHitPercent: () => this.player.getTalents().elementalPrecision });
 	}
 }

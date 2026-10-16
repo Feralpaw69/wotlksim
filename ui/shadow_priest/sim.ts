@@ -195,6 +195,6 @@ export class ShadowPriestSimUI extends IndividualSimUI<Spec.SpecShadowPriest> {
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button, respecting the 17% spell hit cap
-		new EPGemOptimizer(this, { spellHitCapPercent: 17, extraHitPercent: player => player.getTalents().shadowFocus });
+		new EPGemOptimizer(this, { spellHitCapPercent: 17, extraHitPercent: () => this.player.getTalents().shadowFocus });
 	}
 }
