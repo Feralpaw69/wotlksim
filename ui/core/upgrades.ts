@@ -11,6 +11,9 @@ const UPGRADE_CHAINS: Array<Array<number>> = [
 	[131004, 315008], // Doomhammer
 	[128858, 315010], // Embersoul, Scythe of the Cat God 1/2, 2/2
 	[130031, 315004], // Armata Strigoi 1/2, 2/2
+	[132005, 315015], // Atiesh (Priest) 1/2, 2/2
+	[132006, 315016], // Atiesh (Druid) 1/2, 2/2
+	[132007, 315003], // Atiesh (Mage) 1/2, 2/2
 ];
 
 export function getUpgradeChain(itemId: number, hasItem: (id: number) => boolean): Array<number> {

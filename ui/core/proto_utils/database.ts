@@ -1,4 +1,5 @@
 import { registerItemLookup } from '../custom_tooltips.js';
+import { HIDDEN_ITEM_IDS } from '../hidden_items.js';
 import {
 	EquipmentSpec,
 	GemColor,
@@ -100,7 +101,7 @@ export class Database {
 
 	// Add all data from the db proto into this database.
 	private loadProto(db: UIDatabase) {
-		db.items.forEach(item => this.items.set(item.id, item));
+		db.items.filter(item => !HIDDEN_ITEM_IDS.has(item.id)).forEach(item => this.items.set(item.id, item));
 		db.enchants.forEach(enchant => {
 			const slots = getEligibleEnchantSlots(enchant);
 			slots.forEach(slot => {

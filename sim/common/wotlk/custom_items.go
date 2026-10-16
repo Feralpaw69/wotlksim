@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/wowsims/wotlk/sim/core"
+	"github.com/wowsims/wotlk/sim/core/stats"
 )
 
 const (
@@ -125,6 +126,28 @@ func init() {
 	}
 	core.NewItemEffect(stormcoil2ID, stormcoilEffect(stormcoil2ID))
 	core.NewItemEffect(stormcoil3ID, stormcoilEffect(stormcoil3ID))
+
+	// Atiesh, Greatstaff of the Guardian (Whitemane, all class versions and upgrades):
+	// offensive spells have a chance on hit to increase spell power by 285 for 10 sec.
+	// The tooltip gives no chance or cooldown; 10% with a 45 sec cooldown is assumed.
+	for _, atieshID := range []int32{132005, 132006, 132007, 130024, 315015, 315016, 315003} {
+		itemID := atieshID
+		core.NewItemEffect(itemID, func(agent core.Agent) {
+			character := agent.GetCharacter()
+			buff := character.NewTemporaryStatsAura("Atiesh", core.ActionID{ItemID: itemID}, stats.Stats{stats.SpellPower: 285}, time.Second*10)
+			core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
+				Name:       "Atiesh Trigger",
+				Callback:   core.CallbackOnSpellHitDealt,
+				ProcMask:   core.ProcMaskSpellDamage,
+				Outcome:    core.OutcomeLanded,
+				ProcChance: 0.10,
+				ICD:        time.Second * 45,
+				Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
+					buff.Activate(sim)
+				},
+			})
+		})
+	}
 
 	// Nargaroth, Warden of the Dark Tower: 10% chance on hit (1 min ICD).
 	// For 8 sec: 10% less damage taken and 1200 Fire damage to nearby enemies

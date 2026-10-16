@@ -32,9 +32,14 @@ const (
 	Armata2ID     = 315004 // Upgrade level 2/2
 
 	// Atiesh (Whitemane) versions, copied from oomshroom's database.
-	AtieshPriestID = 132005
-	AtieshDruidID  = 132006
-	AtieshMageID   = 132007
+	AtieshPriestID  = 132005
+	AtieshDruidID   = 132006
+	AtieshMageID    = 132007
+	AtieshWarlockID = 130024
+	// Upgraded (item level 258) versions
+	AtieshPriest2ID = 315015
+	AtieshDruid2ID  = 315016
+	AtieshMage2ID   = 315003
 )
 
 func critRating(v float64) stats.Stats {
@@ -344,6 +349,85 @@ var CustomItems = []*proto.UIItem{
 		Phase:           1,
 		Quality:         proto.ItemQuality_ItemQualityLegendary,
 		ClassAllowlist:  []proto.Class{proto.Class_ClassMage},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshWarlockID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 108, stats.Intellect: 128, stats.SpellPower: 550}, hitRating(120), hasteRating(108)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 231,
+		WeaponDamageMax: 427,
+		WeaponSpeed:     2.1,
+		Ilvl:            232,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassWarlock},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshMage2ID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 116, stats.Intellect: 137, stats.SpellPower: 701}, critRating(135), hasteRating(113)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 281,
+		WeaponDamageMax: 518,
+		WeaponSpeed:     2.1,
+		Ilvl:            258,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		Unique:          true,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassMage},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshPriest2ID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 153, stats.Intellect: 153, stats.SpellPower: 701}, critRating(135), hasteRating(113)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 281,
+		WeaponDamageMax: 518,
+		WeaponSpeed:     2.1,
+		Ilvl:            258,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		Unique:          true,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassPriest},
+		Expansion:       proto.Expansion_ExpansionWotlk,
+	},
+	{
+		Id:              AtieshDruid2ID,
+		Name:            "Atiesh, Greatstaff of the Guardian",
+		Icon:            "inv_staff_medivh",
+		Type:            proto.ItemType_ItemTypeWeapon,
+		WeaponType:      proto.WeaponType_WeaponTypeStaff,
+		HandType:        proto.HandType_HandTypeTwoHand,
+		Stats:           sum(stats.Stats{stats.Stamina: 153, stats.Intellect: 153, stats.SpellPower: 701}, hitRating(135), critRating(127)),
+		GemSockets:      []proto.GemColor{proto.GemColor_GemColorBlue, proto.GemColor_GemColorRed},
+		SocketBonus:     stats.Stats{stats.SpellPower: 7}.ToFloatArray(),
+		WeaponDamageMin: 281,
+		WeaponDamageMax: 518,
+		WeaponSpeed:     2.1,
+		Ilvl:            258,
+		Phase:           1,
+		Quality:         proto.ItemQuality_ItemQualityLegendary,
+		Unique:          true,
+		ClassAllowlist:  []proto.Class{proto.Class_ClassDruid},
 		Expansion:       proto.Expansion_ExpansionWotlk,
 	},
 }
