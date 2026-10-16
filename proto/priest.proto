@@ -125,6 +125,7 @@ enum PriestMajorGlyph {
 	GlyphOfShadowWordPain = 42406;
 	GlyphOfSmite = 42416;
 	GlyphOfSpiritOfRedemption = 42417;
+	GlyphOfQuickPain = 990001; // Custom (wotlksim): placeholder item ID
 }
 enum PriestMinorGlyph {
 	PriestMinorGlyphNone = 0;

@@ -44,7 +44,7 @@ func (druid *Druid) registerSavageRoarSpell() {
 		ActionID: actionID,
 		Flags:    core.SpellFlagAPL,
 		EnergyCost: core.EnergyCostOptions{
-			Cost: 25,
+			Cost: druid.finisherEnergyCost(25),
 		},
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{

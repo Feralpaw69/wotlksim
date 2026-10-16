@@ -16,6 +16,7 @@ import (
 	_ "github.com/wowsims/wotlk/sim/encounters" // Needed for preset encounters.
 	"github.com/wowsims/wotlk/tools"
 	"github.com/wowsims/wotlk/tools/database"
+	"google.golang.org/protobuf/encoding/protojson"
 )
 
 // To do a full re-scrape, delete the previous output file first.
@@ -26,6 +27,7 @@ import (
 // go run ./tools/database/gen_db -outDir=assets -gen=wotlk-items
 // go run ./tools/database/gen_db -outDir=assets -gen=wago-db2-items
 // go run ./tools/database/gen_db -outDir=assets -gen=db
+// go run ./tools/database/gen_db -outDir=assets -gen=custom   (wotlksim: merge custom items)
 
 var minId = flag.Int("minid", 1, "Minimum ID to scan for")
 var maxId = flag.Int("maxid", 57000, "Maximum ID to scan for")
@@ -59,6 +61,23 @@ func main() {
 		return
 	} else if *genAsset == "wago-db2-items" {
 		tools.WriteFile(fmt.Sprintf("%s/wago_db2_items.csv", inputsDir), tools.ReadWebRequired("https://wago.tools/db2/ItemSparse/csv?build=3.4.2.49311"))
+		return
+	} else if *genAsset == "custom" {
+		// Merge the fork's custom items (tools/database/custom_items.go) into the
+		// already generated database. Unlike -gen=db this needs no Wowhead inputs.
+		dbJsonPath := fmt.Sprintf("%s/db.json", dbDir)
+		dbJson := tools.ReadFile(dbJsonPath)
+		dbProto := &proto.UIDatabase{}
+		if err := protojson.Unmarshal([]byte(dbJson), dbProto); err != nil {
+			panic(err)
+		}
+		db := database.ReadDatabaseFromJson(dbJson)
+		db.Encounters = dbProto.Encounters
+		db.GlyphIDs = dbProto.GlyphIds
+		for _, item := range database.CustomItems {
+			db.Items[item.Id] = item
+		}
+		db.WriteBinaryAndJson(fmt.Sprintf("%s/db.bin", dbDir), dbJsonPath)
 		return
 	} else if *genAsset != "db" {
 		panic("Invalid gen value")

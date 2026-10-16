@@ -16,7 +16,7 @@ func (druid *Druid) registerFerociousBiteSpell() {
 		Flags:       core.SpellFlagMeleeMetrics | core.SpellFlagIncludeTargetBonusDamage | core.SpellFlagAPL,
 
 		EnergyCost: core.EnergyCostOptions{
-			Cost:          35,
+			Cost:          druid.finisherEnergyCost(35),
 			Refund:        0.4 * float64(druid.Talents.PrimalPrecision),
 			RefundMetrics: druid.PrimalPrecisionRecoveryMetrics,
 		},

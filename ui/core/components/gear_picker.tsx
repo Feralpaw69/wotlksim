@@ -382,6 +382,7 @@ export enum SelectorModalTabs {
 	Gem1 = 'Gem1',
 	Gem2 = 'Gem2',
 	Gem3 = 'Gem3',
+	Upgrade = 'Upgrade',
 }
 
 interface SelectorModalConfig {
@@ -484,6 +485,7 @@ export class SelectorModal extends BaseModal {
 			eventID => {
 				gearData.equipItem(eventID, null);
 				this.removeTabs('Gem');
+				this.removeTabs('Upgrade');
 			},
 		);
 
@@ -516,6 +518,7 @@ export class SelectorModal extends BaseModal {
 		);
 
 		this.addGemTabs(slot, equippedItem, gearData);
+		this.addUpgradeTab(slot, equippedItem, gearData);
 	}
 
 	protected override onShow(e: Event) {
@@ -601,6 +604,44 @@ export class SelectorModal extends BaseModal {
 		});
 	}
 
+	// wotlksim: "Upgrade" tab, placed after the gem tabs. For now it lists a copy of
+	// the item currently in this slot, as a placeholder for upgraded versions.
+	private addUpgradeTab(slot: ItemSlot, equippedItem: EquippedItem | null, gearData: GearData) {
+		if (equippedItem == undefined) {
+			return;
+		}
+
+		const upgrades: Array<Item> = [equippedItem.item];
+		this.addTab<Item>(
+			'Upgrade',
+			upgrades.map(item => {
+				return {
+					item: item,
+					id: item.id,
+					actionId: ActionId.fromItem(item),
+					name: item.name,
+					quality: item.quality,
+					heroic: item.heroic,
+					phase: item.phase,
+					baseEP: this.player.computeItemEP(item, slot),
+					ignoreEPFilter: true,
+					onEquip: (eventID, item: Item) => {
+						const equippedItem = gearData.getEquippedItem();
+						if (equippedItem) {
+							gearData.equipItem(eventID, equippedItem.withItem(item));
+						} else {
+							gearData.equipItem(eventID, new EquippedItem(item));
+						}
+					},
+				};
+			}),
+			item => this.player.computeItemEP(item, slot),
+			equippedItem => equippedItem?.item,
+			GemColor.GemColorUnknown,
+			_eventID => {},
+		);
+	}
+
 	/**
 	 * Adds one of the tabs for the item selector menu.
 	 *
@@ -673,7 +714,9 @@ export class SelectorModal extends BaseModal {
 				// If the item changes, the gem slots might change, so remove and recreate the gem tabs
 				if (Item.is(item)) {
 					this.removeTabs('Gem');
+					this.removeTabs('Upgrade');
 					this.addGemTabs(slot, gearData.getEquippedItem(), gearData);
+					this.addUpgradeTab(slot, gearData.getEquippedItem(), gearData);
 				}
 			},
 		);
@@ -913,7 +956,9 @@ export class ItemList<T> {
 			onRemove(TypedEvent.nextEventID());
 		});
 
-		if (label.startsWith('Enchants')) {
+		if (label == 'Upgrade') {
+			removeButton.hidden = true;
+		} else if (label.startsWith('Enchants')) {
 			removeButton.textContent = 'Remove Enchant';
 		} else if (label.startsWith('Gem')) {
 			removeButton.textContent = 'Remove Gem';
@@ -1114,7 +1159,7 @@ export class ItemList<T> {
 			</li>
 		);
 
-		if (this.label == 'Items') {
+		if (this.label == 'Items' || this.label == 'Upgrade') {
 			listItemElem.appendChild(
 				<div className="selector-modal-list-item-source-container">{this.getSourceInfo(itemData.item as unknown as Item, this.player.sim)}</div>,
 			);

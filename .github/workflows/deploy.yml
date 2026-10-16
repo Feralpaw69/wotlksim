@@ -40,6 +40,9 @@ jobs:
         with:
           node-version: '19'
 
+      - name: Merge custom items
+        run: make custom-items
+
       - name: Build
         run: make dist/wotlk/.dirstamp
 

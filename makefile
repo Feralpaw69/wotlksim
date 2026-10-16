@@ -219,6 +219,11 @@ items: sim/core/items/all_items.go sim/core/proto/api.pb.go
 sim/core/items/all_items.go: $(call rwildcard,tools/database,*.go) $(call rwildcard,sim/core/proto,*.go)
 	go run tools/database/gen_db/*.go -outDir=./assets -gen=db
 
+.PHONY: custom-items
+# wotlksim: merge the custom items from tools/database/custom_items.go into assets/database
+custom-items: sim/core/proto/api.pb.go
+	go run tools/database/gen_db/*.go -outDir=./assets -gen=custom
+
 .PHONY: test
 test: $(OUT_DIR)/lib.wasm binary_dist/dist.go
 	go test --tags=with_db ./sim/...

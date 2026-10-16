@@ -81,6 +81,29 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 		core.TernaryFloat64(shaman.HasSetBonus(ItemSetWorldbreakerGarb, 2), 0.2, 0) -
 		0.1*float64(shaman.Talents.BoomingEchoes)
 
+	// wotlksim custom: Doomhammer. Flame Shock ticks have a 20% chance to reset
+	// Lava Burst's cooldown and make the next Lava Burst instant.
+	var doomhammerAura *core.Aura
+	if shaman.MainHand().ID == DoomhammerID {
+		doomhammerAura = shaman.RegisterAura(core.Aura{
+			Label:    "Doomhammer",
+			ActionID: core.ActionID{ItemID: DoomhammerID},
+			Duration: core.NeverExpires,
+			OnGain: func(aura *core.Aura, sim *core.Simulation) {
+				shaman.LavaBurst.CD.Reset()
+				shaman.LavaBurst.CastTimeMultiplier -= 1
+			},
+			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
+				shaman.LavaBurst.CastTimeMultiplier += 1
+			},
+			OnCastComplete: func(aura *core.Aura, sim *core.Simulation, spell *core.Spell) {
+				if spell == shaman.LavaBurst {
+					aura.Deactivate(sim)
+				}
+			},
+		})
+	}
+
 	config.Dot = core.DotConfig{
 		Aura: core.Aura{
 			Label: "FlameShock",
@@ -105,6 +128,13 @@ func (shaman *Shaman) registerFlameShockSpell(shockTimer *core.Timer) {
 		},
 		OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
 			dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeSnapshotCrit)
+			if doomhammerAura != nil && sim.RandomFloat("Doomhammer") < 0.2 {
+				if doomhammerAura.IsActive() {
+					shaman.LavaBurst.CD.Reset()
+				} else {
+					doomhammerAura.Activate(sim)
+				}
+			}
 		},
 	}
 

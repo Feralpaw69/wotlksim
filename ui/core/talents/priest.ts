@@ -134,6 +134,11 @@ export const priestGlyphsConfig: GlyphsConfig = {
 			description: 'The periodic damage ticks of your Shadow Word: Pain spell restore 1% of your base mana.',
 			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg',
 		},
+		[PriestMajorGlyph.GlyphOfQuickPain]: {
+			name: 'Glyph of Quick Pain',
+			description: 'Your haste now reduces the time between periodic damage ticks of your Shadow Word: Pain spell.',
+			iconUrl: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg',
+		},
 		[PriestMajorGlyph.GlyphOfSmite]: {
 			name: 'Glyph of Smite',
 			description: 'Your Smite spell inflicts an additional 20% damage against targets afflicted by Holy Fire.',
