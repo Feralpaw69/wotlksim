@@ -36,7 +36,7 @@ const CUSTOM_TOOLTIPS: Record<number, CustomTooltip> = {
 			green('Equip: Increases attack power by 177.'),
 			green('Equip: Improves critical strike rating by 98.'),
 			green('Equip: Increases your armor penetration rating by 92.'),
-			green('Equip: While equipped, all of your Cat Form finishing moves cost 18 less energy.'),
+			green('Equip: Your finishing moves restore 4 energy per combo point spent.'),
 		],
 	},
 	130031: {
