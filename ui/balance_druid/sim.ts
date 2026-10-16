@@ -178,6 +178,6 @@ export class BalanceDruidSimUI extends IndividualSimUI<Spec.SpecBalanceDruid> {
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button, respecting the 17% spell hit cap
-		new EPGemOptimizer(this, { spellHitCapPercent: 17 });
+		new EPGemOptimizer(this, { requiredStat: Stat.StatSpellPower, spellHitCapPercent: 17 });
 	}
 }

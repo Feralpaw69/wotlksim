@@ -7,7 +7,7 @@ import { TypedEvent } from '../typed_event.js';
 import { Stats } from '../proto_utils/stats.js';
 import { GemColor, Stat, Profession, ItemSlot, Spec, TristateEffect } from '../proto/common.js';
 import { UIGem as Gem } from '../proto/ui.js';
-import { gemMatchesSocket, isUnrestrictedGem } from '../proto_utils/gems.js';
+import { gemMatchesSocket, getMetaGemCondition, isUnrestrictedGem } from '../proto_utils/gems.js';
 import { SPELL_HIT_RATING_PER_HIT_CHANCE } from '../constants/mechanics.js';
 
 interface GemCapsData {
@@ -689,12 +689,15 @@ export class EPGemOptimizer {
 	// Spell hit % that isn't part of the character sheet stats (e.g. talents the sim
 	// applies per spell), so it isn't seen by the stat check below.
 	private readonly extraHitPercent: (player: Player<any>) => number;
+	// If set, only gems that give this stat are used (e.g. spell power for casters).
+	private readonly requiredStat: Stat | null;
 
-	constructor(simUI: IndividualSimUI<any>, options?: { spellHitCapPercent?: number; extraHitPercent?: (player: Player<any>) => number }) {
+	constructor(simUI: IndividualSimUI<any>, options?: { spellHitCapPercent?: number; extraHitPercent?: (player: Player<any>) => number; requiredStat?: Stat }) {
 		this.player = simUI.player;
 		this.sim = simUI.sim;
 		this.spellHitCapPercent = options?.spellHitCapPercent ?? 0;
 		this.extraHitPercent = options?.extraHitPercent ?? (() => 0);
+		this.requiredStat = options?.requiredStat ?? null;
 		simUI.addAction('Suggest Gems', 'suggest-gems-action', async () => {
 			this.optimizeGems();
 		});
@@ -721,7 +724,8 @@ export class EPGemOptimizer {
 		const phase = this.sim.getPhase();
 		const isBlacksmithing = this.player.isBlacksmithing();
 		const epWeights = this.player.getEpWeights();
-		const allGems = this.sim.db.getGems().filter(gem => gem.color != GemColor.GemColorMeta && isUnrestrictedGem(gem, phase));
+		const allGems = this.sim.db.getGems().filter(gem => gem.color != GemColor.GemColorMeta && isUnrestrictedGem(gem, phase)
+			&& (this.requiredStat == null || (gem.stats[this.requiredStat] || 0) > 0));
 		const bestAny = this.bestGem(allGems);
 		if (!bestAny) {
 			return;
@@ -764,23 +768,39 @@ export class EPGemOptimizer {
 			gear = gear.withEquippedItem(slot, updated, true);
 		}
 
-		// Activate the meta gem if needed, switching the sockets that lose the least EP.
+		// Activate the meta gem if needed. Each step makes the swap that brings the gear
+		// closest to the meta requirement (e.g. 2 blue gems), losing the least EP, and
+		// prefers gems that still match the socket color (e.g. purple in a blue socket).
 		if (metaGem) {
-			const colorsToTry = [GemColor.GemColorRed, GemColor.GemColorYellow, GemColor.GemColorBlue];
-			for (let guard = 0; guard < 6 && !gear.hasActiveMetaGem(isBlacksmithing); guard++) {
-				let bestSwap: { gear: Gear; loss: number } | null = null;
-				for (const color of colorsToTry) {
-					const candidate = this.bestGem(allGems.filter(gem => gemMatchesSocket(gem, color)));
-					if (!candidate) continue;
-					for (const s of sockets) {
-						const item = gear.getEquippedItem(s.slot);
-						const current = item?.gems[s.idx];
-						if (!item || !current || current.id == candidate.id) continue;
-						const loss = this.gemEP(current) - this.gemEP(candidate);
+			const condition = getMetaGemCondition(metaGem.id);
+			const deficit = (g: Gear) => {
+				const c = g.gemColorCounts(isBlacksmithing);
+				if (condition.isCompareColorCondition()) {
+					const count = (color: GemColor) => (color == GemColor.GemColorRed ? c.red : color == GemColor.GemColorYellow ? c.yellow : c.blue);
+					return Math.max(0, count(condition.compareColorLesser) + 1 - count(condition.compareColorGreater));
+				}
+				return Math.max(0, condition.minRed - c.red) + Math.max(0, condition.minYellow - c.yellow) + Math.max(0, condition.minBlue - c.blue);
+			};
+
+			for (let guard = 0; guard < 8 && !gear.hasActiveMetaGem(isBlacksmithing); guard++) {
+				const currentDeficit = deficit(gear);
+				let bestSwap: { gear: Gear; deficit: number; loss: number } | null = null;
+				for (const s of sockets) {
+					const item = gear.getEquippedItem(s.slot);
+					const current = item?.gems[s.idx];
+					if (!item || !current) continue;
+					const inBonusSocket = s.idx < item.item.gemSockets.length;
+					const currentMatched = inBonusSocket && gemMatchesSocket(current, s.color);
+					for (const candidate of allGems) {
+						if (candidate.id == current.id) continue;
 						const testGear = gear.withEquippedItem(s.slot, item.withGem(candidate, s.idx), true);
-						const helps = testGear.hasActiveMetaGem(isBlacksmithing) ? loss - 1e6 : loss;
-						if (!bestSwap || helps < bestSwap.loss) {
-							bestSwap = { gear: testGear, loss: helps };
+						const newDeficit = deficit(testGear);
+						if (newDeficit >= currentDeficit) continue;
+						// Losing the socket bonus counts as a loss too.
+						const bonusLost = currentMatched && !gemMatchesSocket(candidate, s.color) ? new Stats(item.item.socketBonus).computeEP(epWeights) : 0;
+						const loss = this.gemEP(current) - this.gemEP(candidate) + bonusLost;
+						if (!bestSwap || newDeficit < bestSwap.deficit || (newDeficit == bestSwap.deficit && loss < bestSwap.loss)) {
+							bestSwap = { gear: testGear, deficit: newDeficit, loss };
 						}
 					}
 				}
