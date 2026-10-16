@@ -20,6 +20,11 @@ type ApplyEffect func(Agent)
 type ApplyWeaponEffect func(Agent, proto.ItemSlot)
 
 var itemEffects = map[int32]ApplyEffect{}
+
+// wotlksim: lower item level versions of buffed items (e.g. Ulduar) use the original
+// item ID plus this offset, and share the original item's effect.
+const BaseVersionIDOffset = 10_000_000
+
 var weaponEffects = map[int32]ApplyWeaponEffect{}
 var enchantEffects = map[int32]ApplyEffect{}
 

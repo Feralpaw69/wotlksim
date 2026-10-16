@@ -269,6 +269,7 @@ func init() {
 		actionID := core.ActionID{ItemID: nightwingID}
 		const storedFraction = 0.21
 
+		stored := 0.0
 		unleash := character.RegisterSpell(core.SpellConfig{
 			ActionID:    actionID.WithTag(1),
 			SpellSchool: core.SpellSchoolShadow,
@@ -277,9 +278,12 @@ func init() {
 
 			DamageMultiplier: 1,
 			ThreatMultiplier: 1,
+
+			ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
+				spell.CalcAndDealDamage(sim, target, stored, spell.OutcomeAlwaysHit)
+			},
 		})
 
-		stored := 0.0
 		store := func(spell *core.Spell, result *core.SpellResult) {
 			if spell == unleash || result.Damage <= 0 {
 				return
@@ -304,19 +308,22 @@ func init() {
 			},
 			OnExpire: func(aura *core.Aura, sim *core.Simulation) {
 				if stored > 0 && character.CurrentTarget != nil {
-					unleash.CalcAndDealDamage(sim, character.CurrentTarget, stored, unleash.OutcomeAlwaysHit)
+					unleash.Cast(sim, character.CurrentTarget)
 				}
 				stored = 0
 			},
 		})
 
+		// "Offensive spell casts": any spell the player casts that isn't a heal.
+		// (Most shadow/affliction casts are DoTs or channels whose direct hit
+		// deals no damage, so a damage-on-hit trigger would almost never fire.)
 		core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
-			Name:       "Nightwing",
-			Callback:   core.CallbackOnSpellHitDealt,
-			ProcMask:   core.ProcMaskSpellDamage,
-			Harmful:    true,
-			ProcChance: 0.10,
-			ICD:        time.Second * 45,
+			Name:            "Nightwing",
+			Callback:        core.CallbackOnCastComplete,
+			SpellFlags:      core.SpellFlagAPL,
+			ProcMaskExclude: core.ProcMaskSpellHealing,
+			ProcChance:      0.10,
+			ICD:             time.Second * 45,
 			Handler: func(sim *core.Simulation, _ *core.Spell, _ *core.SpellResult) {
 				raven.Activate(sim)
 			},

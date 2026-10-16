@@ -612,7 +612,7 @@ export class SelectorModal extends BaseModal {
 			return;
 		}
 
-		const upgrades: Array<Item> = getUpgradeChain(equippedItem.item.id)
+		const upgrades: Array<Item> = getUpgradeChain(equippedItem.item.id, id => !!this.simUI.sim.db.lookupItemSpec(ItemSpec.create({ id })))
 			.map(id => (id == equippedItem.item.id ? equippedItem.item : this.simUI.sim.db.lookupItemSpec(ItemSpec.create({ id }))?.item))
 			.filter((item): item is Item => !!item)
 			.sort((a, b) => a.ilvl - b.ilvl);

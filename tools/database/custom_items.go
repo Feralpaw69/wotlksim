@@ -56,6 +56,10 @@ func sum(parts ...stats.Stats) []float64 {
 	return total.ToFloatArray()
 }
 
+// Lower item level versions of buffed items (e.g. Ulduar) use the original item ID
+// plus this offset. Keep in sync with core.BaseVersionIDOffset and ui/core/upgrades.ts.
+const BaseVersionIDOffset = 10_000_000
+
 var CustomItems = []*proto.UIItem{
 	{
 		Id:              EmbersoulID,

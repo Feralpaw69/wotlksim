@@ -308,6 +308,9 @@ func (character *Character) applyItemEffects(agent Agent) {
 	for slot, eq := range character.Equipment {
 		if applyItemEffect, ok := itemEffects[eq.ID]; ok {
 			applyItemEffect(agent)
+		} else if applyItemEffect, ok := itemEffects[eq.ID-BaseVersionIDOffset]; ok && eq.ID > BaseVersionIDOffset {
+			// wotlksim: lower item level versions share the effect of the original item.
+			applyItemEffect(agent)
 		}
 
 		for _, g := range eq.Gems {

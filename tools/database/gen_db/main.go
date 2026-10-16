@@ -77,6 +77,12 @@ func main() {
 		for _, item := range database.CustomItems {
 			db.Items[item.Id] = item
 		}
+		// Original (pre-buff) item level versions of the Ulduar items, taken from the
+		// unmodified wowsims database. IDs are offset by database.BaseVersionIDOffset.
+		baseVersions := database.ReadDatabaseFromJson(tools.ReadFile(fmt.Sprintf("%s/ulduar_base_items.json", inputsDir)))
+		for _, item := range baseVersions.Items {
+			db.Items[item.Id] = item
+		}
 		db.WriteBinaryAndJson(fmt.Sprintf("%s/db.bin", dbDir), dbJsonPath)
 		return
 	} else if *genAsset != "db" {
