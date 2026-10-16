@@ -10,6 +10,7 @@ import {
 import { Database } from './database.js';
 import { CHARACTER_LEVEL } from '../constants/mechanics.js';
 import { customItemUrl, hasCustomTooltip } from '../custom_tooltips.js';
+import { REPO_NAME } from '../constants/other.js';
 
 // If true uses wotlkdb.com, else uses wowhead.com.
 export const USE_WOTLK_DB = false;
@@ -600,6 +601,10 @@ export class ActionId {
 	}
 
 	private static makeIconUrl(iconLabel: string): string {
+		// wotlksim: icons for custom items ship with the site (assets/img/custom_items).
+		if (iconLabel.startsWith('wotlksim_')) {
+			return `/${REPO_NAME}/assets/img/custom_items/${iconLabel.substring('wotlksim_'.length)}.png`;
+		}
 		if (USE_WOTLK_DB) {
 			return `https://wotlkdb.com/static/images/wow/icons/large/${iconLabel}.jpg`;
 		} else {
