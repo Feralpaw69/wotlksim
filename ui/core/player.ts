@@ -1,4 +1,4 @@
-import { hasCustomTooltip } from './custom_tooltips.js';
+import { hasCustomTooltip, setCustomTooltipGems } from './custom_tooltips.js';
 import {
 	Class,
 	Consumes,
@@ -1095,6 +1095,7 @@ export class Player<SpecType extends Spec> {
 		// wotlksim: custom items use our own tooltip (see custom_tooltips.ts).
 		if (hasCustomTooltip(equippedItem.item.id)) {
 			elem.removeAttribute('data-wowhead');
+			setCustomTooltipGems(elem, equippedItem.curGems(this.hasProfession(Profession.Blacksmithing)).map(gem => (gem ? gem.id : 0)));
 			return;
 		}
 		const parts = [];

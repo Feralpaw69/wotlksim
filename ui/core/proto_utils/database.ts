@@ -117,7 +117,7 @@ export class Database {
 		db.encounters.forEach(encounter => this.presetEncounters.set(encounter.path, encounter));
 		db.encounters.map(e => e.targets).flat().forEach(target => this.presetTargets.set(target.path, target));
 
-		registerItemLookup(id => this.items.get(id));
+		registerItemLookup(id => this.items.get(id), id => this.gems.get(id));
 		db.items.forEach(item => this.itemIcons[item.id] = Promise.resolve(IconData.create({
 			id: item.id,
 			name: item.name,

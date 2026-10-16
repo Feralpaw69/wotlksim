@@ -10,10 +10,11 @@ type Line = string | [string, string]; // text, or [left, right]
 interface CustomTooltip {
 	name: string;
 	quality: 'legendary' | 'epic' | 'common';
-	lines: Array<Line | { text: string; color: 'green' | 'gray' | 'yellow' | 'blue' }>;
+	lines: Array<Line | { text: string; color: 'green' | 'gray' | 'yellow' | 'blue' } | { socket: string }>;
 }
 
-const gem = (color: string) => ({ text: `${color} Socket`, color: 'gray' as const });
+// A gem socket line: shows the socket icon, or the socketed gem when one is equipped.
+const gem = (color: string) => ({ socket: color });
 const green = (text: string) => ({ text, color: 'green' as const });
 
 const STORMCOIL_PROC =
@@ -387,10 +388,21 @@ interface ItemData {
 }
 
 let itemLookup: ((id: number) => ItemData | undefined) | null = null;
+let gemLookup: ((id: number) => { name: string; icon: string } | undefined) | null = null;
 
 // Called by the Database once items are loaded.
-export function registerItemLookup(lookup: (id: number) => ItemData | undefined) {
+export function registerItemLookup(lookup: (id: number) => ItemData | undefined, gems?: (id: number) => { name: string; icon: string } | undefined) {
 	itemLookup = lookup;
+	if (gems) gemLookup = gems;
+}
+
+// Equipped gems for a custom item link, stored on the link element.
+export function setCustomTooltipGems(elem: HTMLElement, gemIds: Array<number>) {
+	if (gemIds.some(id => id)) {
+		elem.dataset.wotlksimGems = gemIds.join(':');
+	} else {
+		delete elem.dataset.wotlksimGems;
+	}
 }
 
 export function hasCustomTooltip(itemId: number): boolean {
@@ -515,14 +527,25 @@ function escapeHtml(text: string): string {
 	return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function renderTooltip(tooltip: CustomTooltip): string {
+function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>): string {
 	let html = `<div style="color:${QUALITY_COLORS[tooltip.quality]};font-size:1.05em;font-weight:600">${escapeHtml(tooltip.name)}</div>`;
+	let socketIdx = 0;
 	for (const line of tooltip.lines) {
-		if (typeof line === 'string') {
+		if (typeof line === 'object' && !Array.isArray(line) && 'socket' in line) {
+			const gemData = gemIds[socketIdx] ? gemLookup?.(gemIds[socketIdx]) : undefined;
+			socketIdx++;
+			const iconStyle = 'width:14px;height:14px;vertical-align:-2px;margin-right:6px';
+			if (gemData) {
+				html += `<div><img src="https://wow.zamimg.com/images/wow/icons/small/${gemData.icon}.jpg" style="${iconStyle}">${escapeHtml(gemData.name)}</div>`;
+			} else {
+				const color = line.socket.toLowerCase();
+				html += `<div style="color:${LINE_COLORS.gray}"><img src="https://wow.zamimg.com/images/icons/socket-${color}.gif" style="${iconStyle}">${escapeHtml(line.socket)} Socket</div>`;
+			}
+		} else if (typeof line === 'string') {
 			html += `<div>${escapeHtml(line)}</div>`;
 		} else if (Array.isArray(line)) {
 			html += `<div style="display:flex;justify-content:space-between;gap:2em"><span>${escapeHtml(line[0])}</span><span>${escapeHtml(line[1])}</span></div>`;
-		} else {
+		} else if ('text' in line) {
 			html += `<div style="color:${LINE_COLORS[line.color]}">${escapeHtml(line.text)}</div>`;
 		}
 	}
@@ -583,7 +606,8 @@ function install() {
 		const tooltip = CUSTOM_TOOLTIPS[id] ?? buildGenericTooltip(id);
 		if (!tooltip) return;
 		const elem = getTooltipElem();
-		elem.innerHTML = renderTooltip(tooltip);
+		const gemIds = (anchor.dataset.wotlksimGems || '').split(':').map(Number);
+		elem.innerHTML = renderTooltip(tooltip, gemIds);
 		elem.style.display = 'block';
 		positionTooltip(elem, event);
 	});
