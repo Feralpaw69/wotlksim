@@ -249,6 +249,6 @@ export class RetributionPaladinSimUI extends IndividualSimUI<Spec.SpecRetributio
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button
-		new EPGemOptimizer(this);
+		new EPGemOptimizer(this, { requiredStat: Stat.StatStrength, meleeHitCapPercent: 8 });
 	}
 }

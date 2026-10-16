@@ -232,6 +232,6 @@ export class EnhancementShamanSimUI extends IndividualSimUI<Spec.SpecEnhancement
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button
-		new EPGemOptimizer(this);
+		new EPGemOptimizer(this, { meleeHitCapPercent: 8 });
 	}
 }

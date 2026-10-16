@@ -405,7 +405,7 @@ export class RogueSimUI extends IndividualSimUI<Spec.SpecRogue> {
 		super(parentElem, player, SPEC_CONFIG);
 
 		// wotlksim: generic EP-based "Suggest Gems" button
-		new EPGemOptimizer(this);
+		new EPGemOptimizer(this, { meleeHitCapPercent: 8 });
 		this.player.changeEmitter.on((c) => {
 			const options = this.player.getSpecOptions()
 			const encounter = this.sim.encounter
