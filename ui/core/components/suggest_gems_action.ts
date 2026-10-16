@@ -5,7 +5,7 @@ import { Gear } from '../proto_utils/gear.js';
 import { EquippedItem } from '../proto_utils/equipped_item.js';
 import { TypedEvent } from '../typed_event.js';
 import { Stats } from '../proto_utils/stats.js';
-import { GemColor, Stat, Profession, ItemSlot, Spec, TristateEffect } from '../proto/common.js';
+import { GemColor, Stat, Profession, ItemSlot, ItemQuality, Spec, TristateEffect } from '../proto/common.js';
 import { UIGem as Gem } from '../proto/ui.js';
 import { gemMatchesSocket, getMetaGemCondition, isUnrestrictedGem } from '../proto_utils/gems.js';
 import { MELEE_HIT_RATING_PER_HIT_CHANCE, SPELL_HIT_RATING_PER_HIT_CHANCE } from '../constants/mechanics.js';
@@ -23,6 +23,38 @@ interface SocketData {
 interface SocketBonusData {
 	itemSlot: ItemSlot | null
 	socketBonus: number
+}
+
+
+// wotlksim: Suggest Gems only uses rare (blue) gems in phases 1-2 and epic (purple)
+// gems from phase 3 on. Jewelcrafter-only and meta gems are not affected.
+export function allowedGemQuality(phase: number): ItemQuality {
+	return phase <= 2 ? ItemQuality.ItemQualityRare : ItemQuality.ItemQualityEpic;
+}
+
+// Swaps each socketed gem for the gem of the allowed quality with the same cut and
+// color (e.g. "Bold Cardinal Ruby" -> "Bold Scarlet Ruby"), where one exists.
+export function withGemsOfPhaseQuality(gear: Gear, allGems: Array<Gem>, phase: number, _isBlacksmithing: boolean): Gear {
+	const quality = allowedGemQuality(phase);
+	const cut = (gem: Gem) => gem.name.split(' ')[0];
+	let result = gear;
+	for (const slot of gear.getItemSlots()) {
+		const item = result.getEquippedItem(slot);
+		if (!item) continue;
+		let updated = item;
+		item.gems.forEach((gem, idx) => {
+			if (!gem || gem.color == GemColor.GemColorMeta || gem.requiredProfession != Profession.ProfessionUnknown || gem.quality == quality) return;
+			const replacement = allGems.find(g => g.quality == quality && g.color == gem.color && cut(g) == cut(gem)
+				&& g.requiredProfession == Profession.ProfessionUnknown && !g.unique);
+			if (replacement) {
+				updated = updated.withGem(replacement, idx);
+			}
+		});
+		if (updated != item) {
+			result = result.withEquippedItem(slot, updated, true);
+		}
+	}
+	return result;
 }
 
 abstract class GemOptimizer {
@@ -96,6 +128,10 @@ abstract class GemOptimizer {
 				}
 			}
 		}
+
+		// wotlksim: rare gems in phases 1-2, epic gems from phase 3 on.
+		optimizedGear = withGemsOfPhaseQuality(optimizedGear, this.sim.db.getGems(), this.sim.getPhase(), this.isBlacksmithing);
+		await this.updateGear(optimizedGear);
 	}
 	
 	async updateGear(gear: Gear): Promise<Stats> {
@@ -727,7 +763,9 @@ export class EPGemOptimizer {
 		const phase = this.sim.getPhase();
 		const isBlacksmithing = this.player.isBlacksmithing();
 		const epWeights = this.player.getEpWeights();
+		const quality = allowedGemQuality(phase);
 		const allGems = this.sim.db.getGems().filter(gem => gem.color != GemColor.GemColorMeta && isUnrestrictedGem(gem, phase)
+			&& gem.quality == quality
 			&& (this.requiredStat == null || (gem.stats[this.requiredStat] || 0) > 0));
 		const bestAny = this.bestGem(allGems);
 		if (!bestAny) {
