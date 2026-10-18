@@ -10,7 +10,9 @@ const IdolAvenger int32 = 31025
 const IdolSteadfastRenewal int32 = 40712
 
 func (druid *Druid) registerWrathSpell() {
-	spellCoeff := 0.571 + (0.02 * float64(druid.Talents.WrathOfCenarius))
+	// wotlksim: Wrath has 12% higher base damage and base spell power coefficient.
+	const baseBuff = 1.12
+	spellCoeff := 0.571*baseBuff + (0.02 * float64(druid.Talents.WrathOfCenarius))
 	bonusFlatDamage := core.TernaryFloat64(druid.Ranged().ID == IdolAvenger, 25, 0) +
 		core.TernaryFloat64(druid.Ranged().ID == IdolSteadfastRenewal, 70, 0)
 
@@ -42,7 +44,7 @@ func (druid *Druid) registerWrathSpell() {
 		ThreatMultiplier: 1,
 
 		ApplyEffects: func(sim *core.Simulation, target *core.Unit, spell *core.Spell) {
-			baseDamage := bonusFlatDamage + sim.Roll(557, 627) + spellCoeff*spell.SpellPower()
+			baseDamage := bonusFlatDamage + sim.Roll(557, 627)*baseBuff + spellCoeff*spell.SpellPower()
 			result := spell.CalcDamage(sim, target, baseDamage, spell.OutcomeMagicHitAndCrit)
 			spell.WaitTravelTime(sim, func(sim *core.Simulation) {
 				spell.DealDamage(sim, result)
