@@ -28,7 +28,9 @@ func init() {
 	core.AddEffectsToTest = false
 	defer func() { core.AddEffectsToTest = true }()
 
-	// Armata Strigoi: 40% chance on white hits to bind a Forgotten Soul.
+	// Armata Strigoi: 1 PPM (6% per roll at 3.60 speed), no internal cooldown, on every
+	// landed melee attack: auto attacks and specials (e.g. Crusader Strike, Divine Storm
+	// per target hit, Judgement, Hammer of Wrath). Each roll binds a Forgotten Soul.
 	// At 4 souls they are released and trigger an instant weapon attack. That attack
 	// is an extra auto attack (white hit), so it triggers everything an auto attack
 	// does (e.g. Seal of Vengeance stacks and seal damage), except Armata itself.
@@ -59,11 +61,11 @@ func init() {
 		})
 
 		core.MakeProcTriggerAura(&character.Unit, core.ProcTrigger{
-			Name:       "Armata Strigoi",
-			Callback:   core.CallbackOnSpellHitDealt,
-			ProcMask:   core.ProcMaskMeleeWhiteHit,
-			Outcome:    core.OutcomeLanded,
-			ProcChance: 0.40,
+			Name:     "Armata Strigoi",
+			Callback: core.CallbackOnSpellHitDealt,
+			ProcMask: core.ProcMaskMelee,
+			Outcome:  core.OutcomeLanded,
+			PPM:      1,
 			Handler: func(sim *core.Simulation, spell *core.Spell, result *core.SpellResult) {
 				if spell == soulAttack {
 					return // the released souls don't bind new ones

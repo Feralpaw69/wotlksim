@@ -61,7 +61,7 @@ const CUSTOM_TOOLTIPS: Record<number, CustomTooltip> = {
 			green('Increases attack power by 2501 in Cat, Bear, Dire Bear, and Moonkin forms only.'),
 			green('Equip: Improves critical strike rating by 81.'),
 			green('Equip: Increases your armor penetration rating by 64.'),
-			green('Chance on hit: Your melee auto attacks have a 40% chance to bind a Forgotten Soul. When 4 Forgotten Souls are accumulated, they are released, triggering an instant weapon attack.'),
+			green('Chance on hit: A forgotten soul is bound to your will. When 4 Forgotten Souls are accumulated, they will release, triggering an instant weapon attack.'),
 		],
 	},
 	150005: {
@@ -284,7 +284,7 @@ const CUSTOM_TOOLTIPS: Record<number, CustomTooltip> = {
 			green('Increases attack power by 3176 in Cat, Bear, Dire Bear, and Moonkin forms only.'),
 			green('Equip: Improves critical strike rating by 98.'),
 			green('Equip: Increases your armor penetration rating by 101.'),
-			green('Chance on hit: Your melee auto attacks have a 40% chance to bind a Forgotten Soul. When 4 Forgotten Souls are accumulated, they are released, triggering an instant weapon attack.'),
+			green('Chance on hit: A forgotten soul is bound to your will. When 4 Forgotten Souls are accumulated, they will release, triggering an instant weapon attack.'),
 		],
 	},
 	132005: {
