@@ -57,7 +57,8 @@ func (druid *Druid) registerStarfireSpell() {
 		DamageMultiplier: (1 + []float64{0.0, 0.03, 0.06, 0.1}[druid.Talents.Moonfury]) *
 			core.TernaryFloat64(druid.HasSetBonus(ItemSetMalfurionsRegalia, 4), 1.04, 1) *
 			0.94 * // wotlksim: 6% less damage, calibrated against server combat logs
-			1.08, // wotlksim: Balance buff, 8% more damage
+			1.08 * // wotlksim: Balance buff, 8% more damage
+			0.99, // wotlksim: 1% nerf
 		CritMultiplier:   druid.BalanceCritMultiplier(),
 		ThreatMultiplier: 1,
 
