@@ -1,6 +1,9 @@
+import { ItemQuality } from './proto/common.js';
+import { DungeonDifficulty, Expansion, UIItem as Item } from './proto/ui.js';
+
 // wotlksim: upgrade chains for items that exist in several item levels.
 // The item picker's Upgrade tab lists every version of the equipped item,
-// lowest item level first. Items without other versions just show themselves.
+// lowest item level first, and epic dungeon alternatives for rare dungeon drops.
 
 // Lower item level versions of buffed items (e.g. Ulduar) use the original item ID
 // plus this offset. Keep in sync with BaseVersionIDOffset in the Go code.
@@ -16,6 +19,13 @@ const UPGRADE_CHAINS: Array<Array<number>> = [
 	[132007, 315003], // Atiesh (Mage) 1/2, 2/2
 ];
 
+const WOTLK_DUNGEON_DIFFICULTIES = [
+	DungeonDifficulty.DifficultyNormal,
+	DungeonDifficulty.DifficultyHeroic,
+	DungeonDifficulty.DifficultyTitanRuneAlpha,
+	DungeonDifficulty.DifficultyTitanRuneBeta,
+];
+
 export function getUpgradeChain(itemId: number, hasItem: (id: number) => boolean): Array<number> {
 	const chain = UPGRADE_CHAINS.find(c => c.includes(itemId));
 	if (chain) {
@@ -28,4 +38,30 @@ export function getUpgradeChain(itemId: number, hasItem: (id: number) => boolean
 		return [baseId, originalId];
 	}
 	return [itemId];
+}
+
+function hasWotlkDungeonDrop(item: Item, getZoneExpansion: (zoneId: number) => Expansion | undefined): boolean {
+	return item.sources.some(itemSource => {
+		if (itemSource.source.oneofKind != 'drop') {
+			return false;
+		}
+
+		const drop = itemSource.source.drop;
+		return WOTLK_DUNGEON_DIFFICULTIES.includes(drop.difficulty) &&
+			getZoneExpansion(drop.zoneId) == Expansion.ExpansionWotlk;
+	});
+}
+
+export function getEpicDungeonUpgrades(
+	item: Item,
+	candidates: Array<Item>,
+	getZoneExpansion: (zoneId: number) => Expansion | undefined,
+): Array<Item> {
+	if (item.quality != ItemQuality.ItemQualityRare || !hasWotlkDungeonDrop(item, getZoneExpansion)) {
+		return [];
+	}
+
+	return candidates.filter(candidate =>
+		candidate.quality == ItemQuality.ItemQualityEpic && hasWotlkDungeonDrop(candidate, getZoneExpansion),
+	);
 }
