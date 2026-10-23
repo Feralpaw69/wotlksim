@@ -20,7 +20,7 @@ import { formatDeltaTextElem } from '../utils';
 import { BaseModal } from './base_modal';
 import { Component } from './component';
 import { FiltersMenu } from './filters_menu';
-import { getEpicDungeonUpgrades, getUpgradeChain } from '../upgrades';
+import { getUpgradeChain } from '../upgrades';
 import {
 	makePhaseSelector,
 	makeShow1hWeaponsSelector,
@@ -605,27 +605,17 @@ export class SelectorModal extends BaseModal {
 		});
 	}
 
-	// wotlksim: "Upgrade" tab, placed after the gem tabs. Lists item-level versions
-	// and, for rare dungeon drops, epic dungeon alternatives (see upgrades.ts).
+	// wotlksim: "Upgrade" tab, placed after the gem tabs. Lists every upgrade level of
+	// the equipped item (see upgrades.ts), lowest item level first.
 	private addUpgradeTab(slot: ItemSlot, equippedItem: EquippedItem | null, gearData: GearData) {
 		if (equippedItem == undefined) {
 			return;
 		}
 
-		const upgradeIds = getUpgradeChain(equippedItem.item.id, id => !!this.simUI.sim.db.lookupItemSpec(ItemSpec.create({ id })));
-		const upgrades: Array<Item> = upgradeIds
+		const upgrades: Array<Item> = getUpgradeChain(equippedItem.item.id, id => !!this.simUI.sim.db.lookupItemSpec(ItemSpec.create({ id })))
 			.map(id => (id == equippedItem.item.id ? equippedItem.item : this.simUI.sim.db.lookupItemSpec(ItemSpec.create({ id }))?.item))
-			.filter((item): item is Item => !!item);
-		if (upgradeIds.length == 1) {
-			upgrades.push(
-				...getEpicDungeonUpgrades(
-					equippedItem.item,
-					this.simUI.sim.db.getItems(slot),
-					zoneId => this.simUI.sim.db.getZone(zoneId)?.expansion,
-				),
-			);
-		}
-		upgrades.sort((a, b) => a.ilvl - b.ilvl);
+			.filter((item): item is Item => !!item)
+			.sort((a, b) => a.ilvl - b.ilvl);
 		this.addTab<Item>(
 			'Upgrade',
 			upgrades.map(item => {
@@ -1215,6 +1205,13 @@ export class ItemList<T> {
 			filledId.setWowheadHref(anchorElem.value!);
 			iconElem.value!.src = filledId.iconUrl;
 		});
+
+		if (this.label == 'Upgrade' && Item.is(itemData.item)) {
+			const equippedItem = this.gearData.getEquippedItem();
+			if (equippedItem) {
+				this.player.setWowheadData(equippedItem.withItem(itemData.item), anchorElem.value!);
+			}
+		}
 
 		setItemQualityCssClass(nameElem.value!, itemData.quality);
 

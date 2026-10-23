@@ -485,20 +485,28 @@ interface ItemData {
 }
 
 let itemLookup: ((id: number) => ItemData | undefined) | null = null;
-let gemLookup: ((id: number) => { name: string; icon: string } | undefined) | null = null;
+let gemLookup: ((id: number) => { name: string; icon: string; stats: Array<number> } | undefined) | null = null;
 
 // Called by the Database once items are loaded.
-export function registerItemLookup(lookup: (id: number) => ItemData | undefined, gems?: (id: number) => { name: string; icon: string } | undefined) {
+export function registerItemLookup(
+	lookup: (id: number) => ItemData | undefined,
+	gems?: (id: number) => { name: string; icon: string; stats: Array<number> } | undefined,
+) {
 	itemLookup = lookup;
 	if (gems) gemLookup = gems;
 }
 
-// Equipped gems for a custom item link, stored on the link element.
-export function setCustomTooltipGems(elem: HTMLElement, gemIds: Array<number>) {
+// Equipped gems and enchant for a custom item link, stored on the link element.
+export function setCustomTooltipGems(elem: HTMLElement, gemIds: Array<number>, enchantName?: string) {
 	if (gemIds.some(id => id)) {
 		elem.dataset.wotlksimGems = gemIds.join(':');
 	} else {
 		delete elem.dataset.wotlksimGems;
+	}
+	if (enchantName) {
+		elem.dataset.wotlksimEnchant = enchantName;
+	} else {
+		delete elem.dataset.wotlksimEnchant;
 	}
 }
 
@@ -527,8 +535,9 @@ const QUALITY_NAMES: Record<number, CustomTooltip['quality']> = { 4: 'epic', 5: 
 // Stat indices (proto Stat enum order).
 const S = {
 	str: 0, agi: 1, sta: 2, int: 3, spi: 4, sp: 5, mp5: 6, spellHit: 7, spellCrit: 8, spellHaste: 9, spellPen: 10,
-	ap: 11, hit: 12, crit: 13, haste: 14, arp: 15, exp: 16, armor: 20, def: 22, block: 23, blockValue: 24,
-	dodge: 25, parry: 26, resil: 27, bonusArmor: 34,
+	ap: 11, hit: 12, crit: 13, haste: 14, arp: 15, exp: 16, mana: 17, armor: 20, rangedAp: 21, def: 22,
+	block: 23, blockValue: 24, dodge: 25, parry: 26, resil: 27, health: 28, arcaneResist: 29, fireResist: 30,
+	frostResist: 31, natureResist: 32, shadowResist: 33, bonusArmor: 34,
 };
 
 function statBonusText(stats: Array<number>): Array<string> {
@@ -541,10 +550,30 @@ function statBonusText(stats: Array<number>): Array<string> {
 	add(v(S.int), 'Intellect');
 	add(v(S.spi), 'Spirit');
 	add(v(S.sp), 'Spell Power');
+	add(v(S.mp5), 'Mana per 5 sec.');
+	add(v(S.mana), 'Mana');
 	add(v(S.ap), 'Attack Power');
+	if (v(S.rangedAp) != v(S.ap)) add(v(S.rangedAp), 'Ranged Attack Power');
 	add(Math.max(v(S.crit), v(S.spellCrit)), 'Critical Strike Rating');
 	add(Math.max(v(S.hit), v(S.spellHit)), 'Hit Rating');
 	add(Math.max(v(S.haste), v(S.spellHaste)), 'Haste Rating');
+	add(v(S.spellPen), 'Spell Penetration');
+	add(v(S.arp), 'Armor Penetration Rating');
+	add(v(S.exp), 'Expertise Rating');
+	add(v(S.armor), 'Armor');
+	add(v(S.def), 'Defense Rating');
+	add(v(S.block), 'Block Rating');
+	add(v(S.blockValue), 'Block Value');
+	add(v(S.dodge), 'Dodge Rating');
+	add(v(S.parry), 'Parry Rating');
+	add(v(S.resil), 'Resilience Rating');
+	add(v(S.bonusArmor), 'Bonus Armor');
+	add(v(S.health), 'Health');
+	add(v(S.arcaneResist), 'Arcane Resistance');
+	add(v(S.fireResist), 'Fire Resistance');
+	add(v(S.frostResist), 'Frost Resistance');
+	add(v(S.natureResist), 'Nature Resistance');
+	add(v(S.shadowResist), 'Shadow Resistance');
 	return parts;
 }
 
@@ -624,8 +653,9 @@ function escapeHtml(text: string): string {
 	return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>): string {
-	let html = `<div style="color:${QUALITY_COLORS[tooltip.quality]};font-size:1.05em;font-weight:600">${escapeHtml(tooltip.name)}</div>`;
+function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>, enchantName?: string): string {
+	let html = enchantName ? `<div style="color:${LINE_COLORS.green}">${escapeHtml(enchantName)}</div>` : '';
+	html += `<div style="color:${QUALITY_COLORS[tooltip.quality]};font-size:1.05em;font-weight:600">${escapeHtml(tooltip.name)}</div>`;
 	let socketIdx = 0;
 	for (const line of tooltip.lines) {
 		if (typeof line === 'object' && !Array.isArray(line) && 'socket' in line) {
@@ -633,7 +663,9 @@ function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>): string {
 			socketIdx++;
 			const iconStyle = 'width:14px;height:14px;vertical-align:-2px;margin-right:6px';
 			if (gemData) {
-				html += `<div><img src="https://wow.zamimg.com/images/wow/icons/small/${gemData.icon}.jpg" style="${iconStyle}">${escapeHtml(gemData.name)}</div>`;
+				const gemStats = statBonusText(gemData.stats);
+				const gemDescription = gemStats.length > 0 ? gemStats.join(', ') : gemData.name;
+				html += `<div><img src="https://wow.zamimg.com/images/wow/icons/small/${gemData.icon}.jpg" style="${iconStyle}">${escapeHtml(gemDescription)}</div>`;
 			} else {
 				const color = line.socket.toLowerCase();
 				html += `<div style="color:${LINE_COLORS.gray}"><img src="https://wow.zamimg.com/images/icons/socket-${color}.gif" style="${iconStyle}">${escapeHtml(line.socket)} Socket</div>`;
@@ -704,7 +736,7 @@ function install() {
 		if (!tooltip) return;
 		const elem = getTooltipElem();
 		const gemIds = (anchor.dataset.wotlksimGems || '').split(':').map(Number);
-		elem.innerHTML = renderTooltip(tooltip, gemIds);
+		elem.innerHTML = renderTooltip(tooltip, gemIds, anchor.dataset.wotlksimEnchant);
 		elem.style.display = 'block';
 		positionTooltip(elem, event);
 	});
