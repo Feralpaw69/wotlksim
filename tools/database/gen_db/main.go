@@ -77,6 +77,20 @@ func main() {
 		for _, item := range database.CustomItems {
 			db.Items[item.Id] = item
 		}
+		for _, filename := range []string{"wotlk_upgrade_base_items.json", "wotlk_upgrade_items.json"} {
+			upgradeItemsJson := tools.ReadFile(fmt.Sprintf("%s/%s", inputsDir, filename))
+			var upgradeItemRecords []json.RawMessage
+			if err := json.Unmarshal([]byte(upgradeItemsJson), &upgradeItemRecords); err != nil {
+				panic(err)
+			}
+			for _, record := range upgradeItemRecords {
+				item := &proto.UIItem{}
+				if err := protojson.Unmarshal(record, item); err != nil {
+					panic(err)
+				}
+				db.Items[item.Id] = item
+			}
+		}
 		// Original (pre-buff) item level versions of the Ulduar items, taken from the
 		// unmodified wowsims database. IDs are offset by database.BaseVersionIDOffset.
 		baseVersions := database.ReadDatabaseFromJson(tools.ReadFile(fmt.Sprintf("%s/ulduar_base_items.json", inputsDir)))
