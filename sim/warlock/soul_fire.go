@@ -25,12 +25,14 @@ func (warlock *Warlock) registerSoulFireSpell() {
 			},
 		},
 
-		BonusCritRating: 0 +
+		// wotlksim: Whitemane's Soul Fire has +10% crit chance and deals 15% more damage.
+		BonusCritRating: 10*core.CritRatingPerCritChance +
 			core.TernaryFloat64(warlock.Talents.Devastation, 5*core.CritRatingPerCritChance, 0) +
 			core.TernaryFloat64(warlock.HasSetBonus(ItemSetDarkCovensRegalia, 2), 5*core.CritRatingPerCritChance, 0),
 		DamageMultiplierAdditive: 1 +
 			warlock.GrandFirestoneBonus() +
 			0.03*float64(warlock.Talents.Emberstorm),
+		DamageMultiplier: 1.15,
 		CritMultiplier:   warlock.SpellCritMultiplier(1, float64(warlock.Talents.Ruin)/5),
 		ThreatMultiplier: 1 - 0.1*float64(warlock.Talents.DestructiveReach),
 

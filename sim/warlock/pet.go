@@ -283,6 +283,8 @@ func (wp *WarlockPet) GetPet() *core.Pet {
 func (wp *WarlockPet) Initialize() {
 	switch wp.owner.Options.Summon {
 	case proto.Warlock_Options_Felguard:
+		// wotlksim: the Felguard's auto attacks deal 18% more damage on Whitemane.
+		wp.AutoAttacks.MHConfig().DamageMultiplier *= 1.18
 		wp.registerCleaveSpell()
 		wp.registerInterceptSpell()
 	case proto.Warlock_Options_Succubus:
