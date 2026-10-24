@@ -3,6 +3,7 @@ package retribution
 import (
 	"github.com/wowsims/wotlk/sim/core"
 	"github.com/wowsims/wotlk/sim/core/proto"
+	"github.com/wowsims/wotlk/sim/core/stats"
 	"github.com/wowsims/wotlk/sim/paladin"
 )
 
@@ -56,6 +57,32 @@ func (ret *RetributionPaladin) GetPaladin() *paladin.Paladin {
 func (ret *RetributionPaladin) Initialize() {
 	ret.Paladin.Initialize()
 	ret.RegisterAvengingWrathCD()
+	ret.applyWhitemaneBuffs()
+}
+
+// wotlksim: Retribution changes on Whitemane Frostmourne Rebuffed.
+func (ret *RetributionPaladin) applyWhitemaneBuffs() {
+	crit := func(percent float64) float64 { return percent * core.CritRatingPerCritChance }
+
+	// +1% damage and +4% crit chance on everything.
+	ret.PseudoStats.DamageDealtMultiplier *= 1.01
+	ret.AddStats(stats.Stats{stats.MeleeCrit: crit(4), stats.SpellCrit: crit(4)})
+
+	// Auto attacks: +8% damage and +5% crit chance.
+	ret.AutoAttacks.MHConfig().DamageMultiplier *= 1.08
+	ret.AutoAttacks.MHConfig().BonusCritRating += crit(5)
+
+	// Consecration: +6% damage.
+	if ret.Consecration != nil {
+		ret.Consecration.DamageMultiplier *= 1.06
+	}
+
+	// Divine Storm and Hand of Reckoning: +5% crit chance.
+	for _, spell := range []*core.Spell{ret.DivineStorm, ret.HandOfReckoning} {
+		if spell != nil {
+			spell.BonusCritRating += crit(5)
+		}
+	}
 }
 
 func (ret *RetributionPaladin) Reset(sim *core.Simulation) {
