@@ -147,7 +147,14 @@ func NewCharacter(party *Party, partyIndex int, player *proto.Player) Character 
 		character.Consumes = player.Consumes
 	}
 
-	character.baseStats = BaseStats[BaseStatsKey{Race: character.Race, Class: character.Class}]
+	baseStats, ok := BaseStats[BaseStatsKey{Race: character.Race, Class: character.Class}]
+	if !ok {
+		// wotlksim: a race/class combination without base stats (e.g. an unknown race from an
+		// imported or old saved setup) used to leave every stat, including base mana, at 0 and
+		// crash on spells with a mana cost. Fall back to the class's base stats instead.
+		baseStats = ClassBaseStats[character.Class].Add(ExtraClassBaseStats[character.Class])
+	}
+	character.baseStats = baseStats
 
 	character.AddStats(character.baseStats)
 	character.addUniversalStatDependencies()

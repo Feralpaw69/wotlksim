@@ -517,6 +517,12 @@ export class Player<SpecType extends Spec> {
 		return this.race;
 	}
 	setRace(eventID: EventID, newRace: Race) {
+		// wotlksim: an imported or saved race this class can't be (e.g. RaceUnknown) is replaced
+		// by the class's first eligible race, so the sim always gets a valid race/class combination.
+		const eligibleRaces = specToEligibleRaces[this.spec];
+		if (eligibleRaces && !eligibleRaces.includes(newRace)) {
+			newRace = eligibleRaces[0];
+		}
 		if (newRace != this.race) {
 			this.race = newRace;
 			this.raceChangeEmitter.emit(eventID);
