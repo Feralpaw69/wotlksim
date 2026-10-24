@@ -16,6 +16,9 @@ type GhoulPet struct {
 	GhoulFrenzyAura *core.Aura
 	Claw            *core.Spell
 
+	// wotlksim: Army of the Dead ghoul of a Frost DK (double damage, +50% Claw damage).
+	frostArmyGhoul bool
+
 	uptimePercent float64
 }
 
@@ -67,6 +70,12 @@ func (dk *Deathknight) NewArmyGhoulPet(_ int) *GhoulPet {
 	// command doesn't apply to army ghoul
 	if dk.Race == proto.Race_RaceOrc {
 		ghoulPet.PseudoStats.DamageDealtMultiplier /= 1.05
+	}
+
+	// wotlksim: Army of the Dead ghouls of Frost DKs (most talent points in Frost) deal double damage.
+	if dk.PrimaryTalentTree == 1 {
+		ghoulPet.frostArmyGhoul = true
+		ghoulPet.PseudoStats.DamageDealtMultiplier *= frostArmyDamageMultiplier
 	}
 
 	return ghoulPet
@@ -221,6 +230,11 @@ func (dk *Deathknight) armyGhoulStatInheritance() core.PetStatInheritance {
 	}
 }
 
+const (
+	frostArmyDamageMultiplier     = 2.0
+	frostArmyClawDamageMultiplier = 1.5 // on top of the double damage
+)
+
 func (ghoulPet *GhoulPet) registerClaw() *core.Spell {
 	return ghoulPet.RegisterSpell(core.SpellConfig{
 		ActionID:    core.ActionID{SpellID: 47468},
@@ -240,7 +254,7 @@ func (ghoulPet *GhoulPet) registerClaw() *core.Spell {
 			IgnoreHaste: true,
 		},
 
-		DamageMultiplier: 1.5,
+		DamageMultiplier: 1.5 * core.TernaryFloat64(ghoulPet.frostArmyGhoul, frostArmyClawDamageMultiplier, 1),
 		CritMultiplier:   2,
 		ThreatMultiplier: 1,
 
