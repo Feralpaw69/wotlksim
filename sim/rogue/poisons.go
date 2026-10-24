@@ -173,7 +173,8 @@ func (rogue *Rogue) applyWoundPoison() {
 	}
 
 	const basePPM = 0.5 / (1.4 / 60) // ~21.43, the former 50% normalized to a 1.4 speed weapon
-	rogue.woundPoisonPPMM = rogue.AutoAttacks.NewPPMManager(basePPM, procMask)
+	// wotlksim: Assassination's flat +15% proc chance (50% -> 65% on a 1.4 speed weapon).
+	rogue.woundPoisonPPMM = rogue.AutoAttacks.NewPPMManager(basePPM*(1+rogue.assassinationPoisonBonus()/0.5), procMask)
 
 	rogue.RegisterAura(core.Aura{
 		Label:    "Wound Poison",
@@ -296,8 +297,19 @@ func (rogue *Rogue) registerInstantPoisonSpell() {
 	}
 }
 
+// wotlksim: Assassination rogues (most talent points in Assassination) get a flat +15%
+// chance to apply their poisons on Whitemane Frostmourne Rebuffed.
+const assassinationPoisonProcBonus = 0.15
+
+func (rogue *Rogue) assassinationPoisonBonus() float64 {
+	if rogue.PrimaryTalentTree == 0 {
+		return assassinationPoisonProcBonus
+	}
+	return 0
+}
+
 func (rogue *Rogue) GetDeadlyPoisonProcChance() float64 {
-	return 0.3 + 0.04*float64(rogue.Talents.ImprovedPoisons) + rogue.deadlyPoisonProcChanceBonus
+	return 0.3 + 0.04*float64(rogue.Talents.ImprovedPoisons) + rogue.deadlyPoisonProcChanceBonus + rogue.assassinationPoisonBonus()
 }
 
 func (rogue *Rogue) UpdateInstantPoisonPPM(bonusChance float64) {
@@ -308,7 +320,8 @@ func (rogue *Rogue) UpdateInstantPoisonPPM(bonusChance float64) {
 
 	const basePPM = 0.2 / (1.4 / 60) // ~8.57, the former 20% normalized to a 1.4 speed weapon
 
-	ppm := basePPM * (1 + float64(rogue.Talents.ImprovedPoisons)*0.1 + bonusChance)
+	// The Assassination bonus is a flat +15% on the 20% base chance, like Envenom's (+0.75 = +15%).
+	ppm := basePPM * (1 + float64(rogue.Talents.ImprovedPoisons)*0.1 + bonusChance + rogue.assassinationPoisonBonus()/0.2)
 	rogue.instantPoisonPPMM = rogue.AutoAttacks.NewPPMManager(ppm, procMask)
 }
 
