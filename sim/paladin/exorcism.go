@@ -41,7 +41,7 @@ func (paladin *Paladin) registerExorcismSpell() {
 			paladin.getTalentSanctityOfBattleBonus() +
 			paladin.getMajorGlyphOfExorcismBonus() +
 			paladin.getItemSetAegisBattlegearBonus2(),
-		DamageMultiplier: 1,
+		DamageMultiplier: paladin.whitemaneRetBonus(1.15), // wotlksim: Exorcism +15% for Ret
 		ThreatMultiplier: 1,
 		CritMultiplier:   paladin.SpellCritMultiplier(),
 
