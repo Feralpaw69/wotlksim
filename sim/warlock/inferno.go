@@ -179,5 +179,9 @@ func (infernal *InfernalPet) Reset(_ *core.Simulation) {
 }
 
 func (infernal *InfernalPet) ExecuteCustomRotation(sim *core.Simulation) {
-	infernal.immolationAura.Cast(sim, nil)
+	// wotlksim: only start Immolation once. Re-casting it on every rotation call restarted
+	// the aura before its first 2 s tick, so it never dealt any damage.
+	if !infernal.immolationAura.AOEDot().IsActive() {
+		infernal.immolationAura.Cast(sim, nil)
+	}
 }
