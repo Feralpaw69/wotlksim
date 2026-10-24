@@ -232,7 +232,7 @@ func (dk *Deathknight) armyGhoulStatInheritance() core.PetStatInheritance {
 
 const (
 	frostArmyDamageMultiplier     = 2.0
-	frostArmyClawDamageMultiplier = 1.5 // on top of the double damage
+	frostArmyClawDamageMultiplier = 0.865 // with the double damage: Claw ~1.73x its normal damage (~145 instead of 84 DPS)
 )
 
 func (ghoulPet *GhoulPet) registerClaw() *core.Spell {
