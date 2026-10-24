@@ -318,6 +318,9 @@ func (character *Character) applyItemEffects(agent Agent) {
 		} else if applyItemEffect, ok := itemEffects[eq.ID-BaseVersionIDOffset]; ok && eq.ID > BaseVersionIDOffset {
 			// wotlksim: lower item level versions share the effect of the original item.
 			applyItemEffect(agent)
+		} else if applyItemEffect, ok := itemEffects[UpgradeBaseItemIDs[eq.ID]]; ok {
+			// wotlksim: upgrade levels and epic versions share the effect of their base item.
+			applyItemEffect(agent)
 		}
 
 		for _, g := range eq.Gems {
@@ -528,13 +531,18 @@ func (character *Character) HasGlyph(glyphID int32) bool {
 	return false
 }
 
+// wotlksim: an item or one of its upgrade levels / epic versions.
+func isItemOrUpgrade(equippedID int32, itemID int32) bool {
+	return equippedID == itemID || (equippedID != 0 && UpgradeBaseItemIDs[equippedID] == itemID)
+}
+
 func (character *Character) HasTrinketEquipped(itemID int32) bool {
-	return character.Trinket1().ID == itemID ||
-		character.Trinket2().ID == itemID
+	return isItemOrUpgrade(character.Trinket1().ID, itemID) ||
+		isItemOrUpgrade(character.Trinket2().ID, itemID)
 }
 
 func (character *Character) HasRingEquipped(itemID int32) bool {
-	return character.Finger1().ID == itemID || character.Finger2().ID == itemID
+	return isItemOrUpgrade(character.Finger1().ID, itemID) || isItemOrUpgrade(character.Finger2().ID, itemID)
 }
 
 func (character *Character) HasMetaGemEquipped(gemID int32) bool {

@@ -20,7 +20,7 @@ import { formatDeltaTextElem } from '../utils';
 import { BaseModal } from './base_modal';
 import { Component } from './component';
 import { FiltersMenu } from './filters_menu';
-import { getUpgradeChain } from '../upgrades';
+import { getUpgradeChain, getUpgradeLevel, isUpgradeVersion } from '../upgrades';
 import {
 	makePhaseSelector,
 	makeShow1hWeaponsSelector,
@@ -37,6 +37,15 @@ const EP_TOOLTIP = `
 
 const createHeroicLabel = () => {
 	return <span className="heroic-label">[H]</span>;
+};
+
+// wotlksim: upgraded versions get a gold "+1", "+2", ... marker instead of [H].
+const createItemLabel = (item: { id: number; heroic: boolean }) => {
+	const upgradeLevel = getUpgradeLevel(item.id);
+	if (upgradeLevel > 0) {
+		return <span className="heroic-label upgrade-label">+{upgradeLevel.toString()}</span>;
+	}
+	return item.heroic ? createHeroicLabel() : null;
 };
 
 const createGemContainer = (socketColor: GemColor, gem: Gem | null) => {
@@ -159,8 +168,9 @@ export class ItemRenderer extends Component {
 
 	update(newItem: EquippedItem) {
 		this.nameElem.textContent = newItem.item.name;
-		if (newItem.item.heroic) {
-			this.nameElem.insertAdjacentElement('beforeend', createHeroicLabel());
+		const itemLabel = createItemLabel(newItem.item);
+		if (itemLabel) {
+			this.nameElem.insertAdjacentElement('beforeend', itemLabel);
 		} else {
 			this.nameElem.querySelector('.heroic-label')?.remove();
 		}
@@ -459,7 +469,8 @@ export class SelectorModal extends BaseModal {
 
 		this.addTab<Item>(
 			'Items',
-			eligibleItems.map(item => {
+			// wotlksim: upgrade versions are only listed in the Upgrade tab.
+			eligibleItems.filter(item => !isUpgradeVersion(item.id)).map(item => {
 				return {
 					item: item,
 					id: item.id,
@@ -1161,7 +1172,7 @@ export class ItemList<T> {
 						<img className="selector-modal-list-item-icon" ref={iconElem}></img>
 						<label className="selector-modal-list-item-name" ref={nameElem}>
 							{itemData.name}
-							{itemData.heroic && createHeroicLabel()}
+							{Item.is(itemData.item) ? createItemLabel(itemData.item) : itemData.heroic && createHeroicLabel()}
 						</label>
 					</a>
 				</div>

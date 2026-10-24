@@ -17,6 +17,7 @@ import { ItemData, ItemList, ItemRenderer, SelectorModal, SelectorModalTabs } fr
 import { Importer } from '../importers';
 import { ResultsViewer } from '../results_viewer';
 import { SimTab } from '../sim_tab';
+import { getUpgradeLevel } from '../../upgrades';
 
 export class BulkGearJsonImporter<SpecType extends Spec> extends Importer {
 	private readonly simUI: IndividualSimUI<SpecType>;
@@ -609,7 +610,15 @@ export class BulkTab extends SimTab {
 					itemElement.addEventListener('click', ev => {
 						this.addItems(Array<ItemSpec>(ItemSpec.create({ id: item.id })));
 					});
-					if (item.heroic) {
+					const upgradeLevel = getUpgradeLevel(item.id);
+					if (upgradeLevel > 0) {
+						// wotlksim: gold "+1", "+2", ... marker for upgraded items
+						const utxt = document.createElement('span');
+						utxt.style.color = '#ffd100';
+						utxt.style.fontWeight = 'bold';
+						utxt.innerText = '+' + upgradeLevel;
+						itemElement.appendChild(utxt);
+					} else if (item.heroic) {
 						const htxt = document.createElement('span');
 						htxt.style.color = 'green';
 						htxt.innerText = '[H]';

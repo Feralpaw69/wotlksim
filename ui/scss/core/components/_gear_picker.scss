@@ -365,6 +365,12 @@ $favorite-cell-width: 2rem;
 .heroic-label {
 	margin-left: map-get($spacers, 1);
 	color: $item-quality-uncommon;
+
+	// wotlksim: "+1", "+2", ... marker of upgraded items
+	&.upgrade-label {
+		color: #ffd100;
+		font-weight: bold;
+	}
 }
 
 @include media-breakpoint-down(lg) {

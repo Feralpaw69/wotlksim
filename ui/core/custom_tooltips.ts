@@ -5,6 +5,8 @@
 // document-level hover handler shows our own tooltip for those links everywhere
 // (gear slots, item lists, glyph picker, ...).
 
+import { getUpgradeChainBase, getUpgradeLevel, isUpgradeVersion } from './upgrades.js';
+
 type Line = string | [string, string]; // text, or [left, right]
 
 interface CustomTooltip {
@@ -497,21 +499,37 @@ export function registerItemLookup(
 }
 
 // Equipped gems and enchant for a custom item link, stored on the link element.
-export function setCustomTooltipGems(elem: HTMLElement, gemIds: Array<number>, enchantName?: string) {
+// An enchant with stats is shown as those stats (e.g. "+81 Spell Power"); one without
+// (e.g. Berserking) keeps its name.
+export function setCustomTooltipGems(
+	elem: HTMLElement,
+	gemIds: Array<number>,
+	enchantName?: string,
+	enchantStats?: Array<number>,
+	socketBonusActive?: boolean,
+) {
 	if (gemIds.some(id => id)) {
 		elem.dataset.wotlksimGems = gemIds.join(':');
 	} else {
 		delete elem.dataset.wotlksimGems;
 	}
-	if (enchantName) {
-		elem.dataset.wotlksimEnchant = enchantName;
+	const enchantText = enchantStats ? statBonusText(enchantStats).join(', ') : '';
+	if (enchantText || enchantName) {
+		elem.dataset.wotlksimEnchant = enchantText || enchantName;
 	} else {
 		delete elem.dataset.wotlksimEnchant;
+	}
+	if (socketBonusActive) {
+		elem.dataset.wotlksimSocketBonus = '1';
+	} else {
+		delete elem.dataset.wotlksimSocketBonus;
 	}
 }
 
 export function hasCustomTooltip(itemId: number): boolean {
-	return itemId in CUSTOM_TOOLTIPS || itemId > BASE_VERSION_ID_OFFSET;
+	// Real WotLK item IDs stay below 100000; everything above is a Whitemane item (upgrade
+	// levels, epic versions, custom items) that Wowhead doesn't know, so it gets our tooltip.
+	return itemId in CUSTOM_TOOLTIPS || itemId > BASE_VERSION_ID_OFFSET || isUpgradeVersion(itemId) || (itemId >= 100_000 && !!itemLookup?.(itemId));
 }
 
 const SLOT_NAMES: Record<number, string> = {
@@ -634,6 +652,11 @@ function buildGenericTooltip(itemId: number): CustomTooltip | null {
 	equip(stat(S.mp5), 'Restores # mana per 5 sec.');
 	equip(stat(S.spellPen), 'Increases your spell penetration by #.');
 
+	const upgradeLevel = getUpgradeLevel(itemId);
+	const chainBase = upgradeLevel > 0 ? itemLookup?.(getUpgradeChainBase(itemId)) : undefined;
+	if (chainBase) {
+		lines.push({ text: `Upgrade +${upgradeLevel} of the item level ${chainBase.ilvl} version. Special effects as on that item.`, color: 'gray' });
+	}
 	const original = itemLookup?.(itemId - BASE_VERSION_ID_OFFSET);
 	if (original) {
 		lines.push({ text: `Original item level version. Special effects as on the item level ${original.ilvl} version.`, color: 'gray' });
@@ -653,12 +676,32 @@ function escapeHtml(text: string): string {
 	return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>, enchantName?: string): string {
-	let html = enchantName ? `<div style="color:${LINE_COLORS.green}">${escapeHtml(enchantName)}</div>` : '';
-	html += `<div style="color:${QUALITY_COLORS[tooltip.quality]};font-size:1.05em;font-weight:600">${escapeHtml(tooltip.name)}</div>`;
+const isSocketLine = (line: CustomTooltip['lines'][number]) => typeof line === 'object' && !Array.isArray(line) && 'socket' in line;
+const isSocketBonusLine = (line: CustomTooltip['lines'][number]) =>
+	typeof line === 'object' && !Array.isArray(line) && 'text' in line && line.text.startsWith('Socket Bonus:');
+
+function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>, enchantText?: string, socketBonusActive?: boolean): string {
+	let html = `<div style="color:${QUALITY_COLORS[tooltip.quality]};font-size:1.05em;font-weight:600">${escapeHtml(tooltip.name)}</div>`;
+
+	// The enchant goes below the item's stats and above its sockets (as in game): before the
+	// first socket line, or, without sockets, before the first line after the white stats.
+	let enchantIdx = -1;
+	if (enchantText) {
+		enchantIdx = tooltip.lines.findIndex(line => isSocketLine(line) || isSocketBonusLine(line));
+		if (enchantIdx < 0) {
+			const lastStatIdx = tooltip.lines.reduce((last, line, i) => (typeof line === 'string' && /^\+\d/.test(line) ? i : last), -1);
+			enchantIdx = lastStatIdx >= 0 ? lastStatIdx + 1 : tooltip.lines.length;
+		}
+	}
+
 	let socketIdx = 0;
-	for (const line of tooltip.lines) {
-		if (typeof line === 'object' && !Array.isArray(line) && 'socket' in line) {
+	for (const [lineIdx, line] of tooltip.lines.entries()) {
+		if (lineIdx == enchantIdx) {
+			html += `<div style="color:${LINE_COLORS.green}">${escapeHtml(enchantText!)}</div>`;
+		}
+		if (isSocketBonusLine(line) && socketBonusActive && typeof line === 'object' && 'text' in line) {
+			html += `<div style="color:${LINE_COLORS.green}">${escapeHtml(line.text)}</div>`;
+		} else if (typeof line === 'object' && !Array.isArray(line) && 'socket' in line) {
 			const gemData = gemIds[socketIdx] ? gemLookup?.(gemIds[socketIdx]) : undefined;
 			socketIdx++;
 			const iconStyle = 'width:14px;height:14px;vertical-align:-2px;margin-right:6px';
@@ -677,6 +720,9 @@ function renderTooltip(tooltip: CustomTooltip, gemIds: Array<number>, enchantNam
 		} else if ('text' in line) {
 			html += `<div style="color:${LINE_COLORS[line.color]}">${escapeHtml(line.text)}</div>`;
 		}
+	}
+	if (enchantIdx == tooltip.lines.length) {
+		html += `<div style="color:${LINE_COLORS.green}">${escapeHtml(enchantText!)}</div>`;
 	}
 	return html;
 }
@@ -736,7 +782,7 @@ function install() {
 		if (!tooltip) return;
 		const elem = getTooltipElem();
 		const gemIds = (anchor.dataset.wotlksimGems || '').split(':').map(Number);
-		elem.innerHTML = renderTooltip(tooltip, gemIds, anchor.dataset.wotlksimEnchant);
+		elem.innerHTML = renderTooltip(tooltip, gemIds, anchor.dataset.wotlksimEnchant, anchor.dataset.wotlksimSocketBonus == '1');
 		elem.style.display = 'block';
 		positionTooltip(elem, event);
 	});

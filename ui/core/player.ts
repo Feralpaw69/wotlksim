@@ -1105,6 +1105,8 @@ export class Player<SpecType extends Spec> {
 				elem,
 				equippedItem.curGems(this.hasProfession(Profession.Blacksmithing)).map(gem => (gem ? gem.id : 0)),
 				equippedItem.enchant?.name,
+				equippedItem.enchant?.stats,
+				equippedItem.meetsSocketBonus(),
 			);
 			return;
 		}

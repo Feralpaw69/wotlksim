@@ -9,7 +9,8 @@ import { UIItem as Item } from './proto/ui.js';
 // plus this offset. Keep in sync with BaseVersionIDOffset in the Go code.
 export const BASE_VERSION_ID_OFFSET = 10_000_000;
 
-const UPGRADE_CHAINS: Array<Array<number>> = [
+// Upgrade levels: base item first, then +1, +2, ...
+const LEVEL_CHAINS: Array<Array<number>> = [
 	[150005, 150090, 315005], // Stormcoil 1/3, 2/3, 3/3
 	[131004, 315008], // Doomhammer
 	[128858, 315010], // Embersoul, Scythe of the Cat God 1/2, 2/2
@@ -17,8 +18,35 @@ const UPGRADE_CHAINS: Array<Array<number>> = [
 	[132005, 315015], // Atiesh (Priest) 1/2, 2/2
 	[132006, 315016], // Atiesh (Druid) 1/2, 2/2
 	[132007, 315003], // Atiesh (Mage) 1/2, 2/2
-	...upgradeChainData.chains,
+	...upgradeChainData.chains, // dungeon/raid item upgrades +1 ... +5
 ];
+
+// Every version of an item for the Upgrade tab: upgrade levels and epic versions
+// ([base item, epic version]) of quest/dungeon items.
+const UPGRADE_CHAINS: Array<Array<number>> = [...LEVEL_CHAINS, ...upgradeChainData.epicVariants];
+
+// Upgrade levels (every level chain entry after the first, and the lower item level versions
+// with offset IDs) are only listed in the Upgrade tab, not in the normal item list.
+// Epic versions stay in the normal list.
+const UPGRADE_VERSION_IDS = new Set<number>(LEVEL_CHAINS.flatMap(chain => chain.slice(1)));
+
+export function isUpgradeVersion(itemId: number): boolean {
+	return itemId > BASE_VERSION_ID_OFFSET || UPGRADE_VERSION_IDS.has(itemId);
+}
+
+// Position of an item in its upgrade chain: 0 for the base version, 1 for +1 and so on.
+// Returns 0 for items without upgrades.
+const UPGRADE_LEVELS = new Map<number, number>(LEVEL_CHAINS.flatMap(chain => chain.map((id, level): [number, number] => [id, level])));
+
+export function getUpgradeLevel(itemId: number): number {
+	return UPGRADE_LEVELS.get(itemId) ?? 0;
+}
+
+// First (base) item of the item's upgrade chain, or the item itself.
+export function getUpgradeChainBase(itemId: number): number {
+	const chain = LEVEL_CHAINS.find(c => c.includes(itemId));
+	return chain ? chain[0] : itemId;
+}
 
 export function getUpgradeChain(
 	itemId: number,
