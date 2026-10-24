@@ -721,7 +721,8 @@ func (cat *FeralDruid) setupRotation(rotation *proto.FeralDruid_Rotation) {
 		} else {
 			cat.Rotation.MinRoarOffset = 25 * time.Second
 		}
-		cat.Rotation.BiteTime = 4 * time.Second
+		// wotlksim: Whitemane's buffed Ferocious Bite is worth casting more often (see ferocious_bite.go).
+		cat.Rotation.BiteTime = 2 * time.Second
 	} else {
 		if hasT72P {
 			cat.Rotation.MinRoarOffset = 14 * time.Second
@@ -730,6 +731,6 @@ func (cat *FeralDruid) setupRotation(rotation *proto.FeralDruid_Rotation) {
 		} else {
 			cat.Rotation.MinRoarOffset = 12 * time.Second
 		}
-		cat.Rotation.BiteTime = 10 * time.Second
+		cat.Rotation.BiteTime = 8 * time.Second
 	}
 }
