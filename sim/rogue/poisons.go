@@ -40,7 +40,7 @@ func (rogue *Rogue) registerDeadlyPoisonSpell() {
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskWeaponProc,
 
-		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons],
+		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons] * rogue.assassinationPoisonDamageMultiplier(),
 		ThreatMultiplier: 1,
 
 		Dot: core.DotConfig{
@@ -210,7 +210,7 @@ func (rogue *Rogue) makeInstantPoison(procSource PoisonProcSource) *core.Spell {
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskWeaponProc,
 
-		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons],
+		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons] * rogue.assassinationPoisonDamageMultiplier(),
 		CritMultiplier:   rogue.SpellCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -233,7 +233,7 @@ func (rogue *Rogue) makeWoundPoison(procSource PoisonProcSource) *core.Spell {
 		SpellSchool: core.SpellSchoolNature,
 		ProcMask:    core.ProcMaskWeaponProc,
 
-		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons],
+		DamageMultiplier: []float64{1, 1.07, 1.14, 1.20}[rogue.Talents.VilePoisons] * rogue.assassinationPoisonDamageMultiplier(),
 		CritMultiplier:   rogue.SpellCritMultiplier(),
 		ThreatMultiplier: 1,
 
@@ -306,6 +306,14 @@ func (rogue *Rogue) assassinationPoisonBonus() float64 {
 		return assassinationPoisonProcBonus
 	}
 	return 0
+}
+
+// wotlksim: Assassination rogues' poisons (Deadly, Instant, Wound) deal 3.5% more damage.
+func (rogue *Rogue) assassinationPoisonDamageMultiplier() float64 {
+	if rogue.PrimaryTalentTree == 0 {
+		return 1.035
+	}
+	return 1
 }
 
 func (rogue *Rogue) GetDeadlyPoisonProcChance() float64 {
