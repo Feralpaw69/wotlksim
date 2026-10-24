@@ -23,6 +23,9 @@ func (paladin *Paladin) registerHandOfReckoningSpell() {
 			Multiplier: 1 - 0.02*float64(paladin.Talents.Benediction),
 		},
 		Cast: core.CastConfig{
+			DefaultCast: core.Cast{
+				GCD: core.GCDDefault,
+			},
 			CD: core.Cooldown{
 				Timer:    paladin.NewTimer(),
 				Duration: time.Second * time.Duration(core.TernaryInt(paladin.HasSetBonus(ItemSetTuralyonsPlate, 2), 6, 8)),
