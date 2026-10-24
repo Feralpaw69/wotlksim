@@ -70,6 +70,9 @@ type Character struct {
 	glyphs            [6]int32
 	PrimaryTalentTree uint8
 
+	// wotlksim: factor for the amounts of the item effect being applied (see ItemEffectScales); 0 outside of that.
+	itemEffectScale float64
+
 	// Provides major cooldown management behavior.
 	majorCooldownManager
 
@@ -319,8 +322,11 @@ func (character *Character) applyItemEffects(agent Agent) {
 			// wotlksim: lower item level versions share the effect of the original item.
 			applyItemEffect(agent)
 		} else if applyItemEffect, ok := itemEffects[UpgradeBaseItemIDs[eq.ID]]; ok {
-			// wotlksim: upgrade levels and epic versions share the effect of their base item.
+			// wotlksim: upgrade levels and epic versions share the effect of their base item,
+			// with its amounts scaled for the better versions (e.g. epic Meteorite Whetstone).
+			character.itemEffectScale = ItemEffectScales[eq.ID]
 			applyItemEffect(agent)
+			character.itemEffectScale = 0
 		}
 
 		for _, g := range eq.Gems {

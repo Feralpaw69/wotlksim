@@ -5,7 +5,12 @@
 // document-level hover handler shows our own tooltip for those links everywhere
 // (gear slots, item lists, glyph picker, ...).
 
+import variantEffects from '../../assets/db_inputs/wotlk_variant_effects.json';
 import { getUpgradeChainBase, getUpgradeLevel, isUpgradeVersion } from './upgrades.js';
+
+// Special effect lines (procs, use effects) of upgrade levels and epic versions, taken from
+// their base item (or the Whitemane 2 export, with the scaled amounts). See tools/gen_variant_items.py.
+const VARIANT_EFFECTS = variantEffects as Record<string, Array<string>>;
 
 type Line = string | [string, string]; // text, or [left, right]
 
@@ -652,10 +657,15 @@ function buildGenericTooltip(itemId: number): CustomTooltip | null {
 	equip(stat(S.mp5), 'Restores # mana per 5 sec.');
 	equip(stat(S.spellPen), 'Increases your spell penetration by #.');
 
+	const effectLines = VARIANT_EFFECTS[String(itemId)] || [];
+	for (const text of effectLines) {
+		lines.push(green(text));
+	}
+
 	const upgradeLevel = getUpgradeLevel(itemId);
 	const chainBase = upgradeLevel > 0 ? itemLookup?.(getUpgradeChainBase(itemId)) : undefined;
 	if (chainBase) {
-		lines.push({ text: `Upgrade +${upgradeLevel} of the item level ${chainBase.ilvl} version. Special effects as on that item.`, color: 'gray' });
+		lines.push({ text: `Upgrade +${upgradeLevel} of the item level ${chainBase.ilvl} version.`, color: 'gray' });
 	}
 	const original = itemLookup?.(itemId - BASE_VERSION_ID_OFFSET);
 	if (original) {

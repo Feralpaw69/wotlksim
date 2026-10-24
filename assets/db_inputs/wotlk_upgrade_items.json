@@ -97,8 +97,6 @@
   "name": "Keleseth's Blade of Evocation",
   "icon": "inv_weapon_shortblade_46",
   "type": 13,
-  "weaponType": 2,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -136,6 +134,15 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 2,
+  "weaponDamageMin": 83.0,
+  "weaponDamageMax": 155.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -173,13 +180,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 83,
-  "weaponDamageMax": 155,
-  "weaponSpeed": 1.8,
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -195,7 +195,6 @@
   "name": "Dragon Stabler's Gauntlets",
   "icon": "inv_gauntlets_10",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    37,
@@ -233,6 +232,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -270,10 +274,6 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -289,7 +289,6 @@
   "name": "Reinforced Velvet Helm",
   "icon": "inv_helmet_107",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -327,6 +326,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -364,10 +368,6 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -383,8 +383,6 @@
   "name": "Arm Blade of Augelmir",
   "icon": "inv_weapon_hand_09",
   "type": 13,
-  "weaponType": 3,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -422,6 +420,15 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 3,
+  "weaponDamageMin": 182.0,
+  "weaponDamageMax": 339.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -459,13 +466,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 182,
-  "weaponDamageMax": 339,
-  "weaponSpeed": 2.4,
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -481,7 +481,6 @@
   "name": "Chestplate of the Northern Lights",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -519,6 +518,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -556,10 +560,6 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -575,7 +575,6 @@
   "name": "Skarvald's Dragonskin Habergeon",
   "icon": "inv_chest_leather_08",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    69,
@@ -613,6 +612,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -650,10 +654,6 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -669,8 +669,6 @@
   "name": "Ingvar's Monolithic Cleaver",
   "icon": "inv_axe_81",
   "type": 13,
-  "weaponType": 1,
-  "handType": 4,
   "stats": [
    65,
    0,
@@ -708,6 +706,15 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 1,
+  "weaponDamageMin": 361.0,
+  "weaponDamageMax": 542.0,
+  "weaponSpeed": 3.2,
   "socketBonus": [
    0,
    0,
@@ -745,13 +752,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 361,
-  "weaponDamageMax": 542,
-  "weaponSpeed": 3.2,
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -767,7 +767,6 @@
   "name": "Holistic Patchwork Breeches",
   "icon": "inv_pants_leather_13",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -805,6 +804,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -842,11 +846,7 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -862,7 +862,6 @@
   "name": "Overlaid Chain Spaulders",
   "icon": "inv_shoulder_77",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -900,6 +899,11 @@
    0,
    0
   ],
+  "ilvl": 155,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -937,10 +941,6 @@
    0,
    0
   ],
-  "ilvl": 155,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -956,8 +956,6 @@
   "name": "Witch Doctor's Wildstaff",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    100,
@@ -995,6 +993,15 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 312.0,
+  "weaponDamageMax": 470.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -1032,13 +1039,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 312,
-  "weaponDamageMax": 470,
-  "weaponSpeed": 2.4,
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1054,7 +1054,6 @@
   "name": "Embroidered Gown of Zul'Drak",
   "icon": "inv_chest_cloth_27",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -1092,6 +1091,11 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -1129,10 +1133,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1148,7 +1148,6 @@
   "name": "Cannibal's Legguards",
   "icon": "inv_pants_mail_16",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    70,
@@ -1186,6 +1185,11 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -1223,10 +1227,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1242,8 +1242,6 @@
   "name": "Frozen Scepter of Necromancy",
   "icon": "inv_mace_60",
   "type": 13,
-  "weaponType": 4,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -1281,6 +1279,15 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 4,
+  "weaponDamageMin": 116.0,
+  "weaponDamageMax": 217.0,
+  "weaponSpeed": 2.3,
   "socketBonus": [
    0,
    0,
@@ -1318,13 +1325,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 116,
-  "weaponDamageMax": 217,
-  "weaponSpeed": 2.3,
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1340,7 +1340,6 @@
   "name": "Forlorn Breastplate of War",
   "icon": "inv_chest_plate13",
   "type": 5,
-  "armorType": 4,
   "stats": [
    62,
    0,
@@ -1378,6 +1377,11 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -1415,10 +1419,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1471,6 +1471,10 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -1508,11 +1512,7 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1528,7 +1528,6 @@
   "name": "Drakkari Hunting Bow",
   "icon": "inv_weapon_bow_34",
   "type": 14,
-  "rangedWeaponType": 1,
   "stats": [
    0,
    31,
@@ -1566,6 +1565,14 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 1,
+  "weaponDamageMin": 206.0,
+  "weaponDamageMax": 384.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -1603,13 +1610,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 206,
-  "weaponDamageMax": 384,
-  "weaponSpeed": 2.6,
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1625,7 +1625,6 @@
   "name": "Shoulderguards of the Ice Troll",
   "icon": "inv_shoulder_78",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    58,
@@ -1663,6 +1662,11 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -1700,10 +1704,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1719,7 +1719,6 @@
   "name": "Hauberk of Totemic Mastery",
   "icon": "inv_chest_chain_13",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -1757,6 +1756,11 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -1794,10 +1798,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1813,8 +1813,6 @@
   "name": "Glacier Sharpened Vileblade",
   "icon": "inv_weapon_shortblade_71",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    0,
@@ -1852,6 +1850,15 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 150.0,
+  "weaponDamageMax": 227.0,
+  "weaponSpeed": 1.7,
   "socketBonus": [
    0,
    0,
@@ -1889,13 +1896,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 150,
-  "weaponDamageMax": 227,
-  "weaponSpeed": 1.7,
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -1911,7 +1911,6 @@
   "name": "Attuned Crystalline Boots",
   "icon": "inv_boots_cloth_01",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -1949,6 +1948,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -1986,10 +1990,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2042,6 +2042,10 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -2079,11 +2083,7 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2099,8 +2099,6 @@
   "name": "Tome of the Lore Keepers",
   "icon": "inv_misc_book_05",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -2138,6 +2136,12 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -2175,10 +2179,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2194,7 +2194,6 @@
   "name": "Gauntlets of Serpent Scales",
   "icon": "inv_gauntlets_14",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -2232,6 +2231,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -2269,10 +2273,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2288,7 +2288,6 @@
   "name": "Cleated Ice Boots",
   "icon": "inv_boots_chain_09",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    47,
@@ -2326,6 +2325,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -2363,10 +2367,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2382,8 +2382,6 @@
   "name": "Drakonid Arm Blade",
   "icon": "inv_weapon_hand_09",
   "type": 13,
-  "weaponType": 3,
-  "handType": 3,
   "stats": [
    0,
    37,
@@ -2421,6 +2419,15 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 3,
+  "weaponDamageMin": 124.0,
+  "weaponDamageMax": 231.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -2458,13 +2465,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 124,
-  "weaponDamageMax": 231,
-  "weaponSpeed": 1.6,
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2480,7 +2480,6 @@
   "name": "Chiseled Stalagmite Pauldrons",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    63,
    0,
@@ -2518,6 +2517,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -2555,10 +2559,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2574,7 +2574,6 @@
   "name": "Greaves of the Blue Flight",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -2612,6 +2611,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -2649,10 +2653,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2668,7 +2668,6 @@
   "name": "Insulating Bindings",
   "icon": "inv_bracer_14",
   "type": 6,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -2706,6 +2705,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -2743,10 +2747,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2762,7 +2762,6 @@
   "name": "Belt of Draconic Runes",
   "icon": "inv_belt_26",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -2800,6 +2799,11 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -2837,10 +2841,6 @@
    0,
    0
   ],
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2856,8 +2856,6 @@
   "name": "Blade of Nadox",
   "icon": "inv_weapon_shortblade_35",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    0,
@@ -2895,6 +2893,15 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 148.0,
+  "weaponDamageMax": 224.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -2932,13 +2939,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 148,
-  "weaponDamageMax": 224,
-  "weaponSpeed": 1.6,
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -2954,7 +2954,6 @@
   "name": "Ahn'kahar Handwraps",
   "icon": "inv_gauntlets_13",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -2992,6 +2991,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -3029,10 +3033,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3048,7 +3048,6 @@
   "name": "Crawler-Emblem Belt",
   "icon": "inv_belt_31",
   "type": 8,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -3086,6 +3085,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -3123,10 +3127,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3142,8 +3142,6 @@
   "name": "Talisman of Scourge Command",
   "icon": "inv_offhand_blood_02",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -3181,6 +3179,12 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -3218,10 +3222,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3274,6 +3274,10 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -3311,10 +3315,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3330,7 +3330,6 @@
   "name": "Gloves of the Blood Prince",
   "icon": "inv_gauntlets_14",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -3368,6 +3367,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -3405,10 +3409,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3424,7 +3424,6 @@
   "name": "Mantle of Echoing Bats",
   "icon": "inv_shoulder_72",
   "type": 3,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -3462,6 +3461,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -3499,10 +3503,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3518,7 +3518,6 @@
   "name": "Pyramid Embossed Belt",
   "icon": "inv_belt_21",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    53,
@@ -3556,6 +3555,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -3593,10 +3597,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3612,7 +3612,6 @@
   "name": "Volazj's Sabatons",
   "icon": "inv_boots_plate_06",
   "type": 10,
-  "armorType": 4,
   "stats": [
    38,
    0,
@@ -3650,6 +3649,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -3687,10 +3691,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3706,7 +3706,6 @@
   "name": "Wand of Shimmering Scales",
   "icon": "inv_wand_18",
   "type": 14,
-  "rangedWeaponType": 8,
   "stats": [
    0,
    0,
@@ -3744,6 +3743,14 @@
    0,
    0
   ],
+  "ilvl": 159,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 8,
+  "weaponDamageMin": 257.0,
+  "weaponDamageMax": 478.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -3781,13 +3788,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 257,
-  "weaponDamageMax": 478,
-  "weaponSpeed": 1.8,
-  "ilvl": 159,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3803,8 +3803,6 @@
   "name": "Troll Butcherer",
   "icon": "inv_sword_95",
   "type": 13,
-  "weaponType": 9,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -3842,6 +3840,15 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 9,
+  "weaponDamageMin": 384.0,
+  "weaponDamageMax": 578.0,
+  "weaponSpeed": 3.1,
   "socketBonus": [
    0,
    0,
@@ -3879,13 +3886,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 384,
-  "weaponDamageMax": 578,
-  "weaponSpeed": 3.1,
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3901,7 +3901,6 @@
   "name": "Infection Resistant Legguards",
   "icon": "inv_pants_mail_25",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -3939,6 +3938,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -3976,10 +3980,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -3995,7 +3995,6 @@
   "name": "Berserker's Horns",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -4033,6 +4032,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -4070,10 +4074,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4089,8 +4089,6 @@
   "name": "Summoner's Stone Gavel",
   "icon": "inv_mace_60",
   "type": 13,
-  "weaponType": 4,
-  "handType": 2,
   "stats": [
    0,
    0,
@@ -4128,6 +4126,15 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 4,
+  "weaponDamageMin": 192.0,
+  "weaponDamageMax": 357.0,
+  "weaponSpeed": 2.3,
   "socketBonus": [
    0,
    0,
@@ -4165,13 +4172,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 192,
-  "weaponDamageMax": 357,
-  "weaponSpeed": 2.3,
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4224,6 +4224,10 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -4261,10 +4265,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4280,7 +4280,6 @@
   "name": "Robes of Novos",
   "icon": "inv_chest_cloth_43",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -4318,6 +4317,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -4355,10 +4359,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4374,8 +4374,6 @@
   "name": "Staff of the Great Reptile",
   "icon": "inv_staff_69",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -4413,6 +4411,15 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 182.0,
+  "weaponDamageMax": 275.0,
+  "weaponSpeed": 2.1,
   "socketBonus": [
    0,
    0,
@@ -4450,13 +4457,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 182,
-  "weaponDamageMax": 275,
-  "weaponSpeed": 2.1,
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4472,7 +4472,6 @@
   "name": "Scabrous-Hide Helm",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    72,
@@ -4510,6 +4509,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -4547,10 +4551,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4566,7 +4566,6 @@
   "name": "Stable Master's Breeches",
   "icon": "inv_pants_cloth_14",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -4604,6 +4603,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -4641,10 +4645,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4660,8 +4660,6 @@
   "name": "Tharon'ja's Aegis",
   "icon": "inv_shield_51",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -4687,7 +4685,7 @@
    0,
    0,
    0,
-   0,
+   181,
    0,
    0,
    0,
@@ -4699,6 +4697,12 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -4736,10 +4740,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4755,7 +4755,6 @@
   "name": "Muradin's Lost Greaves",
   "icon": "inv_pants_plate_21",
   "type": 9,
-  "armorType": 4,
   "stats": [
    53,
    0,
@@ -4793,6 +4792,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -4830,10 +4834,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4849,7 +4849,6 @@
   "name": "Helmet of Living Flesh",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    70,
@@ -4887,6 +4886,11 @@
    0,
    0
   ],
+  "ilvl": 171,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -4924,10 +4928,6 @@
    0,
    0
   ],
-  "ilvl": 171,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -4943,8 +4943,6 @@
   "name": "Riot Shield",
   "icon": "inv_shield_50",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    39,
    0,
@@ -4969,8 +4967,8 @@
    7091,
    0,
    27,
-   76,
    0,
+   263,
    0,
    0,
    0,
@@ -4982,6 +4980,12 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -5019,10 +5023,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5038,7 +5038,6 @@
   "name": "Spaulders of Ichoron",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -5076,6 +5075,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -5113,10 +5117,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5132,7 +5132,6 @@
   "name": "Xevozz's Belt",
   "icon": "inv_belt_25",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    56,
@@ -5170,6 +5169,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -5207,10 +5211,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5226,7 +5226,6 @@
   "name": "Prison Warden's Shotgun",
   "icon": "inv_weapon_rifle_21",
   "type": 14,
-  "rangedWeaponType": 3,
   "stats": [
    0,
    32,
@@ -5264,6 +5263,14 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 3,
+  "weaponDamageMin": 208.0,
+  "weaponDamageMax": 388.0,
+  "weaponSpeed": 2.7,
   "socketBonus": [
    0,
    0,
@@ -5301,13 +5308,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 208,
-  "weaponDamageMax": 388,
-  "weaponSpeed": 2.7,
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5323,7 +5323,6 @@
   "name": "Lava Burn Gloves",
   "icon": "inv_gauntlets_19",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -5361,6 +5360,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -5398,10 +5402,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5417,7 +5417,6 @@
   "name": "Handguards of Rapid Pursuit",
   "icon": "inv_gauntlets_18",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    56,
@@ -5455,6 +5454,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -5492,10 +5496,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5511,8 +5511,6 @@
   "name": "Jailer's Baton",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    78,
@@ -5550,6 +5548,15 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 305.0,
+  "weaponDamageMax": 459.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -5587,13 +5594,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 305,
-  "weaponDamageMax": 459,
-  "weaponSpeed": 2.4,
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5609,7 +5609,6 @@
   "name": "Boots of the Portal Guardian",
   "icon": "inv_boots_chain_10",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -5647,6 +5646,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -5684,10 +5688,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5703,7 +5703,6 @@
   "name": "Plate Claws of the Dragon",
   "icon": "inv_gauntlets_01",
   "type": 7,
-  "armorType": 4,
   "stats": [
    63,
    0,
@@ -5741,6 +5740,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -5778,10 +5782,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5797,8 +5797,6 @@
   "name": "Cobweb Machete",
   "icon": "inv_weapon_shortblade_69",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    45,
@@ -5836,6 +5834,15 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 154.0,
+  "weaponDamageMax": 232.0,
+  "weaponSpeed": 1.7,
   "socketBonus": [
    0,
    0,
@@ -5873,13 +5880,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 154,
-  "weaponDamageMax": 232,
-  "weaponSpeed": 1.7,
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5895,7 +5895,6 @@
   "name": "Aura Focused Gauntlets",
   "icon": "inv_gauntlets_62",
   "type": 7,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -5933,6 +5932,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -5970,10 +5974,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -5989,7 +5989,6 @@
   "name": "Exquisite Spider-Silk Footwraps",
   "icon": "inv_boots_cloth_20",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -6027,6 +6026,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -6064,10 +6068,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6083,8 +6083,6 @@
   "name": "Life-Staff of the Web Lair",
   "icon": "inv_staff_69",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -6122,6 +6120,15 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 191.0,
+  "weaponDamageMax": 288.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -6159,13 +6166,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 191,
-  "weaponDamageMax": 288,
-  "weaponSpeed": 2.4,
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6181,7 +6181,6 @@
   "name": "Treads of Aspiring Heights",
   "icon": "inv_boots_03",
   "type": 10,
-  "armorType": 2,
   "stats": [
    0,
    51,
@@ -6219,6 +6218,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -6256,10 +6260,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6275,7 +6275,6 @@
   "name": "Spinneret Epaulets",
   "icon": "inv_shoulder_87",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -6313,6 +6312,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -6350,10 +6354,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6390,7 +6390,7 @@
    0,
    0,
    0,
-   308,
+   0,
    0,
    20,
    0,
@@ -6404,8 +6404,12 @@
    0,
    0,
    0,
-   0
+   308
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -6443,11 +6447,7 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6463,7 +6463,6 @@
   "name": "Wing Cover Girdle",
   "icon": "inv_belt_17",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -6501,6 +6500,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -6538,10 +6542,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6557,7 +6557,6 @@
   "name": "Charmed Silken Cord",
   "icon": "inv_belt_30",
   "type": 8,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -6595,6 +6594,11 @@
    0,
    0
   ],
+  "ilvl": 163,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -6632,10 +6636,6 @@
    0,
    0
   ],
-  "ilvl": 163,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6651,7 +6651,6 @@
   "name": "Brann's Lost Mining Helmet",
   "icon": "inv_helmet_123",
   "type": 1,
-  "armorType": 4,
   "stats": [
    60,
    0,
@@ -6689,6 +6688,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -6726,10 +6730,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6745,7 +6745,6 @@
   "name": "Hollow Geode Helm",
   "icon": "inv_helmet_121",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -6783,6 +6782,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -6820,10 +6824,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6839,7 +6839,6 @@
   "name": "Leggings of Burning Gleam",
   "icon": "inv_pants_cloth_14",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -6877,6 +6876,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -6914,10 +6918,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -6933,7 +6933,6 @@
   "name": "Linked Armor of the Sphere",
   "icon": "inv_chest_chain_07",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    78,
@@ -6971,6 +6970,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -7008,10 +7012,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7027,7 +7027,6 @@
   "name": "Constellation Leggings",
   "icon": "inv_pants_leather_09",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    82,
@@ -7065,6 +7064,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -7102,10 +7106,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7121,7 +7121,6 @@
   "name": "Cosmos Vestments",
   "icon": "inv_chest_leather_06",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -7159,6 +7158,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -7196,10 +7200,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7215,7 +7215,6 @@
   "name": "Ironshaper's Legplates",
   "icon": "inv_pants_plate_11",
   "type": 9,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -7253,6 +7252,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -7290,10 +7294,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7309,7 +7309,6 @@
   "name": "Static Cowl",
   "icon": "inv_helmet_125",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -7347,6 +7346,11 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -7384,10 +7388,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7424,7 +7424,7 @@
    0,
    0,
    0,
-   336,
+   0,
    0,
    0,
    0,
@@ -7438,8 +7438,12 @@
    0,
    0,
    0,
-   0
+   336
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -7477,10 +7481,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7533,6 +7533,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -7570,10 +7574,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7589,8 +7589,6 @@
   "name": "Lifeblade of Belgaristrasz",
   "icon": "inv_weapon_shortblade_72",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    33,
@@ -7628,6 +7626,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 189.0,
+  "weaponDamageMax": 284.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -7665,13 +7672,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 189,
-  "weaponDamageMax": 284,
-  "weaponSpeed": 1.8,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7687,7 +7687,6 @@
   "name": "Verdisa's Cuffs of Dreaming",
   "icon": "inv_bracer_08",
   "type": 6,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -7725,6 +7724,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -7765,10 +7769,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7784,7 +7784,6 @@
   "name": "Runic Cage Chestpiece",
   "icon": "inv_chest_chain_03",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -7822,6 +7821,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    3
   ],
@@ -7862,10 +7866,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7918,6 +7918,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -7955,10 +7959,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -7974,7 +7974,6 @@
   "name": "Horned Helm of Varos",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -8012,6 +8011,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    4
   ],
@@ -8052,10 +8056,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8071,7 +8071,6 @@
   "name": "Gloves of the Azure-Lord",
   "icon": "inv_gauntlets_17",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -8109,6 +8108,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -8146,10 +8150,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8165,7 +8165,6 @@
   "name": "Wing Commander's Breastplate",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    80,
    0,
@@ -8203,6 +8202,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -8243,10 +8247,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8262,7 +8262,6 @@
   "name": "Sidestepping Handguards",
   "icon": "inv_gauntlets_25",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    59,
@@ -8300,6 +8299,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -8337,10 +8341,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8356,7 +8356,6 @@
   "name": "Girdle of Obscuring",
   "icon": "inv_belt_33",
   "type": 8,
-  "armorType": 4,
   "stats": [
    59,
    0,
@@ -8394,6 +8393,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -8431,10 +8435,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8450,7 +8450,6 @@
   "name": "Spaulders of Skillful Maneuvers",
   "icon": "inv_shoulder_95",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    39,
@@ -8488,6 +8487,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -8525,10 +8529,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8544,7 +8544,6 @@
   "name": "The Conjurer's Slippers",
   "icon": "inv_boots_cloth_18",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -8582,6 +8581,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -8619,10 +8623,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8675,6 +8675,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -8712,11 +8716,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8732,8 +8732,6 @@
   "name": "Wyrmclaw Battleaxe",
   "icon": "inv_axe_81",
   "type": 13,
-  "weaponType": 1,
-  "handType": 4,
   "stats": [
    0,
    79,
@@ -8771,6 +8769,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 1,
+  "weaponDamageMin": 480.0,
+  "weaponDamageMax": 721.0,
+  "weaponSpeed": 3.5,
   "socketBonus": [
    0,
    0,
@@ -8808,13 +8815,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 480,
-  "weaponDamageMax": 721,
-  "weaponSpeed": 3.5,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8830,7 +8830,6 @@
   "name": "Helm of the Ley-Guardian",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    46,
    0,
@@ -8868,6 +8867,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -8908,10 +8912,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -8927,7 +8927,6 @@
   "name": "Headguard of Westrift",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    61,
@@ -8965,6 +8964,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -9005,10 +9009,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9061,6 +9061,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -9098,11 +9102,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9118,7 +9118,6 @@
   "name": "Vestments of the Scholar",
   "icon": "inv_chest_cloth_39",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -9156,6 +9155,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -9193,10 +9197,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9212,7 +9212,6 @@
   "name": "Eregos' Ornamented Chestguard",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -9250,6 +9249,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -9290,10 +9294,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9309,8 +9309,6 @@
   "name": "Malygos' Favor",
   "icon": "inv_staff_69",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -9348,6 +9346,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 231.0,
+  "weaponDamageMax": 347.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -9385,13 +9392,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 231,
-  "weaponDamageMax": 347,
-  "weaponSpeed": 2.4,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9444,6 +9444,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -9481,11 +9485,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9501,8 +9501,6 @@
   "name": "Hewn Sparring Quarterstaff",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    60,
@@ -9540,6 +9538,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 329.0,
+  "weaponDamageMax": 494.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -9577,13 +9584,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 329,
-  "weaponDamageMax": 494,
-  "weaponSpeed": 2.4,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9599,7 +9599,6 @@
   "name": "Hardened Vrykul Throwing Axe",
   "icon": "inv_axe_03",
   "type": 14,
-  "rangedWeaponType": 6,
   "stats": [
    0,
    0,
@@ -9637,6 +9636,14 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 6,
+  "weaponDamageMin": 301.0,
+  "weaponDamageMax": 453.0,
+  "weaponSpeed": 2.2,
   "socketBonus": [
    0,
    0,
@@ -9674,13 +9681,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 301,
-  "weaponDamageMax": 453,
-  "weaponSpeed": 2.2,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9696,7 +9696,6 @@
   "name": "Mantle of Electrical Charges",
   "icon": "inv_shoulder_79",
   "type": 3,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -9734,6 +9733,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -9771,10 +9775,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9827,6 +9827,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -9864,10 +9868,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9883,8 +9883,6 @@
   "name": "Eternally Folded Blade",
   "icon": "inv_sword_91",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    33,
    0,
@@ -9922,6 +9920,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 147.0,
+  "weaponDamageMax": 275.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -9959,13 +9966,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 147,
-  "weaponDamageMax": 275,
-  "weaponSpeed": 1.6,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -9981,7 +9981,6 @@
   "name": "Volkhan's Hood",
   "icon": "inv_helmet_107",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -10019,6 +10018,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -10056,10 +10060,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10075,7 +10075,6 @@
   "name": "Kilt of Molten Golems",
   "icon": "inv_pants_plate_02",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -10113,6 +10112,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -10150,10 +10154,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10206,6 +10206,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -10243,10 +10247,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10262,7 +10262,6 @@
   "name": "Ancient Measuring Rod",
   "icon": "inv_torch_unlit",
   "type": 14,
-  "rangedWeaponType": 8,
   "stats": [
    0,
    0,
@@ -10300,6 +10299,14 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 8,
+  "weaponDamageMin": 305.0,
+  "weaponDamageMax": 567.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -10337,13 +10344,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 305,
-  "weaponDamageMax": 567,
-  "weaponSpeed": 1.8,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10359,7 +10359,6 @@
   "name": "Raiments of the Titans",
   "icon": "inv_chest_cloth_63",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -10397,6 +10396,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -10437,10 +10441,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10456,7 +10456,6 @@
   "name": "Leather-Braced Chain Leggings",
   "icon": "inv_pants_mail_21",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    70,
@@ -10494,6 +10493,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -10534,10 +10538,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10590,6 +10590,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -10627,11 +10631,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10647,7 +10647,6 @@
   "name": "Projectile Activator",
   "icon": "inv_weapon_rifle_22",
   "type": 14,
-  "rangedWeaponType": 3,
   "stats": [
    0,
    34,
@@ -10685,6 +10684,14 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 3,
+  "weaponDamageMin": 233.0,
+  "weaponDamageMax": 434.0,
+  "weaponSpeed": 2.8,
   "socketBonus": [
    0,
    0,
@@ -10722,13 +10729,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 233,
-  "weaponDamageMax": 434,
-  "weaponSpeed": 2.8,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10744,7 +10744,6 @@
   "name": "Fists of Loken",
   "icon": "inv_gauntlets_26",
   "type": 7,
-  "armorType": 4,
   "stats": [
    60,
    0,
@@ -10782,6 +10781,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -10822,10 +10826,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10841,7 +10841,6 @@
   "name": "Hood of the Furtive Assassin",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    61,
@@ -10879,6 +10878,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -10919,10 +10923,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -10938,8 +10938,6 @@
   "name": "Ritualistic Athame",
   "icon": "inv_weapon_shortblade_71",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    33,
@@ -10977,6 +10975,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 147.0,
+  "weaponDamageMax": 222.0,
+  "weaponSpeed": 1.4,
   "socketBonus": [
    0,
    0,
@@ -11014,13 +11021,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 147,
-  "weaponDamageMax": 222,
-  "weaponSpeed": 1.4,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11036,7 +11036,6 @@
   "name": "Brazier Igniter",
   "icon": "inv_wand_17",
   "type": 14,
-  "rangedWeaponType": 8,
   "stats": [
    0,
    0,
@@ -11074,6 +11073,14 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 8,
+  "weaponDamageMin": 305.0,
+  "weaponDamageMax": 567.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -11111,13 +11118,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 305,
-  "weaponDamageMax": 567,
-  "weaponSpeed": 1.8,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11133,7 +11133,6 @@
   "name": "Svala's Bloodied Shackles",
   "icon": "inv_bracer_07",
   "type": 6,
-  "armorType": 4,
   "stats": [
    44,
    0,
@@ -11171,6 +11170,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -11208,10 +11212,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11227,7 +11227,6 @@
   "name": "Tear-Linked Gauntlets",
   "icon": "inv_gauntlets_15",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    59,
@@ -11265,6 +11264,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -11302,10 +11306,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11358,6 +11358,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -11395,10 +11399,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11414,7 +11414,6 @@
   "name": "Trophy Gatherer",
   "icon": "inv_weapon_bow_36",
   "type": 14,
-  "rangedWeaponType": 1,
   "stats": [
    0,
    0,
@@ -11452,6 +11451,14 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 1,
+  "weaponDamageMin": 249.0,
+  "weaponDamageMax": 464.0,
+  "weaponSpeed": 3.0,
   "socketBonus": [
    0,
    0,
@@ -11489,13 +11496,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 249,
-  "weaponDamageMax": 464,
-  "weaponSpeed": 3,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11511,8 +11511,6 @@
   "name": "Seal of Valgarde",
   "icon": "inv_staff_24",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -11550,6 +11548,12 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -11587,10 +11591,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11606,7 +11606,6 @@
   "name": "Reanimated Armor",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    78,
    0,
@@ -11644,6 +11643,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -11681,10 +11685,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11737,6 +11737,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -11774,10 +11778,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11793,7 +11793,6 @@
   "name": "Silken Amice of the Ymirjar",
   "icon": "inv_shoulder_72",
   "type": 3,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -11831,6 +11830,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -11868,10 +11872,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11887,7 +11887,6 @@
   "name": "Harpooner's Striders",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -11925,6 +11924,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -11962,10 +11966,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -11981,7 +11981,6 @@
   "name": "Drake Rider's Tunic",
   "icon": "inv_chest_leather_08",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    60,
@@ -12019,6 +12018,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -12059,10 +12063,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12115,6 +12115,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -12152,11 +12156,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12172,8 +12172,6 @@
   "name": "Jeweled Coronation Sword",
   "icon": "inv_sword_91",
   "type": 13,
-  "weaponType": 9,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -12211,6 +12209,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 9,
+  "weaponDamageMin": 90.0,
+  "weaponDamageMax": 169.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -12248,13 +12255,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 90,
-  "weaponDamageMax": 169,
-  "weaponSpeed": 1.6,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12270,8 +12270,6 @@
   "name": "Tor's Crest",
   "icon": "inv_shield_51",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -12297,7 +12295,7 @@
    0,
    0,
    0,
-   0,
+   197,
    0,
    0,
    0,
@@ -12309,6 +12307,12 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -12346,10 +12350,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12365,7 +12365,6 @@
   "name": "Crown of Forgotten Kings",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -12403,6 +12402,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -12443,10 +12447,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12499,6 +12499,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -12536,11 +12540,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12556,8 +12556,6 @@
   "name": "Ymiron's Blade",
   "icon": "inv_sword_99",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    0,
    33,
@@ -12595,6 +12593,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 239.0,
+  "weaponDamageMax": 446.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -12632,13 +12639,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 239,
-  "weaponDamageMax": 446,
-  "weaponSpeed": 2.6,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12654,7 +12654,6 @@
   "name": "Ancient Royal Legguards",
   "icon": "inv_pants_plate_20",
   "type": 9,
-  "armorType": 4,
   "stats": [
    80,
    0,
@@ -12692,6 +12691,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -12732,10 +12736,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12751,7 +12751,6 @@
   "name": "Ceremonial Pyre Mantle",
   "icon": "inv_shoulder_78",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    39,
@@ -12789,6 +12788,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -12826,10 +12830,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12882,6 +12882,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -12919,11 +12923,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -12939,8 +12939,6 @@
   "name": "Meathook's Slicer",
   "icon": "inv_sword_99",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    0,
    33,
@@ -12978,6 +12976,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 147.0,
+  "weaponDamageMax": 275.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -13015,13 +13022,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 147,
-  "weaponDamageMax": 275,
-  "weaponSpeed": 1.6,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13037,7 +13037,6 @@
   "name": "Slaughterhouse Sabatons",
   "icon": "inv_boots_plate_09",
   "type": 10,
-  "armorType": 4,
   "stats": [
    59,
    0,
@@ -13062,8 +13061,8 @@
    1496,
    0,
    39,
-   118,
    0,
+   118,
    0,
    0,
    0,
@@ -13075,6 +13074,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -13112,10 +13116,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13131,7 +13131,6 @@
   "name": "Kilt of Sewn Flesh",
   "icon": "inv_pants_leather_26",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -13169,6 +13168,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -13206,11 +13210,7 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13247,7 +13247,7 @@
    0,
    0,
    0,
-   504,
+   140,
    0,
    30,
    0,
@@ -13261,8 +13261,12 @@
    0,
    0,
    0,
-   0
+   364
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -13300,10 +13304,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13319,8 +13319,6 @@
   "name": "Tome of Salramm",
   "icon": "inv_misc_book_11",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -13358,6 +13356,12 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -13395,10 +13399,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13414,7 +13414,6 @@
   "name": "Spiked Metal Cilice",
   "icon": "inv_belt_23",
   "type": 8,
-  "armorType": 4,
   "stats": [
    59,
    43,
@@ -13452,6 +13451,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -13489,10 +13493,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13508,7 +13508,6 @@
   "name": "Waistband of the Thuzadin",
   "icon": "inv_belt_26",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    46,
@@ -13546,6 +13545,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -13583,10 +13587,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13639,6 +13639,10 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -13676,10 +13680,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13695,8 +13695,6 @@
   "name": "Sempiternal Staff",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -13734,6 +13732,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 203.0,
+  "weaponDamageMax": 306.0,
+  "weaponSpeed": 2.1,
   "socketBonus": [
    0,
    0,
@@ -13771,13 +13778,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 203,
-  "weaponDamageMax": 306,
-  "weaponSpeed": 2.1,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13793,7 +13793,6 @@
   "name": "Treads of Altered History",
   "icon": "inv_boots_chain_07",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -13831,6 +13830,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -13868,10 +13872,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13887,7 +13887,6 @@
   "name": "Ouroboros Belt",
   "icon": "inv_jewelry_ring_41",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -13925,6 +13924,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -13962,10 +13966,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -13981,8 +13981,6 @@
   "name": "Leeka's Shield",
   "icon": "inv_shield_49",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    43,
    0,
@@ -14008,7 +14006,7 @@
    0,
    44,
    0,
-   0,
+   197,
    0,
    0,
    0,
@@ -14020,6 +14018,12 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -14057,10 +14061,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14076,8 +14076,6 @@
   "name": "Dreadlord's Blade",
   "icon": "inv_sword_100",
   "type": 13,
-  "weaponType": 9,
-  "handType": 4,
   "stats": [
    80,
    0,
@@ -14115,6 +14113,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 9,
+  "weaponDamageMin": 466.0,
+  "weaponDamageMax": 700.0,
+  "weaponSpeed": 3.4,
   "socketBonus": [
    0,
    0,
@@ -14152,13 +14159,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 466,
-  "weaponDamageMax": 700,
-  "weaponSpeed": 3.4,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14174,7 +14174,6 @@
   "name": "Discarded Silver Hand Spaulders",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -14212,6 +14211,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -14249,10 +14253,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14268,7 +14268,6 @@
   "name": "Gauntlets of Dark Conversion",
   "icon": "inv_gauntlets_26",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -14306,6 +14305,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -14343,10 +14347,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14362,8 +14362,6 @@
   "name": "Beguiling Scepter",
   "icon": "inv_mace_60",
   "type": 13,
-  "weaponType": 4,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -14401,6 +14399,15 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 4,
+  "weaponDamageMin": 130.0,
+  "weaponDamageMax": 242.0,
+  "weaponSpeed": 2.3,
   "socketBonus": [
    0,
    0,
@@ -14438,13 +14445,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 130,
-  "weaponDamageMax": 242,
-  "weaponSpeed": 2.3,
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14460,7 +14460,6 @@
   "name": "Demonic Fabric Bands",
   "icon": "inv_bracer_08",
   "type": 6,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -14498,6 +14497,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -14535,10 +14539,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14554,7 +14554,6 @@
   "name": "Gloves of Northern Lordaeron",
   "icon": "inv_gauntlets_05",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -14592,6 +14591,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -14629,10 +14633,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14648,8 +14648,6 @@
   "name": "Telestra's Journal",
   "icon": "inv_misc_book_06",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -14687,6 +14685,12 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -14724,10 +14728,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14750,7 +14750,6 @@
   "name": "Arcane-Shielded Helm",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    70,
    0,
@@ -14788,6 +14787,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    1,
    3
@@ -14829,10 +14833,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14855,7 +14855,6 @@
   "name": "Bands of Channeled Energy",
   "icon": "inv_bracer_07",
   "type": 6,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -14893,6 +14892,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -14930,10 +14934,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -14956,7 +14956,6 @@
   "name": "Spaulders of the Careless Thief",
   "icon": "inv_shoulder_78",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    66,
@@ -14994,6 +14993,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -15034,10 +15038,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15097,6 +15097,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -15134,10 +15138,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15160,7 +15160,6 @@
   "name": "Hauberk of the Arcane Wraith",
   "icon": "inv_chest_chain_03",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    64,
@@ -15198,6 +15197,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    3
   ],
@@ -15238,10 +15242,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15264,7 +15264,6 @@
   "name": "Helm of Anomalus",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -15302,6 +15301,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    1,
    4
@@ -15343,10 +15347,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15369,7 +15369,6 @@
   "name": "Rift Striders",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    57,
    0,
@@ -15407,6 +15406,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -15447,10 +15451,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15510,6 +15510,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -15547,11 +15551,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15574,7 +15574,6 @@
   "name": "Girdle of Ice",
   "icon": "inv_belt_22",
   "type": 8,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -15612,6 +15611,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -15652,10 +15656,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15678,7 +15678,6 @@
   "name": "Gloves of the Crystal Gardener",
   "icon": "inv_gauntlets_17",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -15716,6 +15715,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -15753,10 +15757,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15779,7 +15779,6 @@
   "name": "Frozen Forest Kilt",
   "icon": "inv_pants_mail_25",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -15817,6 +15816,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2,
    3
@@ -15858,10 +15862,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15884,8 +15884,6 @@
   "name": "Bulwark of the Noble Protector",
   "icon": "inv_shield_50",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    50,
    0,
@@ -15911,7 +15909,7 @@
    0,
    36,
    29,
-   0,
+   204,
    0,
    0,
    0,
@@ -15923,6 +15921,12 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -15960,10 +15964,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -15986,7 +15986,6 @@
   "name": "Crystal-Infused Tunic",
   "icon": "inv_chest_leather_08",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    61,
@@ -16024,6 +16023,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    4,
    2
@@ -16065,10 +16069,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16128,6 +16128,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -16165,11 +16169,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16192,7 +16192,6 @@
   "name": "Dragon Slayer's Sabatons",
   "icon": "inv_boots_chain_09",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    48,
@@ -16230,6 +16229,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2,
    2
@@ -16271,10 +16275,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16297,7 +16297,6 @@
   "name": "Wand of the San'layn",
   "icon": "inv_wand_18",
   "type": 14,
-  "rangedWeaponType": 8,
   "stats": [
    0,
    0,
@@ -16335,6 +16334,14 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 8,
+  "weaponDamageMin": 332.0,
+  "weaponDamageMax": 617.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -16372,13 +16379,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 332,
-  "weaponDamageMax": 617,
-  "weaponSpeed": 1.8,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16401,7 +16401,6 @@
   "name": "Strategist's Belt",
   "icon": "inv_belt_34",
   "type": 8,
-  "armorType": 4,
   "stats": [
    60,
    0,
@@ -16439,6 +16438,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -16479,10 +16483,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16505,8 +16505,6 @@
   "name": "Infantry Assault Blade",
   "icon": "inv_sword_97",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    28,
    0,
@@ -16544,6 +16542,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 261.0,
+  "weaponDamageMax": 486.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -16581,13 +16588,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 261,
-  "weaponDamageMax": 486,
-  "weaponSpeed": 2.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16610,7 +16610,6 @@
   "name": "Battlemap Hide Helm",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -16648,6 +16647,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    1,
    4
@@ -16689,10 +16693,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16715,8 +16715,6 @@
   "name": "Dagger of Betrayal",
   "icon": "inv_weapon_shortblade_72",
   "type": 13,
-  "weaponType": 2,
-  "handType": 2,
   "stats": [
    0,
    28,
@@ -16754,6 +16752,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 2,
+  "weaponDamageMin": 206.0,
+  "weaponDamageMax": 310.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -16791,13 +16798,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 206,
-  "weaponDamageMax": 310,
-  "weaponSpeed": 1.8,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16820,7 +16820,6 @@
   "name": "Helmet of the Constructor",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -16858,6 +16857,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    1,
    2
@@ -16899,10 +16903,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -16925,7 +16925,6 @@
   "name": "Bindings of the Tunneler",
   "icon": "inv_bracer_02",
   "type": 6,
-  "armorType": 2,
   "stats": [
    0,
    36,
@@ -16963,6 +16962,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -17000,10 +17004,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17026,7 +17026,6 @@
   "name": "Dalronn's Jerkin",
   "icon": "inv_chest_chain_04",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -17064,6 +17063,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    3
   ],
@@ -17104,10 +17108,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17154,8 +17154,8 @@
    0,
    0,
    35,
-   94,
    0,
+   94,
    0,
    0,
    0,
@@ -17167,6 +17167,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -17204,11 +17208,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17231,7 +17231,6 @@
   "name": "Plunderer's Helmet",
   "icon": "inv_helmet_121",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    69,
@@ -17269,6 +17268,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    1,
    2
@@ -17310,10 +17314,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17336,7 +17336,6 @@
   "name": "Breeches of the Caller",
   "icon": "inv_pants_cloth_19",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -17374,6 +17373,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2,
    3
@@ -17415,10 +17419,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17441,8 +17441,6 @@
   "name": "Enraged Feral Staff",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    90,
@@ -17478,8 +17476,17 @@
    0,
    0,
    0,
-   0
+   700
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 358.0,
+  "weaponDamageMax": 538.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -17517,13 +17524,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 358,
-  "weaponDamageMax": 538,
-  "weaponSpeed": 2.4,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17583,6 +17583,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -17620,11 +17624,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17647,8 +17647,6 @@
   "name": "Facade Shield of Glyphs",
   "icon": "inv_shield_51",
   "type": 13,
-  "weaponType": 7,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -17674,7 +17672,7 @@
    0,
    0,
    0,
-   0,
+   204,
    0,
    0,
    0,
@@ -17686,6 +17684,12 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 7,
   "socketBonus": [
    0,
    0,
@@ -17723,10 +17727,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17749,7 +17749,6 @@
   "name": "Golden Limb Bands",
   "icon": "inv_bracer_19",
   "type": 6,
-  "armorType": 4,
   "stats": [
    51,
    0,
@@ -17787,6 +17786,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -17824,10 +17828,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17850,7 +17850,6 @@
   "name": "Stone-Worn Footwraps",
   "icon": "inv_boots_cloth_09",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -17888,6 +17887,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -17925,10 +17929,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -17951,7 +17951,6 @@
   "name": "Custodian's Chestpiece",
   "icon": "inv_chest_leather_03",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    64,
@@ -17989,6 +17988,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -18026,10 +18030,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18089,6 +18089,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -18126,11 +18130,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18153,7 +18153,6 @@
   "name": "Hollowed Mandible Legplates",
   "icon": "inv_pants_mail_03",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    71,
@@ -18191,6 +18190,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2,
    2
@@ -18232,10 +18236,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18258,7 +18258,6 @@
   "name": "Egg Sac Robes",
   "icon": "inv_chest_cloth_25",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -18296,6 +18295,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2,
    4
@@ -18337,10 +18341,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18363,7 +18363,6 @@
   "name": "Grotto Mist Gloves",
   "icon": "inv_gauntlets_25",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -18401,6 +18400,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -18441,10 +18445,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18504,6 +18504,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -18541,11 +18545,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18568,8 +18568,6 @@
   "name": "Crypt Lord's Deft Blade",
   "icon": "inv_sword_97",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    0,
    22,
@@ -18607,6 +18605,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 250.0,
+  "weaponDamageMax": 466.0,
+  "weaponSpeed": 2.5,
   "socketBonus": [
    0,
    0,
@@ -18644,13 +18651,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 250,
-  "weaponDamageMax": 466,
-  "weaponSpeed": 2.5,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18673,7 +18673,6 @@
   "name": "Insect Vestments",
   "icon": "inv_chest_cloth_15",
   "type": 5,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -18711,6 +18710,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2,
    4
@@ -18752,10 +18756,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18778,7 +18778,6 @@
   "name": "Chitin Shell Greathelm",
   "icon": "inv_helmet_110",
   "type": 1,
-  "armorType": 4,
   "stats": [
    72,
    0,
@@ -18816,6 +18815,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    1,
    4
@@ -18857,10 +18861,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18883,8 +18883,6 @@
   "name": "The Interrogator",
   "icon": "inv_sword_99",
   "type": 13,
-  "weaponType": 9,
-  "handType": 2,
   "stats": [
    0,
    0,
@@ -18922,6 +18920,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 9,
+  "weaponDamageMin": 160.0,
+  "weaponDamageMax": 299.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -18959,13 +18966,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 160,
-  "weaponDamageMax": 299,
-  "weaponSpeed": 1.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -18988,7 +18988,6 @@
   "name": "Scaled Armor of Drakos",
   "icon": "inv_chest_chain_03",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -19026,6 +19025,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -19063,10 +19067,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19110,7 +19110,7 @@
    0,
    0,
    0,
-   406,
+   0,
    0,
    32,
    0,
@@ -19124,8 +19124,12 @@
    0,
    0,
    0,
-   0
+   406
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -19163,11 +19167,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19190,7 +19190,6 @@
   "name": "Drakewing Raiments",
   "icon": "inv_chest_cloth_28",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -19228,6 +19227,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4,
    2
@@ -19269,10 +19273,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19295,8 +19295,6 @@
   "name": "Cloudstrider's Waraxe",
   "icon": "inv_axe_79",
   "type": 13,
-  "weaponType": 1,
-  "handType": 2,
   "stats": [
    28,
    0,
@@ -19334,6 +19332,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 1,
+  "weaponDamageMin": 190.0,
+  "weaponDamageMax": 355.0,
+  "weaponSpeed": 1.9,
   "socketBonus": [
    0,
    0,
@@ -19371,13 +19378,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 190,
-  "weaponDamageMax": 355,
-  "weaponSpeed": 1.9,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19400,7 +19400,6 @@
   "name": "Gloves of Radiant Light",
   "icon": "inv_gauntlets_25",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -19438,6 +19437,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -19475,10 +19479,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19501,7 +19501,6 @@
   "name": "Azure Ringmail Leggings",
   "icon": "inv_pants_mail_11",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    60,
@@ -19539,6 +19538,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -19576,10 +19580,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19602,7 +19602,6 @@
   "name": "Legplates of the Oculus Guardian",
   "icon": "inv_pants_plate_21",
   "type": 9,
-  "armorType": 4,
   "stats": [
    90,
    69,
@@ -19640,6 +19639,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -19677,10 +19681,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19740,6 +19740,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -19777,11 +19781,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19804,7 +19804,6 @@
   "name": "Catalytic Bands",
   "icon": "inv_bracer_09",
   "type": 6,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -19842,6 +19841,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -19879,10 +19883,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -19905,7 +19905,6 @@
   "name": "Sash of Phantasmal Images",
   "icon": "inv_belt_07",
   "type": 8,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -19943,6 +19942,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -19980,10 +19984,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20043,6 +20043,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -20080,10 +20084,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20106,7 +20106,6 @@
   "name": "Ley-Guardian's Legguards",
   "icon": "inv_pants_plate_21",
   "type": 9,
-  "armorType": 4,
   "stats": [
    52,
    0,
@@ -20144,6 +20143,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -20184,10 +20188,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20210,7 +20210,6 @@
   "name": "Mask of the Watcher",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    41,
@@ -20248,6 +20247,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    1,
    3
@@ -20289,10 +20293,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20315,7 +20315,6 @@
   "name": "Crown of Unbridled Magic",
   "icon": "inv_helmet_107",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -20353,6 +20352,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    1,
    4
@@ -20394,10 +20398,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20420,7 +20420,6 @@
   "name": "Echoing Stompers",
   "icon": "inv_boots_plate_09",
   "type": 10,
-  "armorType": 4,
   "stats": [
    69,
    44,
@@ -20458,6 +20457,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -20495,10 +20499,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20521,7 +20521,6 @@
   "name": "Silent Spectator Shoulderpads",
   "icon": "inv_shoulder_87",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -20559,6 +20558,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    3
   ],
@@ -20599,10 +20603,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20625,7 +20625,6 @@
   "name": "Sorrowgrave's Breeches",
   "icon": "inv_pants_cloth_10",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -20663,6 +20662,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2
   ],
@@ -20703,10 +20707,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20729,7 +20729,6 @@
   "name": "Cuffs of the Trussed Hall",
   "icon": "inv_bracer_04",
   "type": 6,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -20767,6 +20766,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -20804,10 +20808,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20867,6 +20867,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -20904,11 +20908,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -20931,7 +20931,6 @@
   "name": "Massive Spaulders of the Jormungar",
   "icon": "inv_shoulder_69",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    47,
@@ -20969,6 +20968,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -21006,10 +21010,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21032,7 +21032,6 @@
   "name": "Ravenous Leggings of the Furbolg",
   "icon": "inv_pants_leather_01",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    71,
@@ -21070,6 +21069,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2,
    2
@@ -21111,10 +21115,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21137,7 +21137,6 @@
   "name": "Ferocious Pauldrons of the Rhino",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -21175,6 +21174,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -21215,10 +21219,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21241,8 +21241,6 @@
   "name": "Netherbreath Spellblade",
   "icon": "inv_sword_91",
   "type": 13,
-  "weaponType": 2,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -21280,6 +21278,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 2,
+  "weaponDamageMin": 126.0,
+  "weaponDamageMax": 236.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -21317,13 +21324,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 126,
-  "weaponDamageMax": 236,
-  "weaponSpeed": 1.8,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21346,7 +21346,6 @@
   "name": "Skadi's Iron Belt",
   "icon": "inv_belt_29",
   "type": 8,
-  "armorType": 4,
   "stats": [
    56,
    0,
@@ -21371,8 +21370,8 @@
    1261,
    0,
    45,
-   103,
    0,
+   103,
    0,
    0,
    0,
@@ -21384,6 +21383,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -21424,10 +21428,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21450,8 +21450,6 @@
   "name": "Staff of Wayward Principles",
   "icon": "inv_staff_69",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -21489,6 +21487,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 242.0,
+  "weaponDamageMax": 364.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -21526,13 +21533,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 242,
-  "weaponDamageMax": 364,
-  "weaponSpeed": 2.4,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21555,7 +21555,6 @@
   "name": "Crenelation Leggings",
   "icon": "inv_pants_leather_13",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -21593,6 +21592,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -21633,11 +21637,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21697,6 +21697,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -21734,11 +21738,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21761,7 +21761,6 @@
   "name": "Ornamented Plate Regalia",
   "icon": "inv_chest_plate13",
   "type": 5,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -21799,6 +21798,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3,
    2
@@ -21840,10 +21844,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21903,6 +21903,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -21940,10 +21944,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -21966,7 +21966,6 @@
   "name": "Mantle of Discarded Ways",
   "icon": "inv_shoulder_77",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -22004,6 +22003,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -22041,10 +22045,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22088,7 +22088,7 @@
    0,
    0,
    0,
-   462,
+   0,
    0,
    24,
    0,
@@ -22102,8 +22102,12 @@
    0,
    0,
    0,
-   0
+   462
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -22141,11 +22145,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22168,7 +22168,6 @@
   "name": "Brood Plague Helmet",
   "icon": "inv_helmet_121",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -22206,6 +22205,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    1,
    2
@@ -22247,10 +22251,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22273,7 +22273,6 @@
   "name": "Sprinting Shoulderpads",
   "icon": "inv_shoulder_78",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    38,
@@ -22311,6 +22310,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -22348,10 +22352,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22374,7 +22374,6 @@
   "name": "Elder Headpiece",
   "icon": "inv_helmet_124",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -22412,6 +22411,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -22449,10 +22453,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22512,6 +22512,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -22549,10 +22553,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22575,7 +22575,6 @@
   "name": "Bonegrinder Breastplate",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    80,
    0,
@@ -22613,6 +22612,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3,
    2
@@ -22654,10 +22658,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22680,7 +22680,6 @@
   "name": "Flame Sphere Bindings",
   "icon": "inv_bracer_13",
   "type": 6,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -22718,6 +22717,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -22755,10 +22759,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22781,7 +22781,6 @@
   "name": "Gauntlets of the Plundering Geist",
   "icon": "inv_gauntlets_65",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    44,
@@ -22819,6 +22818,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -22856,10 +22860,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22882,7 +22882,6 @@
   "name": "Titanium Compound Bow",
   "icon": "inv_weapon_bow_35",
   "type": 14,
-  "rangedWeaponType": 1,
   "stats": [
    0,
    28,
@@ -22920,6 +22919,14 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 1,
+  "weaponDamageMin": 263.0,
+  "weaponDamageMax": 489.0,
+  "weaponSpeed": 2.9,
   "socketBonus": [
    0,
    0,
@@ -22957,13 +22964,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 263,
-  "weaponDamageMax": 489,
-  "weaponSpeed": 2.9,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -22986,7 +22986,6 @@
   "name": "Kilt of the Forgotten One",
   "icon": "inv_pants_leather_13",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -23024,6 +23023,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -23061,11 +23065,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23088,8 +23088,6 @@
   "name": "Staff of Sinister Claws",
   "icon": "inv_staff_37",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -23127,6 +23125,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 211.0,
+  "weaponDamageMax": 318.0,
+  "weaponSpeed": 2.1,
   "socketBonus": [
    0,
    0,
@@ -23164,13 +23171,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 211,
-  "weaponDamageMax": 318,
-  "weaponSpeed": 2.1,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23193,7 +23193,6 @@
   "name": "Greaves of Ancient Evil",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    65,
    0,
@@ -23231,6 +23230,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -23268,10 +23272,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23294,7 +23294,6 @@
   "name": "Wand of Sseratus",
   "icon": "inv_wand_22",
   "type": 14,
-  "rangedWeaponType": 8,
   "stats": [
    0,
    0,
@@ -23332,6 +23331,14 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 8,
+  "weaponDamageMin": 332.0,
+  "weaponDamageMax": 617.0,
+  "weaponSpeed": 1.8,
   "socketBonus": [
    0,
    0,
@@ -23369,13 +23376,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 332,
-  "weaponDamageMax": 617,
-  "weaponSpeed": 1.8,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23398,7 +23398,6 @@
   "name": "Snake Den Spaulders",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    57,
    0,
@@ -23436,6 +23435,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -23476,10 +23480,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23502,7 +23502,6 @@
   "name": "Slad'ran's Coiled Cord",
   "icon": "inv_belt_13",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -23540,6 +23539,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -23577,10 +23581,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23603,7 +23603,6 @@
   "name": "Slithering Slippers",
   "icon": "inv_boots_cloth_15",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -23641,6 +23640,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -23678,10 +23682,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23741,6 +23741,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -23778,10 +23782,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23804,8 +23804,6 @@
   "name": "Fist of the Deity",
   "icon": "inv_sword_draenei_05",
   "type": 13,
-  "weaponType": 3,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -23843,6 +23841,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 3,
+  "weaponDamageMin": 261.0,
+  "weaponDamageMax": 486.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -23880,13 +23887,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 261,
-  "weaponDamageMax": 486,
-  "weaponSpeed": 2.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -23909,7 +23909,6 @@
   "name": "Mojo Frenzy Greaves",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -23947,6 +23946,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -23987,10 +23991,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24013,7 +24013,6 @@
   "name": "Ground Tremor Helm",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    55,
    0,
@@ -24051,6 +24050,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    1,
    2
@@ -24092,10 +24096,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24118,7 +24118,6 @@
   "name": "Bracers of the Divine Elemental",
   "icon": "inv_bracer_16",
   "type": 6,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -24156,6 +24155,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -24193,10 +24197,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24219,7 +24219,6 @@
   "name": "Pauldrons of the Colossus",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    66,
    0,
@@ -24257,6 +24256,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -24297,10 +24301,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24323,7 +24323,6 @@
   "name": "Helm of Cheated Fate",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    90,
@@ -24361,6 +24360,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -24398,10 +24402,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24424,7 +24424,6 @@
   "name": "Living Mojo Belt",
   "icon": "inv_belt_14",
   "type": 8,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -24462,6 +24461,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2
   ],
@@ -24502,10 +24506,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24549,7 +24549,6 @@
    0,
    0,
    0,
-   550,
    0,
    0,
    0,
@@ -24563,8 +24562,13 @@
    0,
    0,
    0,
-   0
+   0,
+   550
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -24602,11 +24606,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24629,7 +24629,6 @@
   "name": "Grips of the Beast God",
   "icon": "inv_gauntlets_49",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    42,
@@ -24667,6 +24666,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -24707,10 +24711,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24733,7 +24733,6 @@
   "name": "Boots of Transformation",
   "icon": "inv_boots_chain_03",
   "type": 10,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -24771,6 +24770,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -24811,10 +24815,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24837,7 +24837,6 @@
   "name": "Arcane Flame Altar-Garb",
   "icon": "inv_chest_cloth_71",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -24875,6 +24874,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -24912,10 +24916,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -24938,7 +24938,6 @@
   "name": "Shardling Legguards",
   "icon": "inv_pants_plate_20",
   "type": 9,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -24976,6 +24975,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -25016,10 +25020,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25079,6 +25079,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -25116,11 +25120,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25143,7 +25143,6 @@
   "name": "Spaulders of Krystallus",
   "icon": "inv_shoulder_73",
   "type": 3,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -25181,6 +25180,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -25218,10 +25222,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25244,8 +25244,6 @@
   "name": "Sword of Justice",
   "icon": "inv_sword_102",
   "type": 13,
-  "weaponType": 9,
-  "handType": 4,
   "stats": [
    80,
    0,
@@ -25283,6 +25281,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 9,
+  "weaponDamageMin": 566.0,
+  "weaponDamageMax": 851.0,
+  "weaponSpeed": 3.8,
   "gemSockets": [
    2
   ],
@@ -25323,13 +25330,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 566,
-  "weaponDamageMax": 851,
-  "weaponSpeed": 3.8,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25352,7 +25352,6 @@
   "name": "Sabatons of the Ages",
   "icon": "inv_boots_chain_10",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -25390,6 +25389,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -25427,10 +25431,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25453,7 +25453,6 @@
   "name": "Mantle of the Tribunal",
   "icon": "inv_shoulder_80",
   "type": 3,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -25491,6 +25490,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -25528,10 +25532,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25554,7 +25554,6 @@
   "name": "Raging Construct Bands",
   "icon": "inv_bracer_09",
   "type": 6,
-  "armorType": 3,
   "stats": [
    0,
    50,
@@ -25592,6 +25591,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -25629,10 +25633,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25692,6 +25692,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -25729,11 +25733,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25756,7 +25756,6 @@
   "name": "Sun-Emblazoned Chestplate",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    61,
    0,
@@ -25794,6 +25793,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -25834,10 +25838,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25897,6 +25897,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -25934,11 +25938,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -25961,7 +25961,6 @@
   "name": "Boots of the Whirling Mist",
   "icon": "inv_boots_leather01",
   "type": 10,
-  "armorType": 2,
   "stats": [
    0,
    66,
@@ -25999,6 +25998,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -26036,10 +26040,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26062,7 +26062,6 @@
   "name": "Legplates of Steel Implants",
   "icon": "inv_pants_plate_02",
   "type": 9,
-  "armorType": 4,
   "stats": [
    80,
    0,
@@ -26100,6 +26099,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2,
    4
@@ -26141,10 +26145,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26167,7 +26167,6 @@
   "name": "Bile-Cured Gloves",
   "icon": "inv_gauntlets_21",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    48,
@@ -26205,6 +26204,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -26242,10 +26246,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26268,7 +26268,6 @@
   "name": "Spaulders of the Abomination",
   "icon": "inv_shoulder_69",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    57,
@@ -26306,6 +26305,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -26346,10 +26350,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26372,7 +26372,6 @@
   "name": "Belt of Unified Souls",
   "icon": "inv_belt_30",
   "type": 8,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -26410,6 +26409,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -26447,10 +26451,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26473,8 +26473,6 @@
   "name": "Gavel of the Fleshcrafter",
   "icon": "inv_mace_60",
   "type": 13,
-  "weaponType": 4,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -26512,6 +26510,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 4,
+  "weaponDamageMin": 133.0,
+  "weaponDamageMax": 248.0,
+  "weaponSpeed": 2.3,
   "socketBonus": [
    0,
    0,
@@ -26549,13 +26556,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 133,
-  "weaponDamageMax": 248,
-  "weaponSpeed": 2.3,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26578,7 +26578,6 @@
   "name": "Bindings of Dark Will",
   "icon": "inv_bracer_18",
   "type": 6,
-  "armorType": 4,
   "stats": [
    49,
    0,
@@ -26616,6 +26615,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -26653,10 +26657,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26716,6 +26716,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -26753,10 +26757,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26779,7 +26779,6 @@
   "name": "Forgotten Shadow Hood",
   "icon": "inv_helmet_107",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -26817,6 +26816,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    1,
    3
@@ -26858,10 +26862,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26921,6 +26921,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -26958,11 +26962,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -26985,7 +26985,6 @@
   "name": "Cracked Epoch Grasps",
   "icon": "inv_gauntlets_49",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -27023,6 +27022,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -27063,10 +27067,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27089,7 +27089,6 @@
   "name": "Gloves of Distorted Time",
   "icon": "inv_gauntlets_16",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -27127,6 +27126,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -27167,10 +27171,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27193,7 +27193,6 @@
   "name": "Legplates of the Infinite Drakonid",
   "icon": "inv_pants_plate_21",
   "type": 9,
-  "armorType": 4,
   "stats": [
    90,
    0,
@@ -27231,6 +27230,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -27268,10 +27272,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27331,6 +27331,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -27368,10 +27372,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27394,7 +27394,6 @@
   "name": "Pauldrons of Destiny",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -27432,6 +27431,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -27469,10 +27473,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27495,7 +27495,6 @@
   "name": "Mantle of Deceit",
   "icon": "inv_shoulder_72",
   "type": 3,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -27533,6 +27532,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -27570,10 +27574,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27596,7 +27596,6 @@
   "name": "Pierce's Pistol",
   "icon": "inv_weapon_rifle_01",
   "type": 14,
-  "rangedWeaponType": 3,
   "stats": [
    0,
    0,
@@ -27634,6 +27633,14 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 3,
+  "weaponDamageMin": 263.0,
+  "weaponDamageMax": 489.0,
+  "weaponSpeed": 2.9,
   "socketBonus": [
    0,
    0,
@@ -27671,13 +27678,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 263,
-  "weaponDamageMax": 489,
-  "weaponSpeed": 2.9,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27700,7 +27700,6 @@
   "name": "Terrace Defence Boots",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    66,
    0,
@@ -27738,6 +27737,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -27778,10 +27782,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27804,7 +27804,6 @@
   "name": "Batrider's Cord",
   "icon": "inv_belt_14",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    65,
@@ -27842,6 +27841,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -27879,10 +27883,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -27905,7 +27905,6 @@
   "name": "Cowl of the Dire Troll",
   "icon": "inv_helmet_107",
   "type": 1,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -27943,6 +27942,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -27980,10 +27984,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28006,7 +28006,6 @@
   "name": "Legs of Physical Regeneration",
   "icon": "inv_pants_plate_27",
   "type": 9,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -28044,6 +28043,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -28081,10 +28085,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28107,8 +28107,6 @@
   "name": "Temple Crystal Fragment",
   "icon": "inv_datacrystal01",
   "type": 13,
-  "weaponType": 5,
-  "handType": 3,
   "stats": [
    0,
    0,
@@ -28146,6 +28144,12 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 3,
+  "weaponType": 5,
   "socketBonus": [
    0,
    0,
@@ -28183,10 +28187,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28209,8 +28209,6 @@
   "name": "Cursed Lich Blade",
   "icon": "inv_sword_91",
   "type": 13,
-  "weaponType": 9,
-  "handType": 1,
   "stats": [
    0,
    0,
@@ -28248,6 +28246,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 1,
+  "weaponType": 9,
+  "weaponDamageMin": 92.0,
+  "weaponDamageMax": 172.0,
+  "weaponSpeed": 1.6,
   "socketBonus": [
    0,
    0,
@@ -28285,13 +28292,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 92,
-  "weaponDamageMax": 172,
-  "weaponSpeed": 1.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28314,7 +28314,6 @@
   "name": "Breastplate of Undeath",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    92,
    129,
@@ -28352,6 +28351,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -28389,10 +28393,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28452,6 +28452,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -28489,11 +28493,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28516,7 +28516,6 @@
   "name": "Handler's Arm Strap",
   "icon": "inv_bracer_02",
   "type": 6,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -28554,6 +28553,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -28591,10 +28595,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28617,7 +28617,6 @@
   "name": "Savage Wound Wrap",
   "icon": "inv_bracer_08",
   "type": 6,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -28655,6 +28654,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -28692,10 +28696,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28718,7 +28718,6 @@
   "name": "King Dred's Helm",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    63,
@@ -28756,6 +28755,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -28793,10 +28797,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28856,6 +28856,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -28893,10 +28897,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -28919,7 +28919,6 @@
   "name": "Grips of Sculptured Icicles",
   "icon": "inv_gauntlets_61",
   "type": 7,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -28957,6 +28956,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -28994,10 +28998,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29020,7 +29020,6 @@
   "name": "Cleric's Linen Shoes",
   "icon": "inv_boots_cloth_17",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -29058,6 +29057,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2
   ],
@@ -29098,10 +29102,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29124,7 +29124,6 @@
   "name": "Opposed Stasis Leggings",
   "icon": "inv_pants_cloth_23",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -29162,6 +29161,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -29199,10 +29203,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29262,6 +29262,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -29299,11 +29303,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29326,8 +29326,6 @@
   "name": "Mojo Masked Crusher",
   "icon": "inv_mace_63",
   "type": 13,
-  "weaponType": 4,
-  "handType": 4,
   "stats": [
    90,
    52,
@@ -29365,6 +29363,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 4,
+  "weaponDamageMin": 503.0,
+  "weaponDamageMax": 840.0,
+  "weaponSpeed": 3.6,
   "socketBonus": [
    0,
    0,
@@ -29402,13 +29409,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 503,
-  "weaponDamageMax": 840,
-  "weaponSpeed": 3.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29468,6 +29468,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -29505,11 +29509,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29532,7 +29532,6 @@
   "name": "Ziggurat Imprinted Chestguard",
   "icon": "inv_chest_plate13",
   "type": 5,
-  "armorType": 4,
   "stats": [
    87,
    0,
@@ -29570,6 +29569,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -29607,10 +29611,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29633,7 +29633,6 @@
   "name": "Iron Dwarf Smith Pauldrons",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    66,
    0,
@@ -29671,6 +29670,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -29708,10 +29712,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29734,7 +29734,6 @@
   "name": "Patroller's War-Kilt",
   "icon": "inv_pants_03",
   "type": 9,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -29772,6 +29771,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2
   ],
@@ -29812,10 +29816,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29838,7 +29838,6 @@
   "name": "Traditionally Dyed Handguards",
   "icon": "inv_gauntlets_06",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -29876,6 +29875,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -29916,10 +29920,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -29942,7 +29942,6 @@
   "name": "The General's Steel Girdle",
   "icon": "inv_belt_35",
   "type": 8,
-  "armorType": 4,
   "stats": [
    66,
    41,
@@ -29980,6 +29979,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -30017,10 +30021,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30094,6 +30094,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -30131,10 +30135,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30157,7 +30157,6 @@
   "name": "Slag Footguards",
   "icon": "inv_boots_chain_07",
   "type": 10,
-  "armorType": 2,
   "stats": [
    0,
    44,
@@ -30195,6 +30194,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    4
   ],
@@ -30235,10 +30239,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30261,7 +30261,6 @@
   "name": "Belt of Vivacity",
   "icon": "inv_belt_26",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -30299,6 +30298,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -30336,10 +30340,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30362,7 +30362,6 @@
   "name": "Giant-Hair Woven Gloves",
   "icon": "inv_gauntlets_16",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -30400,6 +30399,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -30437,10 +30441,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30500,6 +30500,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -30537,11 +30541,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30564,7 +30564,6 @@
   "name": "Cord of Swirling Winds",
   "icon": "inv_belt_36",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    45,
@@ -30602,6 +30601,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -30639,10 +30643,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30665,7 +30665,6 @@
   "name": "Charged-Bolt Grips",
   "icon": "inv_gauntlets_06",
   "type": 7,
-  "armorType": 2,
   "stats": [
    0,
    57,
@@ -30703,6 +30702,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -30743,10 +30747,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30769,8 +30769,6 @@
   "name": "Lightning Giant Staff",
   "icon": "inv_staff_71",
   "type": 13,
-  "weaponType": 8,
-  "handType": 4,
   "stats": [
    0,
    87,
@@ -30808,6 +30806,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 8,
+  "weaponDamageMin": 358.0,
+  "weaponDamageMax": 538.0,
+  "weaponSpeed": 2.4,
   "socketBonus": [
    0,
    0,
@@ -30845,13 +30852,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 358,
-  "weaponDamageMax": 538,
-  "weaponSpeed": 2.4,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30874,7 +30874,6 @@
   "name": "Planetary Helm",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    92,
    87,
@@ -30912,6 +30911,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -30949,10 +30953,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -30975,7 +30975,6 @@
   "name": "Flowing Sash of Order",
   "icon": "inv_belt_30",
   "type": 8,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -31013,6 +31012,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    2
   ],
@@ -31053,10 +31057,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31079,7 +31079,6 @@
   "name": "Ornate Woolen Stola",
   "icon": "inv_chest_cloth_17",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -31117,6 +31116,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -31154,10 +31158,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31217,6 +31217,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -31254,10 +31258,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31280,7 +31280,6 @@
   "name": "Gauntlets of the Water Revenant",
   "icon": "inv_gauntlets_29",
   "type": 7,
-  "armorType": 4,
   "stats": [
    48,
    0,
@@ -31318,6 +31317,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -31355,10 +31359,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31381,7 +31381,6 @@
   "name": "Footwraps of Teleportation",
   "icon": "inv_boots_cloth_19",
   "type": 10,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -31419,6 +31418,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -31459,10 +31463,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31485,7 +31485,6 @@
   "name": "Girdle of the Ethereal",
   "icon": "inv_belt_17",
   "type": 8,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -31523,6 +31522,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    3
   ],
@@ -31563,10 +31567,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31626,6 +31626,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -31663,11 +31667,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31690,7 +31690,6 @@
   "name": "Twin-Headed Boots",
   "icon": "inv_boots_chain_12",
   "type": 10,
-  "armorType": 3,
   "stats": [
    0,
    34,
@@ -31728,6 +31727,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -31765,10 +31769,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31791,8 +31791,6 @@
   "name": "The Key",
   "icon": "inv_axe_97",
   "type": 13,
-  "weaponType": 1,
-  "handType": 2,
   "stats": [
    0,
    39,
@@ -31830,6 +31828,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 1,
+  "weaponDamageMin": 261.0,
+  "weaponDamageMax": 486.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -31867,13 +31874,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 261,
-  "weaponDamageMax": 486,
-  "weaponSpeed": 2.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -31933,6 +31933,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -31970,11 +31974,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32034,6 +32034,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -32071,11 +32075,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32098,7 +32098,6 @@
   "name": "Gauntlets of Capture",
   "icon": "inv_gauntlets_30",
   "type": 7,
-  "armorType": 4,
   "stats": [
    66,
    39,
@@ -32136,6 +32135,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -32173,10 +32177,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32199,7 +32199,6 @@
   "name": "Spaulders of the Violet Hold",
   "icon": "inv_shoulder_77",
   "type": 3,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -32237,6 +32236,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    4
   ],
@@ -32277,10 +32281,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32303,7 +32303,6 @@
   "name": "Cyanigosa's Leggings",
   "icon": "inv_pants_cloth_10",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -32341,6 +32340,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -32378,10 +32382,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32441,6 +32441,10 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -32478,11 +32482,7 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32535,6 +32535,10 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -32572,10 +32576,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32628,6 +32628,10 @@
    0,
    0
   ],
+  "ilvl": 183,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -32665,10 +32669,6 @@
    0,
    0
   ],
-  "ilvl": 183,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32684,7 +32684,6 @@
   "name": "Lightning-Charged Gloves",
   "icon": "inv_gauntlets_14",
   "type": 7,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -32722,6 +32721,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -32759,10 +32763,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32785,7 +32785,6 @@
   "name": "Maiden's Girdle",
   "icon": "inv_belt_24",
   "type": 8,
-  "armorType": 2,
   "stats": [
    0,
    0,
@@ -32823,6 +32822,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "socketBonus": [
    0,
    0,
@@ -32860,10 +32864,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32923,6 +32923,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -32960,11 +32964,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -32987,8 +32987,6 @@
   "name": "Hammer of Grief",
   "icon": "inv_hammer_25",
   "type": 13,
-  "weaponType": 4,
-  "handType": 4,
   "stats": [
    0,
    0,
@@ -33026,6 +33024,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 4,
+  "weaponDamageMin": 536.0,
+  "weaponDamageMax": 806.0,
+  "weaponSpeed": 3.6,
   "socketBonus": [
    0,
    0,
@@ -33063,13 +33070,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 536,
-  "weaponDamageMax": 806,
-  "weaponSpeed": 3.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33092,7 +33092,6 @@
   "name": "Pauldrons of the Lightning Revenant",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    51,
    0,
@@ -33130,6 +33129,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -33170,10 +33174,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33189,7 +33189,6 @@
   "name": "Ionar's Girdle",
   "icon": "inv_belt_27",
   "type": 8,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -33227,6 +33226,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -33264,10 +33268,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33283,7 +33283,6 @@
   "name": "Thundercloud Grasps",
   "icon": "inv_gauntlets_19",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -33321,6 +33320,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "socketBonus": [
    0,
    0,
@@ -33358,10 +33362,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33377,7 +33377,6 @@
   "name": "Tornado Cuffs",
   "icon": "inv_bracer_16",
   "type": 6,
-  "armorType": 3,
   "stats": [
    0,
    32,
@@ -33415,6 +33414,11 @@
    0,
    0
   ],
+  "ilvl": 187,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "socketBonus": [
    0,
    0,
@@ -33452,10 +33456,6 @@
    0,
    0
   ],
-  "ilvl": 187,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33508,6 +33508,10 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -33545,11 +33549,7 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33602,6 +33602,10 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -33639,10 +33643,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33658,7 +33658,6 @@
   "name": "Battlechest of the Twilight Cult",
   "icon": "inv_chest_chain_15",
   "type": 5,
-  "armorType": 4,
   "stats": [
    50,
    0,
@@ -33696,6 +33695,11 @@
    0,
    0
   ],
+  "ilvl": 167,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -33733,10 +33737,6 @@
    0,
    0
   ],
-  "ilvl": 167,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33752,7 +33752,6 @@
   "name": "Faceguard of the Hammer Clan",
   "icon": "inv_helmet_130",
   "type": 1,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -33790,6 +33789,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "socketBonus": [
    0,
    0,
@@ -33827,10 +33831,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33853,8 +33853,6 @@
   "name": "Edge of Oblivion",
   "icon": "inv_axe_83",
   "type": 13,
-  "weaponType": 1,
-  "handType": 4,
   "stats": [
    92,
    0,
@@ -33892,6 +33890,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 1,
+  "weaponDamageMin": 536.0,
+  "weaponDamageMax": 806.0,
+  "weaponSpeed": 3.6,
   "socketBonus": [
    0,
    0,
@@ -33929,13 +33936,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 536,
-  "weaponDamageMax": 806,
-  "weaponSpeed": 3.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -33995,6 +33995,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34032,10 +34036,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34095,6 +34095,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34132,10 +34136,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34158,7 +34158,6 @@
   "name": "Amanitar Skullbow",
   "icon": "inv_weapon_crossbow_22",
   "type": 14,
-  "rangedWeaponType": 2,
   "stats": [
    0,
    32,
@@ -34196,6 +34195,14 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "rangedWeaponType": 2,
+  "weaponDamageMin": 300.0,
+  "weaponDamageMax": 451.0,
+  "weaponSpeed": 2.9,
   "socketBonus": [
    0,
    0,
@@ -34233,13 +34240,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 300,
-  "weaponDamageMax": 451,
-  "weaponSpeed": 2.9,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34299,6 +34299,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34336,10 +34340,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34362,7 +34362,6 @@
   "name": "Legguards of Swarming Attacks",
   "icon": "inv_pants_mail_07",
   "type": 9,
-  "armorType": 2,
   "stats": [
    0,
    55,
@@ -34400,6 +34399,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    3
   ],
@@ -34440,10 +34444,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34466,7 +34466,6 @@
   "name": "Silken Bridge Handwraps",
   "icon": "inv_gauntlets_16",
   "type": 7,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -34504,6 +34503,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    4
   ],
@@ -34544,10 +34548,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34607,6 +34607,10 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34644,10 +34648,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34700,6 +34700,10 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34737,11 +34741,7 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34794,6 +34794,10 @@
    0,
    0
   ],
+  "ilvl": 179,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -34831,10 +34835,6 @@
    0,
    0
   ],
-  "ilvl": 179,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34850,7 +34850,6 @@
   "name": "Engraved Chestplate of Eck",
   "icon": "inv_chest_plate13",
   "type": 5,
-  "armorType": 4,
   "stats": [
    71,
    0,
@@ -34888,6 +34887,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3,
    4
@@ -34929,10 +34933,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -34955,7 +34955,6 @@
   "name": "Helmet of the Shrine",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 3,
   "stats": [
    0,
    71,
@@ -34993,6 +34992,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    1,
    4
@@ -35034,10 +35038,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35060,7 +35060,6 @@
   "name": "Gorloc Muddy Footwraps",
   "icon": "inv_boots_leather01",
   "type": 10,
-  "armorType": 2,
   "stats": [
    0,
    38,
@@ -35098,6 +35097,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    2
   ],
@@ -35138,10 +35142,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35164,7 +35164,6 @@
   "name": "Leggings of the Ruins Dweller",
   "icon": "inv_pants_cloth_20",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -35202,6 +35201,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    3,
    3
@@ -35243,10 +35247,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35269,7 +35269,6 @@
   "name": "Void Sentry Legplates",
   "icon": "inv_pants_plate_21",
   "type": 9,
-  "armorType": 4,
   "stats": [
    69,
    0,
@@ -35307,6 +35306,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -35347,10 +35351,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35403,6 +35403,10 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -35440,10 +35444,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35496,6 +35496,10 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -35533,10 +35537,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35552,7 +35552,6 @@
   "name": "Trousers of the Arakkoa",
   "icon": "inv_pants_cloth_11",
   "type": 9,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -35590,6 +35589,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    3
   ],
@@ -35630,10 +35634,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35686,6 +35686,10 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -35723,11 +35727,7 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35743,7 +35743,6 @@
   "name": "Shoulderplates of the Beholder",
   "icon": "inv_shoulder_92",
   "type": 3,
-  "armorType": 4,
   "stats": [
    46,
    0,
@@ -35781,6 +35780,11 @@
    0,
    0
   ],
+  "ilvl": 175,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    2
   ],
@@ -35821,10 +35825,6 @@
    0,
    0
   ],
-  "ilvl": 175,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35840,7 +35840,6 @@
   "name": "Water-Drenched Robe",
   "icon": "inv_chest_cloth_41",
   "type": 5,
-  "armorType": 1,
   "stats": [
    0,
    0,
@@ -35878,6 +35877,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 1,
   "gemSockets": [
    3,
    2
@@ -35919,10 +35923,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -35945,7 +35945,6 @@
   "name": "The Obliterator Greaves",
   "icon": "inv_boots_plate_05",
   "type": 10,
-  "armorType": 4,
   "stats": [
    65,
    0,
@@ -35983,6 +35982,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    4
   ],
@@ -36023,10 +36027,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36049,7 +36049,6 @@
   "name": "Shroud of Darkness",
   "icon": "inv_helmet_104",
   "type": 1,
-  "armorType": 2,
   "stats": [
    0,
    41,
@@ -36087,6 +36086,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 2,
   "gemSockets": [
    1,
    2
@@ -36128,10 +36132,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36191,6 +36191,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -36228,11 +36232,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36255,7 +36255,6 @@
   "name": "Sabatons of Erekem",
   "icon": "inv_boots_chain_08",
   "type": 10,
-  "armorType": 4,
   "stats": [
    0,
    0,
@@ -36293,6 +36292,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 4,
   "gemSockets": [
    3
   ],
@@ -36333,10 +36337,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36396,6 +36396,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -36433,10 +36437,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36459,8 +36459,6 @@
   "name": "Stormstrike Mace",
   "icon": "inv_mace_61",
   "type": 13,
-  "weaponType": 4,
-  "handType": 2,
   "stats": [
    0,
    0,
@@ -36498,6 +36496,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 2,
+  "weaponType": 4,
+  "weaponDamageMin": 261.0,
+  "weaponDamageMax": 486.0,
+  "weaponSpeed": 2.6,
   "socketBonus": [
    0,
    0,
@@ -36535,13 +36542,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 261,
-  "weaponDamageMax": 486,
-  "weaponSpeed": 2.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36601,6 +36601,10 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
   "socketBonus": [
    0,
    0,
@@ -36638,11 +36642,7 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
   "unique": true,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36665,8 +36665,6 @@
   "name": "Saliva Corroded Pike",
   "icon": "inv_weapon_halberd_20",
   "type": 13,
-  "weaponType": 6,
-  "handType": 4,
   "stats": [
    99,
    0,
@@ -36704,6 +36702,15 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "handType": 4,
+  "weaponType": 6,
+  "weaponDamageMin": 536.0,
+  "weaponDamageMax": 806.0,
+  "weaponSpeed": 3.6,
   "socketBonus": [
    0,
    0,
@@ -36741,13 +36748,6 @@
    0,
    0
   ],
-  "weaponDamageMin": 536,
-  "weaponDamageMax": 806,
-  "weaponSpeed": 3.6,
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
@@ -36770,7 +36770,6 @@
   "name": "Moragg's Chestguard",
   "icon": "inv_chest_chain_13",
   "type": 5,
-  "armorType": 3,
   "stats": [
    0,
    0,
@@ -36808,6 +36807,11 @@
    0,
    0
   ],
+  "ilvl": 200,
+  "quality": 4,
+  "phase": 1,
+  "expansion": 3,
+  "armorType": 3,
   "gemSockets": [
    2,
    4
@@ -36849,10 +36853,6 @@
    0,
    0
   ],
-  "ilvl": 200,
-  "phase": 1,
-  "quality": 4,
-  "expansion": 3,
   "sources": [
    {
     "drop": {
