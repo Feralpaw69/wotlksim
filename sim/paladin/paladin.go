@@ -204,3 +204,11 @@ func NewPaladin(character *core.Character, talentsStr string) *Paladin {
 func (paladin *Paladin) GetMutualLockoutDPAW() *core.Timer {
 	return paladin.Character.GetOrInitTimer(&paladin.mutualLockoutDPAW)
 }
+
+// wotlksim: damage factor for Whitemane's Retribution buffs; 1 for Holy and Protection paladins.
+func (paladin *Paladin) whitemaneRetBonus(multiplier float64) float64 {
+	if paladin.PrimaryTalentTree == 2 {
+		return multiplier
+	}
+	return 1
+}

@@ -38,7 +38,7 @@ func (paladin *Paladin) registerDivineStormSpell() {
 		DamageMultiplierAdditive: 1 +
 			paladin.getTalentTheArtOfWarBonus() +
 			paladin.getItemSetRedemptionBattlegearBonus2(),
-		DamageMultiplier: 1.1,
+		DamageMultiplier: 1.1 * 1.05, // wotlksim: Divine Storm +5% damage
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 

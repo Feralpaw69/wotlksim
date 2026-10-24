@@ -636,7 +636,8 @@ func (paladin *Paladin) applyRighteousVengeance() {
 
 			dot := rvDot.Dot(result.Target)
 
-			newDamage := result.Damage * (0.10 * float64(paladin.Talents.RighteousVengeance))
+			// wotlksim: Righteous Vengeance deals 10% more damage.
+			newDamage := result.Damage * (0.10 * float64(paladin.Talents.RighteousVengeance)) * 1.10
 			outstandingDamage := core.TernaryFloat64(dot.IsActive(), dot.SnapshotBaseDamage*float64(dot.NumberOfTicks-dot.TickCount), 0)
 
 			dot.SnapshotAttackerMultiplier = 1

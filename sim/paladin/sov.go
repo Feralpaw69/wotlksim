@@ -47,7 +47,8 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 		Flags:       core.SpellFlagMeleeMetrics,
 
 		DamageMultiplier: 1 *
-			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()),
+			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()) *
+			paladin.whitemaneRetBonus(1.10), // wotlksim: Holy Vengeance +10% for Ret
 		ThreatMultiplier: 1,
 
 		Dot: core.DotConfig{
@@ -135,7 +136,8 @@ func (paladin *Paladin) registerSealOfVengeanceSpellAndAura() {
 		// (mult * weaponScaling / stacks)
 		DamageMultiplier: 1 *
 			(1 + paladin.getItemSetLightswornBattlegearBonus4() + paladin.getItemSetAegisPlateBonus2() + paladin.getTalentSealsOfThePureBonus()) *
-			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) * .33 / 5,
+			(1 + paladin.getTalentTwoHandedWeaponSpecializationBonus()) * .33 / 5 *
+			paladin.whitemaneRetBonus(1.03), // wotlksim: Seal of Vengeance +3% for Ret
 		CritMultiplier:   paladin.MeleeCritMultiplier(),
 		ThreatMultiplier: 1,
 
