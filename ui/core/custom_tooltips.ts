@@ -628,8 +628,7 @@ function buildGenericTooltip(itemId: number): CustomTooltip | null {
 		lines.push([`${Math.round(item.weaponDamageMin)} - ${Math.round(item.weaponDamageMax)} Damage`, `Speed ${item.weaponSpeed.toFixed(2)}`]);
 		lines.push(`(${((item.weaponDamageMin + item.weaponDamageMax) / 2 / item.weaponSpeed).toFixed(1)} damage per second)`);
 	}
-	if (stat(S.armor)) lines.push(`${stat(S.armor)} Armor`);
-	if (stat(S.block)) lines.push(`${stat(S.block)} Block`);
+	if (stat(S.armor) + stat(S.bonusArmor)) lines.push(`${stat(S.armor) + stat(S.bonusArmor)} Armor`);
 
 	for (const [i, name] of [[S.str, 'Strength'], [S.agi, 'Agility'], [S.sta, 'Stamina'], [S.int, 'Intellect'], [S.spi, 'Spirit']] as Array<[number, string]>) {
 		if (stat(i)) lines.push(`+${stat(i)} ${name}`);
@@ -646,6 +645,7 @@ function buildGenericTooltip(itemId: number): CustomTooltip | null {
 	equip(stat(S.def), 'Increases defense rating by #.');
 	equip(stat(S.dodge), 'Increases your dodge rating by #.');
 	equip(stat(S.parry), 'Increases your parry rating by #.');
+	equip(stat(S.block), 'Increases your shield block rating by #.');
 	equip(stat(S.blockValue), 'Increases the block value of your shield by #.');
 	equip(Math.max(stat(S.hit), stat(S.spellHit)), 'Improves hit rating by #.');
 	equip(Math.max(stat(S.crit), stat(S.spellCrit)), 'Improves critical strike rating by #.');
